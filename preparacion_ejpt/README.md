@@ -11,7 +11,7 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 
 ### Módulos
 
-1. **[Recolección de información](./01_information_gathering.md)**
+1. **Recolección de información** [1]
    - Herramientas de escaneo y enumeración
    - Técnicas de investigación pasiva y activa
 
@@ -32,3 +32,5 @@ Este repositorio refleja mi proceso de estudio y contiene:
 - **Resultados de pruebas**: Información sobre los laboratorios y pruebas realizadas durante mi preparación.
 
 [Siguiente ⟶](./01_information_gathering.md)
+
+[1]: ./01_information_gathering.md
