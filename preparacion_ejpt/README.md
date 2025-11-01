@@ -33,4 +33,4 @@ Este repositorio refleja mi proceso de estudio y contiene:
 
 [Siguiente ⟶](./01_information_gathering.md)
 
-[1]: ./01_information_gathering.md
+[1]: ./01_information_gathering/README.md
