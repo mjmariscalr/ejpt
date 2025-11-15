@@ -54,6 +54,8 @@ La información más importante que podemos encontrar durante un reconocimiento 
 
 ## 2.1. Herramientas
 
+A continuación se da una lista de herramientas que se pueden usar durante la fase de reconocimiento pasivo distribuidas segun su finalidad.
+
 ### Reconocimiento web
 
 En esta sección se explora el proceso de reconocimiento pasivo y footprinting sobre una web. El footprinting es esencialmente lo mismo que el reconocimiento pasivo con la diferencia de que se identifica información más importante del objetivo. En esta fase la información que podemos encontrar es:
@@ -66,7 +68,14 @@ En esta sección se explora el proceso de reconocimiento pasivo y footprinting s
 - Direcciones físicas
 - Tecnologías que se están usando en la web.
 
-En los siguientes enlaces se describen algunas herramientas importantes para: [reconocimiento DNS](dns_recon.md), [directorios ocultos](path.md) y [detección de tecnologías web](web.md).
+Algunas herramientas importantes son: 
+
+- [BuiltWith](web_recon/BuiltWith.md)
+- [Wappalyzer](web_recon/Wappalyzer.md)
+- [WhatWeb](web_recon/WhatWeb.md)
+- [robots.txt](web_recon/robots.md)
+- [sitemap.xml](web_recon/sitemap.md)
+- [Netcraft](web_recon/Netcraft.md)
 
 ### Enumeración Whois
 
@@ -74,7 +83,7 @@ En los siguientes enlaces se describen algunas herramientas importantes para: [r
 
 ### Reconocimiento DNS
 
-
+- [reconocimiento DNS](dns_recon.md)
 
 ### Enumeración de subdominios
 

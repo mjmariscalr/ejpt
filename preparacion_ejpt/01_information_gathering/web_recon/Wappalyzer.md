@@ -1,0 +1,4 @@
+# Wappalyzer
+
+
+[⟵ Anterior](README.md)
