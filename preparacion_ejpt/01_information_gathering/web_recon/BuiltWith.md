@@ -18,7 +18,7 @@ Para obtener información con esta herramienta accedemos al e ingresamos la url 
 
 ## Implicaciones legales y riesgo de deteccion
 
-BuiltWith es una herramienta pasiva y analiza tecnologías visibles públicamente, generalmente código fuente HTML accesible públiamente, encabezados HTTP Y recursos externos usados por el sítio. Todo esto lo haces sin interactuar de forma intrusiva. Aun así, es importante tener en cuenta los aspectos comentados en la sección [seccion](../01_information_gathering.md#consideraciones-eticas-y-legales)
+BuiltWith es una herramienta pasiva y analiza tecnologías visibles públicamente, generalmente código fuente HTML accesible públiamente, encabezados HTTP Y recursos externos usados por el sítio. Todo esto lo haces sin interactuar de forma intrusiva. Aun así, es importante tener en cuenta los aspectos comentados en la sección [seccion](../01_information_gathering.md#13-consideraciones-éticas-y-legales)
 
 En cuanto al riesgo de detección, aunque es bajo, pueden aparecer el logs las conexiones de rastreo realizadas por BuiltWith, lo que puede generar sospechas de que el objetivo está siendo analizado.
 
