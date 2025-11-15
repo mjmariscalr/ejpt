@@ -134,7 +134,17 @@ Address: 2a00:1450:4003:80d::200e
 ---
 # Dig
 
+Permite consultas DNS más avanzadas y con mayor funcionalidad. Para las consultas con *dig* seguimos el formato: **dig @SERVER DOMAIN_NAME TYPE**. A continuación, algunas de las opciones de *dig*.
 
+## Búsqueda masiva
+
+
+
+# Búsqueda de puertos
+
+
+
+#
 
 ---
 # DNSDumpster
@@ -150,3 +160,4 @@ Address: 2a00:1450:4003:80d::200e
 # recon-ng
 
 
+[⟵ Anterior](README.md)
