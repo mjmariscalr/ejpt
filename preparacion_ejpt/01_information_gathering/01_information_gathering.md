@@ -113,5 +113,5 @@ En este caso sí debemos interactuar directamente con el objetivo, por ejemplo r
 - Estructura interna de la red.
 - Enumeración de la información.
 
-[⟵ Anterior](README.md) <!-- | [Siguiente ⟶](pagina-siguiente.md) -->
+[⟵ Anterior](../README.md) <!-- | [Siguiente ⟶](pagina-siguiente.md) -->
 
