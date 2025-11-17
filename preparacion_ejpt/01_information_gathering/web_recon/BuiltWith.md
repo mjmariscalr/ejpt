@@ -20,4 +20,4 @@ Para obtener información con esta herramienta accedemos a su sitio web e ingres
 
 BuiltWith es una herramienta pasiva y analiza tecnologías visibles públicamente, generalmente código fuente HTML accesible públiamente, encabezados HTTP Y recursos externos usados por el sítio. Todo esto lo haces sin interactuar de forma intrusiva. Aunque su riesgo de detección es bajo, las conexiones de rastreo realizadas por BuiltWith pueden aparecer en logs, lo que puede generar sospechas de que el objetivo está siendo analizado.
 
-[⟵ Anterior](../01_information_gathering.md)
+[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)

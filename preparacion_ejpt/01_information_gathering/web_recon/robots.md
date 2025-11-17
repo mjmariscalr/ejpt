@@ -10,4 +10,4 @@ La información contenida en robots.txt puede ser útil durante un pentest si re
 
 ![imagen](../../img/robots.png)
 
-[⟵ Anterior](../01_information_gathering.md)
+[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)

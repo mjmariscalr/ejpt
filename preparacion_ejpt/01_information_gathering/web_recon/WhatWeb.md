@@ -40,4 +40,4 @@ En su modo pasivo, whatweb:
 - [¿Qué es whatweb?](https://keepcoding.io/blog/que-es-whatweb/)
 - [Cómo usar WhatWeb para escanear cualquier sitio Web](https://www.youtube.com/watch?v=cO5UVYsTIjk)
 
-[⟵ Anterior](../01_information_gathering.md)
+[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
