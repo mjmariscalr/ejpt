@@ -112,3 +112,5 @@ Los riesgos de detección usando dig son esencialmente los mismos que con el com
 ## Recursos
 
 [Footprinting usando DIG](https://noticiasseguridad.com/tutoriales/18034/)
+
+[⟵ Anterior](../01_information_gathering.md#reconocimiento-dns)
