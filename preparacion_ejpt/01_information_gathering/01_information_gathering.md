@@ -83,7 +83,9 @@ Algunas herramientas importantes son:
 
 ### Reconocimiento DNS
 
-- [reconocimiento DNS](dns_recon.md)
+- [host](dns_recon/host.md)
+- [nslookup](dns_recon/nslookup.md)
+- [dig](dns_recon/dig.md)
 
 ### Enumeración de subdominios
 
