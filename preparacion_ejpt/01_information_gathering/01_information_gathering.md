@@ -79,7 +79,7 @@ Algunas herramientas importantes son:
 
 ### Enumeración Whois
 
-
+- [WhoIs](dns_recon/whois.md)
 
 ### Reconocimiento DNS
 
