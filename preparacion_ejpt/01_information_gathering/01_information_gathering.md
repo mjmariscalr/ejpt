@@ -83,9 +83,13 @@ Algunas herramientas importantes son:
 
 ### Reconocimiento DNS
 
+Dado que aun nos encontramos en la fase de reconocimiento pasivo, no se va a interactuar directamente con el servidor DNS. Teniendo esto en cuenta, la principal información a obtener en esta fase es sobre registros DNS de un dominio particular. A continuación se muestra una lista con algunas herramientas interesantes.
+
 - [host](dns_recon/host.md)
 - [nslookup](dns_recon/nslookup.md)
 - [dig](dns_recon/dig.md)
+- [dnsrecon](dns_recon/dnsrecon.md)
+- [DNSDumpster](dns_recon/dnsdumpster.md)
 
 ### Enumeración de subdominios
 
