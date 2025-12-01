@@ -16,16 +16,7 @@ A continuación se muestran algunas de las opciones más interesantes en la fase
 
 ### Consultar tipos de registro
 
-La opción -t permite especificar el tipo de registro DNS a consultar. Los principales registros DNS son:
-
-- ***A***: contiene la dirección IPv4 del dominio.
-- ***AAAA***: contiene la dirección IPv6.
-- ***CNAME***: redirige el subdominio al dominio principal. Este registro puede revelar subdominios o infraestructura externa.
-- ***MX***: muestra los servidores de correo para el dominio.
-- ***NS***: servidores autoritativos de la zona, que incluyen la información oficial. Una consulta a estos servidores se puede considerar reconocimiento activo.
-- ***TXT***: registros de texto que a veces contienen información sensible.
-- ***SOA***: almacena información importante sobre un dominio o una zona, como la dirección de correo electrónico del administrador, cuándo se actualizó el dominio por última vez y cuánto tiempo debe esperar el servidor entre actualizaciones.
-- ***PTR***: actúa de forma inversa al registro *A*, es decir, almacena una dirección IP y contiene información sobre el dominio/nombre de host para esa IP.
+La opción -t permite especificar el tipo de registro DNS a consultar.
 
 ![imagen](../../img/host2.png)
 
