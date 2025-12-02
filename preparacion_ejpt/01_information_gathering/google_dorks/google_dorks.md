@@ -52,4 +52,4 @@ Estos comandos son completamente pasivos ya que en ningún momento generan tráf
 - [Google Dorks: ¿Qué son? ¿Cómo explotarlos?](https://datascientest.com/es/google-dorks-que-son)
 
 
-[⟵ Anterior](../01_information_gathering/.md#)
+[⟵ Anterior](../01_information_gathering.md#google-dorks)
