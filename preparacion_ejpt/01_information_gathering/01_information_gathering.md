@@ -104,7 +104,7 @@ A continuación se muestra una lista con algunas herramientas interesantes.
 - [dnsrecon](dns_recon/dnsrecon.md)
 - [DNSDumpster](dns_recon/dnsdumpster.md)
 
-### WAF: Web application firewall
+### WAF
 
 Un WAF es un cortafuegos de aplicaciones web. Es un sistema que protege aplicaciones web filtrando, monitoreando y bloqueando tráfico HTTP malicioso. Analiza las solicitudes que llegan a un servidor web para detectar y bloquear ataques como:
 
@@ -127,7 +127,9 @@ Una herramienta interesante para esta tarea es [WAFW00F](waf/wafw00f.md).
 
 ### Enumeración de subdominios
 
+La enumeración de subdominios es el proceso de descubrir subdominios asociados a un dominio principal (por ejemplo: api.ejemplo.com, mail.ejemplo.com, admin.ejemplo.com). Es una etapa clave en reconocimiento durante un pentest.
 
+[Sublist3r](subdomain/sublist3r.md)
 
 ### Google dorks
 
