@@ -81,7 +81,7 @@ Algunas herramientas importantes son:
 
 Proceso de usar el protocolo Whois para recopilar información sobre un dominio web o una dirección IP. Whois es un protocolo de Internet utilizado para consultar bases de datos y obtener información sobre quién ha registrado un nombre de dominio (o dirección IP). Los datos de Whois constituyen una colección de información sobre el nombre de dominio registrado, sus servidores de nombre y registrador, la fecha de creación del nombre de dominio, la fecha de vencimiento del nombre de dominio, la información de contacto del titular del nombre registrado, el contacto técnico y el contacto administrativo, entre otros.
 
-- [WhoIs](dns_recon/whois.md)
+- [WhoIs](whois/whois.md)
 
 ### Reconocimiento DNS
 
