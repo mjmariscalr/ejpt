@@ -133,7 +133,7 @@ La enumeración de subdominios es el proceso de descubrir subdominios asociados 
 
 ### Google dorks
 
-
+[Google dorks](google_dorks/google_dorks.md)
 
 ### Recolección de correo electrónico
 
