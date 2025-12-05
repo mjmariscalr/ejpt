@@ -129,15 +129,18 @@ Una herramienta interesante para esta tarea es [WAFW00F](waf/wafw00f.md).
 
 La enumeración de subdominios es el proceso de descubrir subdominios asociados a un dominio principal (por ejemplo: api.ejemplo.com, mail.ejemplo.com, admin.ejemplo.com). Es una etapa clave en reconocimiento durante un pentest.
 
-[Sublist3r](subdomain/sublist3r.md)
+- [Sublist3r](subdomain/sublist3r.md)
 
 ### Google dorks
 
-[Google dorks](google_dorks/google_dorks.md)
+- [Google dorks](google_dorks/google_dorks.md)
 
 ### Recolección de correo electrónico
 
+En este caso vamos a ver dos herramientas que se pueden usar de forma combinada. La primera la usaremos para obtener direcciones de correo electrónico, aunque tambien puede mostrar subdominios, direcciones IP y más datos que pueden ser interesantes durante un pentest. La segunda es una base de datos que nos muestra si una dirección de correo se ha filtrado junto con su contraseña en una base de datos.
 
+- [theHarvester](email_harvesting/theharvester.md)
+- [Have i been pwned?](email_harvesting/pwned.md)
 
 ### Bases de datos de contraseñas filtradas
 
