@@ -142,14 +142,6 @@ En este caso vamos a ver dos herramientas que se pueden usar de forma combinada.
 - [theHarvester](email_harvesting/theharvester.md)
 - [Have i been pwned?](email_harvesting/pwned.md)
 
-### Bases de datos de contraseñas filtradas
-
-
-
-## 2.2. Conclusión
-
-
-
 # 3. Recolección de información activa
 
 En este caso sí debemos interactuar directamente con el objetivo, por ejemplo realizando un escaneo de puertos con el que podremos buscar vulnerabilidades asociadas a los servicios activos en el sistema. La información más importante en este caso es:
