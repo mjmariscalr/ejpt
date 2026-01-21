@@ -90,4 +90,4 @@ En general, wafw00f lanza peticiones HTTP normales y analiza la respuesta para d
 - [WAFW00F](https://github.com/EnableSecurity/wafw00f)
 - [Identification of Web Application Firewall using WAFW00F in Kali Linux](https://www.geeksforgeeks.org/linux-unix/identification-of-web-application-firewall-using-wafw00f-in-kali-linux/)
 
-[⟵ Anterior](../01_information_gathering.md#waf)
+[⟵ Anterior](../02_pasiva.md#waf)

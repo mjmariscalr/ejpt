@@ -55,4 +55,4 @@ Address: 2a00:1450:4003:80d::200e
 
 Los riesgos de detección usando nslookup son esencialmente los mismos que con el comando [host](host.md#riesgo-de-detección), ya que funcionan de forma similar.
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-dns)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-dns)

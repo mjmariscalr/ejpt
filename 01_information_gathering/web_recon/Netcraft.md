@@ -16,4 +16,4 @@ Es interesante destacar que netcraft nos permite ver si el sitio es vulnerable a
 
 El riesgo de detección es prácticamente nulo, ya que las consultas se realizan a un servidor externo y se consulta información disponible de forma pública.
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-web)

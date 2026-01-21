@@ -8,4 +8,4 @@ Para usarla simplemente entramos a su web y escribimos un dominio en el buscador
 
 ![imagen](../../img/dnsdumpster.png)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-dns)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-dns)

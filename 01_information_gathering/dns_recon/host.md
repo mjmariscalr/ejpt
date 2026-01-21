@@ -76,4 +76,4 @@ Por otro lado, si las consultas son al servidor autoritativo de la empresa, pued
 
 [Curso de Linux para Hackers – Los comandos Host y Hostmane](https://achirou.com/curso-de-linux-para-hackers-los-comandos-host-y-hostmane/)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-dns)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-dns)

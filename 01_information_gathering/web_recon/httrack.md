@@ -26,4 +26,4 @@ HTTrack recorre todo el sitio descargando páginas y recursos, por lo que se gen
 
 [HTTrack](www.httrack.com/)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-web)

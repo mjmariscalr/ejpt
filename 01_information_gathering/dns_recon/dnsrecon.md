@@ -54,4 +54,4 @@ Por otro lado, si las consultas son al servidor autoritativo de la empresa, pued
 - [Realizar una Enumeración Estándar utilizando dnsrecon](https://www.youtube.com/watch?v=yDHvlXTn-gQ)
 - [Realizar una Enumeración por Fuerza Bruta utilizando dnsrecon](https://www.youtube.com/watch?v=3GWBGFIYreo)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-dns)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-dns)

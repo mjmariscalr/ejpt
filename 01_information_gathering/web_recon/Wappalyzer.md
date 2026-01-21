@@ -24,4 +24,4 @@ Wappalyzer es una herramienta pasiva y analiza tecnologías visibles públicamen
 
 [Wappalyzer](www.wappalyzer.com/)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-web)

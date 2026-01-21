@@ -12,4 +12,4 @@ Para usarlo podemos acceder a su web y comprobar si alguno de los correos que he
 
 [Have i been pwned?](https://haveibeenpwned.com/)
 
-[⟵ Anterior](../01_information_gathering/.md#)
+[⟵ Anterior](../02_pasiva/.md#)

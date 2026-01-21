@@ -122,4 +122,4 @@ vpn.zonetransfer.me
 [theHarvester](https://github.com/laramies/theHarvester)
 [The Harvester](https://www.osintux.org/documentacion/the-harvester)
 
-[⟵ Anterior](../01_information_gathering/.md#)
+[⟵ Anterior](../02_pasiva/.md#)

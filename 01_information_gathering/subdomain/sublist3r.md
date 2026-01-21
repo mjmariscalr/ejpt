@@ -71,4 +71,4 @@ $ sublist3r -d wordreference.com -e google,yahoo
 - [Sublist3r](https://github.com/aboul3la/Sublist3r)
 - [Sublist3r: Herramienta para enumerar Subdominios](https://esgeeks.com/sublist3r-herramienta-enumeracion-subdominios/)
 
-[⟵ Anterior](../01_information_gathering.md#enumeración-de-subdominios)
+[⟵ Anterior](../02_pasiva.md#enumeración-de-subdominios)

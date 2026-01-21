@@ -14,4 +14,4 @@ $ whois wikipedia.com
 
 El riesgo de detección en una consulta whois es prácticamente nulo, ya que solo pide información pública a una base de datos también pública.
 
-[⟵ Anterior](../01_information_gathering.md#enumeración-whois)
+[⟵ Anterior](../02_pasiva.md#enumeración-whois)

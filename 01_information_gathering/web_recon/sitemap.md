@@ -17,4 +17,4 @@ Aunque su propósito es SEO, puede proporcionarnos una fuente valiosa de informa
 
 El riesgo de detección al consultar un sitemap.xml durante un pentest es muy bajo porque no es intrusivo y no altera datos. Normalmente no genera alertas de seguridad, pero sí logs al quedar registrada la petición HTTP.
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-web)

@@ -24,4 +24,4 @@ BuiltWith es una herramienta pasiva y analiza tecnologías visibles públicament
 
 [Builtwith](builtwith.com)
 
-[⟵ Anterior](../01_information_gathering.md#reconocimiento-web)
+[⟵ Anterior](../02_pasiva.md#reconocimiento-web)
