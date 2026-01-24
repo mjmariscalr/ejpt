@@ -18,13 +18,26 @@ El scanning o escaneo de redes o hosts es la primera fase donde empezamos a inte
 
 Para determinar que hosts están activos en la red, que puertos se encuentran abiertos en un dispositivo o que sistema operativo está usando se usa el *network mapping*. *Network mapping* se refiere al proceso de descubrir e identificar dispositivos y elementos de la infraestructura de red.
 
-Por ejemplo: supongamos que una empresa solicita un pentest, y se considera el siguiente bloque de direcciones: 200.200.0.0/16. Esta máscara de red significa que la red podría contener hasta 2¹⁶ - 2 hosts con direcciones IP en el rango 200.200.0.1 - 200.200.255.254. La primera tarea del pentester consiste en determinar cuáles de las direcciones IP están asignadas a un host, y cuáles de esos hosts están activos.
-
 ### 3.1.2. Descubrimiento de hosts
 
+El descubrimiento de hosts es una fase crucial en un pentest, ya que permite identificar equipos activos en la red antes de hacer una exploración más profunda. La elección de la técnica a usar depende de factores como: las características de la red, cómo de sigilosos debemos ser o los objetivos del pentest.
+ 
+Por ejemplo: supongamos que una empresa solicita un pentest, y se considera el siguiente bloque de direcciones: 200.200.0.0/16. Esta máscara de red significa que la red podría contener hasta 2¹⁶ - 2 hosts con direcciones IP en el rango 200.200.0.1 - 200.200.255.254. La primera tarea del pentester consiste en determinar cuáles de las direcciones IP están asignadas a un host, y cuáles de esos hosts están activos.
 
+Algunas de las técnicas más importantes son:
 
-[](.md)
+- **Ping sweep:** envía peticiones *ICMP* (ping) a un rango de direcciones. 
+	- Ventajas: rápido y ampliamente soportado.
+	- Inconvenientes: algunos equipos o firewalls pueden bloquear el tráfico *ICMP*.
+- **ARP scanning:** solo funciona en redes locales, es decir, es necesario estar conectado a la red.
+- **TCP SYN ping:** envía peticiones *TCP SYN* a un puerto específico y si el objetivo está activo devuelve un paquete *TCP SYN-ACK*.
+	- Ventajas: es más sigiloso que *ICMP* y puede evitar ciertas defensas.
+	- Inconvenientes: algunos equipos pueden no responder a peticiones *TCP SYN*.
+- **UDP ping:** se envían paquetes *UDP* a un puerto específico. Puede ser útil para hosts que no responden a *ICMP* o *TCP*.
+- **TCP ACK ping:** envía un paquete *TCP SYN* a un puerto específico. Si se recibe un paquete *TCP RST*, significa que el equipo está activo.
+- **SYN-ACK ping:** envía un paquete *TCP SYN-ACK* a un puerto específico. Si se recibe un paquete *TCP RST*, significa que el equipo está activo.
+
+Para el [descubrimiento de hosts](nmap/host_discovery.md) y el resto de tareas relacionadas con el escaneo de redes y equipos usaremos nmap.
 
 ## 3.2. Enumeración
 
