@@ -34,6 +34,7 @@ HOST DISCOVERY:
 .
 .
 ```
+
 ### Ping Scan o No port scan (*-sn*)
 
 Por defecto, el descubrimiento de hosts con *-sn* consiste en consultas *ICMP echo*, *TCP SYN* al puerto 443, *TCP ACK* al puerto 80 y peticiones *ICMP timestamp*. En caso de no tener privilegios, solo se envían paquetes *SYN* a los puertos 80 y 443. Si esta opción se usa dentro de una red local solo se envían consultas *ARP*, a no se que se especifique *--send-ip*. Además, se puede combinar con todas las las opciones -P* excepto -Pn.
