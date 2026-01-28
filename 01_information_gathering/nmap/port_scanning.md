@@ -43,13 +43,13 @@ Para indicar los puertos sobre los que realizar el escaneo disponemos de las sig
 ```bash
 $ nmap -h
 PORT SPECIFICATION AND SCAN ORDER:
-  -p <port ranges>: Only scan specified ports
-    Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
-  --exclude-ports <port ranges>: Exclude the specified ports from scanning
-  -F: Fast mode - Scan fewer ports than the default scan
-  -r: Scan ports sequentially - don't randomize
-  --top-ports <number>: Scan <number> most common ports
-  --port-ratio <ratio>: Scan ports more common than <ratio>
+    -p <port ranges>: Only scan specified ports
+     Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+    --exclude-ports <port ranges>: Exclude the specified ports from scanning
+    -F: Fast mode - Scan fewer ports than the default scan
+    -r: Scan ports sequentially - don't randomize
+    --top-ports <number>: Scan <number> most common ports
+    --port-ratio <ratio>: Scan ports more common than <ratio>
 ```
 
 ### Escaneo por defecto
@@ -76,8 +76,69 @@ $ nmap -sS 192.168.10.54
 $ nmap -sT 192.168.10.54
 ```
 
-### Detección de versiones
-### Detección de sistemas operativos
+### Detección de versiones y sistemas operativos
+
+La detección de servicios y sus versiones es el siguiente paso después de encontrar los puertos abiertos en los sistemas objetivo. Esta informa entrará en juego durante la fase de análisis de vulnerabilidades, tratando de averiguar qué servicios están mal configurados, que servicios son débiles frente a una vulnerabilidad, etc.
+
+```bash
+$ nmap -h 
+SERVICE/VERSION DETECTION:
+    -sV: Probe open ports to determine service/version info
+    --version-intensity <level>: Set from 0 (light) to 9 (try all probes)
+    --version-light: Limit to most likely probes (intensity 2)
+    --version-all: Try every single probe (intensity 9)
+    --version-trace: Show detailed version scan activity (for debugging)
+OS DETECTION:
+    -O: Enable OS detection
+    --osscan-limit: Limit OS detection to promising targets
+    --osscan-guess: Guess OS more aggressively
+
+```
+
+Con la opción *-sV* podemos obtener información sobre el servicio que está corriendo sobre cada puerto analizado, además de la versión concreta de cada servicio que obtengamos.
+
+```bash
+$ nmap -sS -p6421,41288,55413 -sV 192.140.84.3                                                                                                                     
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-01-27 01:55 IST
+Nmap scan report for demo.ine.local (192.140.84.3)
+Host is up (0.000042s latency).
+
+PORT      STATE SERVICE VERSION
+6421/tcp  open  mongodb MongoDB 2.6.10
+41288/tcp open  achat   AChat chat system
+55413/tcp open  ftp     vsftpd 3.0.3
+MAC Address: 02:42:C0:8C:54:03 (Unknown)
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.35 seconds
+
+```
+
+Para obtener información sobre el sistema operativo pordemos usar la opción *-O*. Esta opción puede combinarse con la detección de servicios, ya que puede ayudar a interpretar mejor el sistema operativo que está corriendo el objetivo.
+
+```bash
+$ nmap -sS -p- -sV -O 192.140.84.3                                                                                                                   
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-01-27 02:03 IST
+Nmap scan report for demo.ine.local (192.140.84.3)
+Host is up (0.000064s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+6421/tcp  open  mongodb MongoDB 2.6.10
+41288/tcp open  achat   AChat chat system
+55413/tcp open  ftp     vsftpd 3.0.3
+MAC Address: 02:42:C0:8C:54:03 (Unknown)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.01 seconds
+```
+
 ### Nmap Scripting Engine (NSE)
 
 [⟵ Anterior](../03_activa.md#escaneo-de-puertos)

@@ -45,6 +45,14 @@ La siguiente fase lógica de un pentesting es intentar obtener más información
 
 De la misma forma que la fase anterior, la principal herramienta para esta fase es [Nmap](nmap/port_scanning.md).
 
+### 3.1.4. Detección de firewall y evasión de IDS
+
+En un escenario de laboratorio, los escaneos de Nmap devuelven resultados claros y directos. Sin embargo, en un entorno de real, el pentester se enfrenta a un adversario silencioso: los sistemas de defensa perimetral. Los Firewalls y los Sistemas de Detección de Intrusos (IDS) están diseñados precisamente para identificar y bloquear el ruido generado por un escaneo de puertos convencional.
+
+La guía de uso de *Nmap* para este propósito se encuentra [aquí](nmap/evasion.md).
+
 ## 3.2. Enumeración
+
+## 3.3. Zonas de transferencia DNS
 
 [⟵ Anterior](02_pasiva.md) | [Siguiente ⟶](.md)
