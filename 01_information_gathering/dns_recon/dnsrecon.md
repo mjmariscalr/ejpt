@@ -26,9 +26,9 @@ $ dnsrecon -d preview.owasp-juice.shop
 
 - std: SOA, NS, A, AAAA, MX and SRV.
 - rvl: búsqueda inversa para un CIDR o rango IP.
-- brt: fuerza bruta usando un diccionario.
+- brt: fuerza bruta usando un diccionario (activa).
 - srv: Registros SRV.
-- axfr: Prueba todos los servidores NS para una transferencia de zona.
+- axfr: Prueba todos los servidores NS para una transferencia de zona (activa).
 - bing: Realiza una búsqueda en Bing de subdominios y hosts.
 - yand: Realiza una búsqueda en Yandex de subdominios y hosts.
 - crt: Realiza una búsqueda en crt.sh de subdominios y hosts.
@@ -42,12 +42,6 @@ $ dnsrecon -d preview.owasp-juice.shop -t brt
 [+] 0 Records Found
 
 ```
-
-## Riesgo de detección
-
-El riesgo de detección depende principalmente de a qué servidor se realizan las consultas. Al hacer las consultas de forma pasiva, es decir, a un servidor no autoritativo, no llegan directamente desde nosotros, sino desde el servidor al que consultamos.
-
-Por otro lado, si las consultas son al servidor autoritativo de la empresa, pueden llamar la atención de los sistemas de detección en caso de hacer consultas que soliciten mucha información o enumeración masiva donde se consulta una lista de subdominios.
 
 ## Recursos
 
