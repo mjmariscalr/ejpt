@@ -43,7 +43,7 @@ Para el [descubrimiento de hosts](nmap/host_discovery.md) y el resto de tareas r
 
 La siguiente fase lógica de un pentesting es intentar obtener más información a partir de todo lo que hemos encontrado en la fase de descubrimiento de hosts. Esta fase consiste en ser más específicos en cada uno de los objetivos encontrados para obtener información sobre ellos. Para ello, empezamos por el descubrimiento de puertos, y posteriormente podremos explorar más detalles.
 
-De la misma forma que la fase anterior, la principal herramienta para esta fase es [Nmap](nmap/port_scanning.md), aunque también podemos usar los [módulos auxiliares]() de *metasploit* que se explican en la sección [3.2.2]().
+De la misma forma que la fase anterior, la principal herramienta para esta fase es [Nmap](nmap/port_scanning.md), aunque también podemos usar los [módulos auxiliares](msf/escaneo.md) de *metasploit* que se explican en la sección [3.2.2](322-msf-módulos-auxiliares).
 
 ### 3.1.4. Detección de firewall y evasión de IDS
 

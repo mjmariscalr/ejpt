@@ -54,4 +54,4 @@ Nmap admite distintos formatos a la hora de especificar el objetivo en función 
 
 En el caso de realizar un escaneo con paquetes *TCP ACK*, es posible que tengamos problemas porque algunos sistemas operativos o firewalls puede estar configurados para bloquear este tipo de paquetes. 
 
-[⟵ Anterior](../03_activa.md#descubrimiento-de-hosts)
+[⟵ Anterior](../03_activa.md#312-descubrimiento-de-hosts)

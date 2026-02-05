@@ -141,4 +141,4 @@ Nmap done: 1 IP address (1 host up) scanned in 15.01 seconds
 
 ### Nmap Scripting Engine (NSE)
 
-[⟵ Anterior](../03_activa.md#escaneo-de-puertos)
+[⟵ Anterior](../03_activa.md#313-escaneo-de-puertos)

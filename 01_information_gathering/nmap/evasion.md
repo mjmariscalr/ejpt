@@ -98,4 +98,4 @@ La opción -T de *Nmap* controla  cómo *Nmap* gestiona los tiempos de espera, r
 La opción --scan-delay de *Nmap* permite introducir un retraso fijo entre el envío de paquetes durante un escaneo. Con esta opción, *Nmap* espera el tiempo indicado antes de enviar el siguiente paquete, independientemente del estado de la red o de la velocidad de respuesta del host. Esto reduce la frecuencia del tráfico generado y puede ayudar a evitar sistemas de detección que se basan en un número elevado de paquetes en un corto periodo de tiempo.
 
 
-[⟵ Anterior](../03_activa.md#descubrimiento-de-hosts)
+[⟵ Anterior](../03_activa.md#314-detección-de-firewall-y-evasión-de-ids)
