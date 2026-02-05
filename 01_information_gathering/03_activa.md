@@ -43,7 +43,7 @@ Para el [descubrimiento de hosts](nmap/host_discovery.md) y el resto de tareas r
 
 La siguiente fase lógica de un pentesting es intentar obtener más información a partir de todo lo que hemos encontrado en la fase de descubrimiento de hosts. Esta fase consiste en ser más específicos en cada uno de los objetivos encontrados para obtener información sobre ellos. Para ello, empezamos por el descubrimiento de puertos, y posteriormente podremos explorar más detalles.
 
-De la misma forma que la fase anterior, la principal herramienta para esta fase es [Nmap](nmap/port_scanning.md).
+De la misma forma que la fase anterior, la principal herramienta para esta fase es [Nmap](nmap/port_scanning.md), aunque también podemos usar los [módulos auxiliares]() de *metasploit* que se explican en la sección [3.2.2]().
 
 ### 3.1.4. Detección de firewall y evasión de IDS
 
@@ -53,50 +53,29 @@ La guía de uso de *Nmap* para este propósito se encuentra [aquí](nmap/evasion
 
 ## 3.2. Enumeración
 
-## 3.3. Zonas de transferencia DNS
+El objetivo de la enumeración es obtener información más detallada sobre los sistemas de una red y los servicios activos en ellos. Esto incluye información como: nombres de cuentas, archivos compartidos y servicios mal configurados. Igual que el escaneo de puertos, la enumeración implica conexiones activas a los distintos dispositivos objetivo.
 
-La técnica que usamos para obtener las zonas de transferencia se conoce como *interrogación DNS*. Es el proceso de enumerar los registros DNS de un dominio. Esta es la misma técnica que usan herramientas como *DNSDumpster*, el problema con ellas es que no permiten acceder a mucha información más allá de registros MX.
+### 3.2.1. *Nmap* Scripting Engine (NSE)
 
-Las transferencias de zona se utilizan en DNS para replicar la información de una zona desde un servidor DNS maestro a uno secundario. El servidor maestro autoriza a los secundarios, el secundario solicita la zona y se copia la base de datos completa o parcial de registros DNS.
+Uno de los motivos que hacen a *Nmap* una herramienta tan potente es el hecho de que, además de escaneo de puertos y servicios, también permite realizar enumeración de los mismos. Otra de las ventajas que tiene es que nos permite exportar los resultados con un formato legible por *Metasploit*, para posteriormente poder realizar un análisis de vulnerabilidades y explotación.
 
-Si una transferencia de zona está mal configurada, un atacante puede obtener:
+Para la enumeración con *nmap* tenemos varias opciones en función del objetivo:
 
-- Todos los nombres de host
-- Direcciones IP internas
-- Subdominios.
-- Direcciones de correo.
+- *-sV*: muestra las versiones de los servicios que corren en los puertos abiertos.
+- *-sC*: lanza los scripts por defecto para obtener más información de los servicios. Es equivalente a *--script=default*.
+- *--script*: permite elegir scripts especificos para un determinado servicio, que analizan más en profundidad que los scripts por defecto. Podemos encontrar los scripts en: */usr/share/nmap/scripts*.
 
-LA transferencia de zona en un pentesting consiste en solicitar a un servidor DNS que envíe todos los registros de una zona. Se envía una consulta DNS de tipo AXFR al servidor. El servidor DNS: acepta la solicitud si el cliente está autorizado y rechaza la solicitud si no lo está. Si es aceptada, el servidor responde con todos los registros de la zona (A, AAAA, MX, NS, TXT, etc.).
+### 3.2.2. MSF: módulos auxiliares
 
-Cuando esto se hace desde un cliente no autorizado (kali), los posibles resultados son:
+Los módulos auxiliares se usan para realizar tareas como: escaneo, descubrimiento y fuzzing. Permiten realizar escaneo TCP y UDP, además de enumerar distintos servicios. Una de sus principales ventajas es que se pueden usar tanto en la fase de reconocimiento como en la de post explotación donde, por ejemplo, podemos realizar un escaneo en una red diferente después de conseguir acceso a un sistema objetivo.
 
-- **Servidor bien configurado:** responde con REFUSED o Transfer failed y no se obtiene información
-- **Servidor mal configurado:** acepta la solicitud y devuelve todos los registros DNS de la zona
+Algunos de los servicios que se pueden enumerar a través de los módulos auxiliares de *Metasploit* son:
 
-Herramientas: dnsenum, dig, dnsrecon, fierce.
-
-### Transferencia de zona con dig
-
-```bash
-$ dig axfr @nsztm2.digi.ninja zonetransfer.me
-```
-
-### Transferencia de zona con dnsenum
-
-```bash
-$ dnsenum zonetransfer.me
-```
-
-### Transferencia de zona con dnsrecon
-
-```bash
-$ dnsrecon -d zonetransfer.me -t axfr
-```
-
-### Transferencia de zona con fierce
-
-```bash
-$ fierce -dns zonetransfer.me
-```
+- [FTP](msf/.md)
+- [SMB](msf/.md)
+- [Web server](msf/.md)
+- [MySQL](msf/.md)
+- [SSH](msf/.md)
+- [SMTP](msf/.md)
 
 [⟵ Anterior](02_pasiva.md) | [Siguiente ⟶](.md)
