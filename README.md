@@ -31,7 +31,7 @@ Este repositorio refleja mi proceso de estudio y contiene:
 - **Ejercicios prácticos**: Scripts, configuraciones y desafíos que he completado.
 - **Resultados de pruebas**: Información sobre los laboratorios y pruebas realizadas durante mi preparación.
 
-[Siguiente ⟶](01_information_gathering/01_information_gathering.md)
+[Siguiente ⟶](01_information_gathering/01_introduccion.md)
 
 <!-- REFERENCIAS Y ENLACES -->
 
