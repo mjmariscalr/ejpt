@@ -35,4 +35,4 @@ Este repositorio refleja mi proceso de estudio y contiene:
 
 <!-- REFERENCIAS Y ENLACES -->
 
-[1]: 01_information_gathering/01_information_gathering.md
+[1]: 01_information_gathering/01_introduccion.md
