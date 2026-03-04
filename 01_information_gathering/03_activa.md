@@ -71,7 +71,7 @@ Los módulos auxiliares se usan para realizar tareas como: escaneo, descubrimien
 
 Algunos de los servicios que se pueden enumerar a través de los módulos auxiliares de *Metasploit* son:
 
-- [FTP](msf/.md)
+- [FTP](msf/ftp_enum.md)
 - [SMB](msf/.md)
 - [Web server](msf/.md)
 - [MySQL](msf/.md)
