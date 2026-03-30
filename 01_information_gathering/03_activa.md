@@ -55,7 +55,7 @@ La guía de uso de *Nmap* para este propósito se encuentra [aquí](nmap/evasion
 
 El objetivo de la enumeración es obtener información más detallada sobre los sistemas de una red y los servicios activos en ellos. Esto incluye información como: nombres de cuentas, archivos compartidos y servicios mal configurados. Igual que el escaneo de puertos, la enumeración implica conexiones activas a los distintos dispositivos objetivo.
 
-### 3.2.1. *Nmap* Scripting Engine (NSE)
+### *Nmap* Scripting Engine (NSE)
 
 Uno de los motivos que hacen a *Nmap* una herramienta tan potente es el hecho de que, además de escaneo de puertos y servicios, también permite realizar enumeración de los mismos. Otra de las ventajas que tiene es que nos permite exportar los resultados con un formato legible por *Metasploit*, para posteriormente poder realizar un análisis de vulnerabilidades y explotación.
 
@@ -65,17 +65,20 @@ Para la enumeración con *nmap* tenemos varias opciones en función del objetivo
 - *-sC*: lanza los scripts por defecto para obtener más información de los servicios. Es equivalente a *--script=default*.
 - *--script*: permite elegir scripts especificos para un determinado servicio, que analizan más en profundidad que los scripts por defecto. Podemos encontrar los scripts en: */usr/share/nmap/scripts*.
 
-### 3.2.2. MSF: módulos auxiliares
+### MSF: módulos auxiliares
 
-Los módulos auxiliares se usan para realizar tareas como: escaneo, descubrimiento y fuzzing. Permiten realizar escaneo TCP y UDP, además de enumerar distintos servicios. Una de sus principales ventajas es que se pueden usar tanto en la fase de reconocimiento como en la de post explotación donde, por ejemplo, podemos realizar un escaneo en una red diferente después de conseguir acceso a un sistema objetivo.
+Los módulos auxiliares de *Metasploit* se usan para realizar tareas como: escaneo, descubrimiento y fuzzing. Permiten realizar escaneo TCP y UDP, además de enumerar distintos servicios. Una de sus principales ventajas es que se pueden usar tanto en la fase de reconocimiento como en la de post explotación donde, por ejemplo, podemos realizar un escaneo en una red diferente después de conseguir acceso a un sistema objetivo.
 
-Algunos de los servicios que se pueden enumerar a través de los módulos auxiliares de *Metasploit* son:
+### Enumeración de servicios
 
-- [FTP](msf/ftp_enum.md)
-- [SMB](msf/.md)
-- [Web server](msf/.md)
-- [MySQL](msf/.md)
-- [SSH](msf/.md)
-- [SMTP](msf/.md)
+Algunos de los servicios que se pueden enumerar a través de los módulos auxiliares de *Metasploit*, *Nmap* y otras herramientas son:
+
+- [DNS](enumeration/dns.md)
+- [FTP](enumeration/ftp.md)
+- [SMB](enumeration/smb.md)
+- [Web server](enumeration/web.md)
+- [MySQL](enumeration/mysql.md)
+- [SSH](enumeration/ssh.md)
+- [SMTP](enumeration/smtp.md)
 
 [⟵ Anterior](02_pasiva.md) | [Siguiente ⟶](.md)

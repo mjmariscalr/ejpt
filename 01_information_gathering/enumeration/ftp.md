@@ -38,8 +38,14 @@ Permite descubrir la versión FTP para posteriormente buscar vulnerabilidades.
 
 Ejemplo:
 
+Seleccionamos el módulo con el comando '*use*':
+
 ```bash
 msf > use auxiliary/scanner/ftp/ftp_version
+```
+Podemos ver las opciones de configuración con *show options*.
+
+```bash
 msf auxiliary(scanner/ftp/ftp_version) > show options
 
 Module options (auxiliary/scanner/ftp/ftp_version):
@@ -54,9 +60,17 @@ Module options (auxiliary/scanner/ftp/ftp_version):
 
 
 View the full module info with the info, or info -d command.
+```
 
-msf auxiliary(scanner/ftp/ftp_version) > set rhosts 192.168.1.1
+Con *set* establecemos un valor para una variable concreta. Con *setg* hacemos que sea global y pueda usarse en otros módulos. Esto es util si ejecutamos distintos módulos auxiliares en un mismo objetivo.
+
+```bash
+msf auxiliary(scanner/ftp/ftp_version) > setg rhosts 192.168.1.1
 rhosts => 192.168.1.1
+```
+Para ejecutar el modulo usamos el comando *run*
+
+```bash
 msf auxiliary(scanner/ftp/ftp_version) > run
 [+] 192.168.1.1:21        - FTP Banner: '220 (vsFTPd 2.3.4)'
 [*] 192.168.1.1:21        - Scanned 1 of 1 hosts (100% complete)
@@ -65,12 +79,51 @@ msf auxiliary(scanner/ftp/ftp_version) > run
 
 ### ***ftp_login***
 
-Prueba múltiples combinaciones de nombres de usuario y contraseñas[^1] contra el servicio, permitiendo identificar cuentas con credenciales débiles. Para este módulo necesitamos especificar un usuario y contraseña o al menos una lista[^2].
+Prueba múltiples combinaciones de nombres de usuario y contraseñas[^1] contra el servicio, permitiendo identificar cuentas con credenciales débiles.
 
+```bash
+msf auxiliary(scanner/ftp/ftp_login) > show options
+
+Module options (auxiliary/scanner/ftp/ftp_login):
+
+   Name              Current Setting  Required  Description
+   ----              ---------------  --------  -----------
+   ANONYMOUS_LOGIN   false            yes       Attempt to login with a blank username and password
+   BLANK_PASSWORDS   false            no        Try blank passwords for all users
+   BRUTEFORCE_SPEED  5                yes       How fast to bruteforce, from 0 to 5
+   DB_ALL_CREDS      false            no        Try each user/password couple stored in the current database
+   DB_ALL_PASS       false            no        Add all passwords in the current database to the list
+   DB_ALL_USERS      false            no        Add all users in the current database to the list
+   DB_SKIP_EXISTING  none             no        Skip existing credentials stored in the current database (Accepted: none, use
+                                                r, user&realm)
+   PASSWORD                           no        A specific password to authenticate with
+   PASS_FILE                          no        File containing passwords, one per line
+   Proxies                            no        A proxy chain of format type:host:port[,type:host:port][...]. Supported proxi
+                                                es: socks5h, sapni, socks4, http, socks5
+   RECORD_GUEST      false            no        Record anonymous/guest logins to the database
+   RHOSTS                             yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/bas
+                                                ics/using-metasploit.html
+   RPORT             21               yes       The target port (TCP)
+   STOP_ON_SUCCESS   false            yes       Stop guessing when a credential works for a host
+   THREADS           1                yes       The number of concurrent threads (max one per host)
+   USERNAME                           no        A specific username to authenticate as
+   USERPASS_FILE                      no        File containing users and passwords separated by space, one pair per line
+   USER_AS_PASS      false            no        Try the username as the password for all users
+   USER_FILE                          no        File containing usernames, one per line
+   VERBOSE           true             yes       Whether to print output for all attempts
+```
+
+Para este módulo necesitamos especificar un usuario y contraseña o al menos una lista[^2].
+
+```bash
+msf auxiliary(scanner/ftp/ftp_login) > set user_file /path/to/wordlist.txt
+msf auxiliary(scanner/ftp/ftp_login) > set pass_file /path/to/wordlist.txt
+msf auxiliary(scanner/ftp/ftp_login) > run
+```
 
 ### ***ftp_anonymous***
 
-Verifica si el servidor permite el acceso con el usuario anonymous o ftp sin necesidad de una contraseña real (o usando un formato de correo electrónico genérico como contraseña).
+Verifica si el servidor permite el acceso con el usuario anonymous o ftp sin necesidad de una contraseña real (o usando un formato de correo electrónico genérico como contraseña). No es necesario establecer ninguna configuración más allá de la IP y el puerto FTP del objetivo.
 
 ## Enumeración con NSE
 
