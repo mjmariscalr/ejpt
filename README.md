@@ -14,6 +14,7 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 1. **Recolección de información** [1]
    - Herramientas de escaneo y enumeración
    - Técnicas de investigación pasiva y activa
+2. **Evaluación y análisis de vulnerabilidades** [2]
 
 ## Resultados Esperados
 
@@ -36,3 +37,4 @@ Este repositorio refleja mi proceso de estudio y contiene:
 <!-- REFERENCIAS Y ENLACES -->
 
 [1]: 01_information_gathering/01_introduccion.md
+[2]: 02_vulnerability_assessment/01_assessment.md

@@ -176,6 +176,8 @@ Herramienta para enumeración de usuarios *SMTP*, usada principalmente contra el
 smtp-user-enum -U /path/wordlist.txt -t ejemplo.local
 ```
 
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
+
 ---
 ## Notas
 

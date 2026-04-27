@@ -175,7 +175,7 @@ Detecta backdoor en versiones vulnerables de ProFTPD (caso famoso 1.3.3c).
 nmap -p 21 --script ftp-proftpd-backdoor <IP>
 ```
 
-[⟵ Anterior](../03_activa.md#322-msf-módulos-auxiliares)
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
 
 ---
 ## Notas

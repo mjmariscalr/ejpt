@@ -57,19 +57,4 @@ Auxiliary action:
 	Malformed Packet  Use a malformed packet
 ```
 
-## Enumeración con *nmap*
-
-```bash
-ls /usr/share/nmap/scripts | grep ssh
-ssh-auth-methods.nse
-ssh-brute.nse
-ssh-hostkey.nse
-ssh-publickey-acceptance.nse
-ssh-run.nse
-ssh2-enum-algos.nse
-sshv1.nse
-```
-
-### ssh-hostkey
-
-### 
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)

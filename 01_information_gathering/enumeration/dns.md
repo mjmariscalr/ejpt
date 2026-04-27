@@ -48,7 +48,7 @@ $ dnsrecon -d zonetransfer.me -t axfr
 $ fierce -dns zonetransfer.me
 ```
 
-
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
 
 
 

@@ -34,9 +34,11 @@ En cuanto a las consideraciones legales de la recolección de información, es i
 
 Hay que destacar que incluso teniendo consentimiento explícito y por escrito, es necesario cumplir con el Reglamento General de Protección de Datos si tratamos con datos sensibles y no se justifican ciertas pruebas como ataques a terceros.
 
+## 1.4. Definición del alcance
 
+La definición del alcance (target scoping) es el proceso donde se define exactamente qué sistemas, redes o aplicaciones está permitido atacar. En un pentest, no se ataca todo lo que se pueda encontrar, sino que se hace solo con lo que está explícitamente permitido.
 
-
+Algunos de los objetivos más comunes son: dominios y subdominios, direcciones IP, aplicaciones (web, base de datos, etc). Estos objetivos pueden estar permitidos o no, así como permitidos parcialmente. Por ejemplo, puede estar permitida la aplicación web, pero no su panel de administración.
 
 [⟵ Anterior](../README.md) | [Siguiente ⟶](02_pasiva.md)
 

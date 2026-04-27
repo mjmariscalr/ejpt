@@ -153,4 +153,4 @@ enum4linux -L <IP>
 enum4linux -A <IP>
 ```
 
-[⟵ Anterior](../03_activa.md#322-msf-módulos-auxiliares)
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
