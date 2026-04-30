@@ -13,12 +13,11 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 
 1. [**Recolección de información**]
 	1. [**Introducción**](01_information_gathering/01_introduccion.md)
-	2. [**Recolección pasiva**]()
-	3. [**Recolección activa**]()
+	2. [**Recolección pasiva**](01_information_gathering/02_pasiva.md)
+	3. [**Recolección activa**](01_information_gathering/03_activa.md)
 2. **Evaluación y análisis de vulnerabilidades** 
-	1. [**Evaluación de vulnerabilidades**](02_vulnerability_assessment/01_assessment.md)
-	2. [**Análisis de vulnerabilidades**](02_vulnerability_assessment/02_analysis.md)
-	3. [**Escaneo de vulnerabilidades**](02_vulnerability_assessment/03_scanning.md)
+	1. [**Análisis de vulnerabilidades**](02_vulnerability_assessment/01_analisis.md)
+	2. [**Escaneo de vulnerabilidades**](02_vulnerability_assessment/02_scanning.md)
 
 ## Resultados Esperados
 
