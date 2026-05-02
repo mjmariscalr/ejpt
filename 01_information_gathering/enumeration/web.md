@@ -155,7 +155,7 @@ Algunos métodos pueden ser peligrosos si están habilitados sin control:
 nmap --script http-methods --script-args http-methods.test=all -p80 -T4 -Pn -sV nmap.scanme.org
 ```
 
-### http-
+### http-enum
 
 ## Otros métodos
 
