@@ -157,9 +157,18 @@ nmap --script http-methods --script-args http-methods.test=all -p80 -T4 -Pn -sV 
 
 ### http-enum
 
+
+
 ## Otros métodos
 
+
+
 ### gobuster
+
+
+
 ### dirbuster
+
+
 
 [⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
