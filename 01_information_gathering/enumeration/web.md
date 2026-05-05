@@ -169,7 +169,11 @@ nmap -p 80,443 --script http-enum <IP>
 
 ### gobuster
 
+Gobuster es una herramienta usada para enumerar directorios, archivos y subdominios en sitios web mediante fuerza bruta con listas de palabras. Funciona enviando muchas peticiones HTTP probando rutas o nombres posibles y muestra los que existen según la respuesta del servidor.
 
+```bash
+gobuster dir -u http://ejemplo.com -w /path/wortdlist.txt
+```
 
 ### DirbB
 
