@@ -165,7 +165,7 @@ nmap -p 80,443 --script http-enum <IP>
 
 ## Otros métodos
 
-
+Además de las técnicas de enumeración web basadas Nmap y Metasploit, existen otros métodos y utilidades que pueden complementar el reconocimiento de un objetivo. En esta sección se incluyen herramientas con enfoques distintos, como la búsqueda de directorios y archivos ocultos.
 
 ### gobuster
 
