@@ -160,7 +160,7 @@ nmap --script http-methods --script-args http-methods.test=all -p80 -T4 -Pn -sV 
 Diseñado para realizar enumeración de recursos en servidores web. Su objetivo principal es descubrir directorios, archivos y aplicaciones ocultas o no documentadas que puedan estar accesibles a través del protocolo HTTP o HTTPS.
 
 ```bash
-nmap -p 80,443 --script http-enum <objetivo>
+nmap -p 80,443 --script http-enum <IP>
 ```
 
 ## Otros métodos
@@ -171,8 +171,22 @@ nmap -p 80,443 --script http-enum <objetivo>
 
 
 
-### dirbuster
+### DirbB
 
+DirB es una herramienta que se usa para buscar directorios y archivos ocultos en páginas web. Funciona probando automáticamente nombres de rutas comunes o sospechosas para ver si existen en el servidor.
 
+Su funcionamiento básico consiste en enviar muchas peticiones HTTP a una web, intentando acceder a diferentes rutas usando una lista de palabras (wordlist). Si una ruta existe, el servidor responde con un código distinto a “404 Not Found”.
+
+Ejemplo:
+
+```bash
+dirb http://ejemplo.com /usr/share/wordlists/dirb/common.txt
+```
+
+Con la opción "*-o*" guardamos la salida y con "*-N*" podemos ignorar algunos codigos de respuesta. Además, para buscar archivos en lugar de directorios podemos usar la opción -X para forzar la búsqueda de extensiones:
+
+```bash
+dirb http://ejemplo.com /usr/share/wordlists/dirb/common.txt -X .php,.html,.bak,.zip
+```
 
 [⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
