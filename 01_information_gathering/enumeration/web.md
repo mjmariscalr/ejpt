@@ -157,7 +157,11 @@ nmap --script http-methods --script-args http-methods.test=all -p80 -T4 -Pn -sV 
 
 ### http-enum
 
+Diseñado para realizar enumeración de recursos en servidores web. Su objetivo principal es descubrir directorios, archivos y aplicaciones ocultas o no documentadas que puedan estar accesibles a través del protocolo HTTP o HTTPS.
 
+```bash
+nmap -p 80,443 --script http-enum <objetivo>
+```
 
 ## Otros métodos
 
