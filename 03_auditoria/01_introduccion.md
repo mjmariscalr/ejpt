@@ -27,4 +27,12 @@ Importacia de la auditoría:
 
 ## 1.2. Ciclo de vida de una auditoría de seguridad
 
+1. Planificación: Definir objetivos, alcance, documentación necesaria y el equipo de auditoría.
+2. Recopilación de información: Revisar políticas, entrevistar al personal y obtener datos técnicos de los sistemas.
+3. Evaluación de riesgos: Identificar activos, amenazas y vulnerabilidades para determinar niveles de riesgo.
+4. Ejecución de la auditoría: Realizar pruebas técnicas, verificar cumplimiento y evaluar controles de seguridad.
+5. Análisis: Analizar hallazgos, compararlos con estándares y priorizar problemas según su impacto.
+6. Informe: Documentar resultados, proponer recomendaciones y presentar conclusiones a los responsables.
+7. Remediación: Implementar mejoras, corregir fallos, realizar seguimientos y mantener monitoreo continuo de la seguridad.
+
 [⟵ Anterior](../02_vulnerability_assessment/02_scanning.md) | [Siguiente ⟶](02_grc.md)
