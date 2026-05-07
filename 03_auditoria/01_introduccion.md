@@ -46,4 +46,18 @@ Las auditorías de seguridad se clasifican según su alcance, metodología y el 
 5. **Auditorías de Red:** evalúan routers, switches, firewalls y dispositivos de red. Identifican problemas de diseño y protocolos inseguros.
 6. **Auditorías de Aplicaciones:** revisan la seguridad de aplicaciones y calidad del código. Evalúan validación de entradas, autenticación y manejo de datos.
 
+## 1.4. Auditorías de Seguridad y Pruebas de Penetración
+
+Es fundamental entender cuándo, cómo y por qué se realizan las auditorías de seguridad, cómo se relacionan con las pruebas de penetración y conocer en qué momento se realiza cada una y si pueden combinarse porque son evaluaciones diferentes, con objetivos, alcance y resultados distintos.
+
+| Aspecto | Auditoría de Seguridad | Prueba de Penetración |
+|---|---|---|
+| **Propósito** | Evalúa la postura general de seguridad y el cumplimiento de políticas y estándares. | Simula ataques reales para identificar y explotar vulnerabilidades. |
+| **Alcance** | Amplio: incluye políticas, procedimientos, controles técnicos y cumplimiento normativo. | Específico: se centra en sistemas, redes o aplicaciones concretas. |
+| **Metodología** | Revisión de documentación, entrevistas y evaluaciones de cumplimiento. | Uso de herramientas y técnicas para explotar vulnerabilidades y probar defensas. |
+| **Resultado** | Detecta fallos en políticas y controles, y propone mejoras de seguridad. | Identifica vulnerabilidades y vectores de ataque, con recomendaciones de mitigación. |
+| **Frecuencia** | Se realiza periódicamente o por requisitos regulatorios. | Se realiza cuando es necesario. |
+
+En cuanto a como se ejecuta el proceso, el enfoque más habitual es el secuencial: primero se ejecuta la auditoría y después, con los resultados obtenidos se ejecuta un pentest para evaluar la eficacia de los controles e identificar vulnerabilidades.
+
 [⟵ Anterior](../02_vulnerability_assessment/02_scanning.md) | [Siguiente ⟶](02_grc.md)
