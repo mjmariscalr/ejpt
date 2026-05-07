@@ -18,6 +18,10 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 2. **Evaluación y análisis de vulnerabilidades** 
 	1. [**Análisis de vulnerabilidades**](02_vulnerability_assessment/01_analisis.md)
 	2. [**Escaneo de vulnerabilidades**](02_vulnerability_assessment/02_scanning.md)
+1. [**Fundamentos de auditoría**]
+	1. [**Introducción**](03_auditoria/01_introduccion.md)
+	2. [**Governanza, Riesgo y Cumplimiento**](03_auditoria/02_grc.md)
+	3. [**De auditoría a pentesting**](03_auditoria/03_de_auditoria_a_pentest.md)
 
 ## Resultados Esperados
 

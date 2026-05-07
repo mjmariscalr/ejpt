@@ -11,7 +11,7 @@ Importacia de la auditoría:
 5. Las auditorías ayudan a generar confianza y credibilidad en los clientes, dando la seguridad de que sus datos se gestionan de manera segura y responsable.
 6. Las auditorías periódicas garantizan que las medidas de seguridad evolucionen para hacer frente a nuevas amenazas y vulnerabilidades
 
-## 1.1 Terminología
+## 1.1. Terminología
 
 | Término | Definición | Importancia |
 |---|---|---|
@@ -24,5 +24,7 @@ Importacia de la auditoría:
 | Auditoría de Cumplimiento | Un examen de la adhesión de una organización a requisitos regulatorios y estándares de la industria. | Valida si la organización cumple con los criterios necesarios de cumplimiento e identifica áreas de mejora. |
 | Control de Acceso | Medidas y mecanismos utilizados para regular quién puede acceder a información o sistemas específicos y qué acciones puede realizar. | Protege la información sensible contra accesos no autorizados y usos indebidos. |
 | Informe de Auditoría | Un documento formal que presenta los hallazgos, conclusiones y recomendaciones resultantes de una auditoría de seguridad. | Comunica los resultados de la auditoría y proporciona orientación para mejorar las prácticas de seguridad. |
+
+## 1.2. Ciclo de vida de una auditoría de seguridad
 
 [⟵ Anterior](../02_vulnerability_assessment/02_scanning.md) | [Siguiente ⟶](02_grc.md)
