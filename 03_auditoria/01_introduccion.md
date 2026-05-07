@@ -35,4 +35,15 @@ Importacia de la auditoría:
 6. Informe: Documentar resultados, proponer recomendaciones y presentar conclusiones a los responsables.
 7. Remediación: Implementar mejoras, corregir fallos, realizar seguimientos y mantener monitoreo continuo de la seguridad.
 
+## 1.3. Tipos de auditoría
+
+Las auditorías de seguridad se clasifican según su alcance, metodología y el área evaluada dentro de la organización.
+
+1. **Auditorías Internas:** realizadas por el equipo interno para evaluar controles y cumplimiento de políticas. Ayudan a identificar debilidades y áreas que requieren pruebas más profundas.
+2. **Auditorías Externas:** ejecutadas por auditores independientes para evaluar de forma imparcial.
+3. **Auditorías de Cumplimiento:** verifican el cumplimiento de normativas y estándares como GDPR, HIPAA o PCI DSS.
+4. **Auditorías Técnicas:** analizan infraestructura TI, hardware, software y configuraciones. Detectan debilidades técnicas y vulnerabilidades.
+5. **Auditorías de Red:** evalúan routers, switches, firewalls y dispositivos de red. Identifican problemas de diseño y protocolos inseguros.
+6. **Auditorías de Aplicaciones:** revisan la seguridad de aplicaciones y calidad del código. Evalúan validación de entradas, autenticación y manejo de datos.
+
 [⟵ Anterior](../02_vulnerability_assessment/02_scanning.md) | [Siguiente ⟶](02_grc.md)
