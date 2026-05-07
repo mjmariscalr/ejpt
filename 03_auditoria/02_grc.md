@@ -2,4 +2,4 @@
 
 
 
-[⟵ Anterior](../01_introduccion.md) | [Siguiente ⟶](03_de_auditoria_a_pentest.md)
+[⟵ Anterior](01_introduccion.md) | [Siguiente ⟶](03_de_auditoria_a_pentest.md)
