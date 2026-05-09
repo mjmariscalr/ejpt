@@ -81,4 +81,32 @@ Algunos de los servicios que se pueden enumerar a través de los módulos auxili
 - [SSH](enumeration/ssh.md)
 - [SMTP](enumeration/smtp.md)
 
+### 3.2.4. Banner grabbing
+
+Es una técnica usada para enumerar información sobre el sistema operativo y los servicios que se están ejecutando en un sistema, siendo el principal objetivo identificar el servicio y su versión. Esta técnica se puede llevar a cabo de varias formas:
+
+- **Detección de servicios con *nmap***
+
+```bash
+nmap -sV -O <IP>
+```
+
+- **NSE**
+
+```bash
+nmap --script banner <IP>
+```
+
+- **Conexión a un puerto abierto con *Netcat***
+
+```bash
+nc <IP> <puerto>
+```
+
+-  **Autenticación en el servicio**
+
+```bash
+ssh <usuario>@<IP>
+```
+
 [⟵ Anterior](02_pasiva.md) | [Siguiente ⟶](../02_vulnerability_assessment/01_assessment.md)
