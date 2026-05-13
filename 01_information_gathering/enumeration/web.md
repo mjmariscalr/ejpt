@@ -135,7 +135,7 @@ Realiza fuerza bruta sobre un formulario de autenticación. Las principales opci
 
 ### apache_userdir_enum
 
-permite enumerar usuarios válidos en servidores Apache con la función UserDir habilitada en Apache HTTP Server. Funciona probando rutas del tipo /~usuario y analizando las respuestas del servidor para determinar qué usuarios existen
+Permite enumerar usuarios válidos en servidores Apache con la función UserDir habilitada en Apache HTTP Server. Funciona probando rutas del tipo /~usuario y analizando las respuestas del servidor para determinar qué usuarios existen.
 
 ## *Nmap*
 
