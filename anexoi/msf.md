@@ -9,3 +9,25 @@ Terminología:
 - **Exploit:** módulo que puede tomar ventaja de una vulnerabilidad.
 - **Payload:** fragmento de código enviado a un objetivo para ejecutar código arbitrario o proporcionar acceso remoto.
 - **Listener:** utilidad que espera una conexión desde el objetivo.
+
+# 2.
+
+
+
+# 3. Pentesting con *MSF*
+
+MSF puede usarse para realizar y automatizar tareas que forman parte del ciclo de vida de una prueba de penetración. Podemos adoptar el *PTES* (Penetration Testing Execution Standard) como hoja de ruta para entender cómo se puede integrar Metasploit en cada una de las fases que componen un test de penetración.
+
+*PTES* es una metodología desarrollada con el objetivo de satisfacer la necesidad de un estándar integral y actualizado para las pruebas de penetración.
+
+| Fase de Pruebas de Penetración | Implementación del Framework Metasploit |
+|---|---|
+| Recopilación de Información y Enumeración | Módulos Auxiliares |
+| Escaneo de Vulnerabilidades | Módulos Auxiliares |
+| Escaneo de Vulnerabilidades | Nessus |
+| Explotación | Módulos de Exploit y Payloads |
+| Post-Explotación | Meterpreter |
+| Escalada de Privilegios | Módulos de Post-Explotación |
+| Escalada de Privilegios | Meterpreter |
+| Mantenimiento de Acceso Persistente | Módulos de Post-Explotación |
+| Mantenimiento de Acceso Persistente | Módulos de Persistencia |
