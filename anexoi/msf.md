@@ -16,9 +16,7 @@ Terminología:
 
 # 3. Pentesting con *MSF*
 
-MSF puede usarse para realizar y automatizar tareas que forman parte del ciclo de vida de una prueba de penetración. Podemos adoptar el *PTES* (Penetration Testing Execution Standard) como hoja de ruta para entender cómo se puede integrar Metasploit en cada una de las fases que componen un test de penetración.
-
-*PTES* es una metodología desarrollada con el objetivo de satisfacer la necesidad de un estándar integral y actualizado para las pruebas de penetración.
+MSF puede usarse para realizar y automatizar tareas que forman parte del ciclo de vida de una prueba de penetración.
 
 | Fase de Pruebas de Penetración | Implementación del Framework Metasploit |
 |---|---|
