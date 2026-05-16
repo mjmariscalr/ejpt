@@ -141,3 +141,37 @@ msf > connect <ip> <port>
 | RHOST | almacena la dirección IP del sistema/servidor objetivo. |
 | RHOSTS | especifica las direcciones IP de múltiples sistemas objetivo o rangos de red. |
 | RPORT | almacena el número de puerto que estamos atacando en el sistema objetivo. |
+
+# Workspaces
+
+Permiten realizar un seguimiento de hosts, escaneos y actividades, y  clasificar y organizar tus datos según el objetivo u organización. Además, MSFconsole proporciona la capacidad de crear, administrar y cambiar entre múltiples workspaces.
+
+Mostrar workspace actual:
+
+```bash
+msf > workspace
+```
+
+Mostrar hosts escaneados:
+
+```bash
+msf > hosts
+```
+
+Añadir workspace:
+
+```bash
+msf > workspace -a <nombre>
+```
+
+Eliminar workspace:
+
+```bash
+msf > workspace -d <nombre>
+```
+
+Cambiar de workspace:
+
+```bash
+msf > workspace <nombre>
+```
