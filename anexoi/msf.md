@@ -57,8 +57,82 @@ msfdb init --connection-string=postgresql://postgres@localhost:5432/postgres
 
 # 5. *MSFconsole*
 
+## Comandos
 
-Variables:
+Cómo buscar módulos:
+
+```bash
+msf > search <nombre>
+msf > search type:<tipo> name:<nombre>
+```
+
+Cómo seleccionar módulos:
+
+```bash
+msf > use </nombre/de/modulo>
+msf > use <identificador>
+```
+
+Cómo configurar opciones y variables de módulos:
+
+```bash
+msf > set <variable> <valor>
+msf > setg <variable> <valor>
+```
+
+Cómo buscar exploits:
+
+```bash
+msf > search cve:<año> type:exploit
+msf > search cve:<año> type:exploit platform:-linux
+msf > search <cve>
+```
+
+Buscar payloads:
+
+```bash
+msf > show payloads
+msf > search <nombre>
+msf > search meterpreter
+```
+
+Usar payloads:
+
+```bash
+msf > set payload <payload>
+```
+
+Lista de sesiones:
+
+```bash
+msf > sessions 
+```
+
+Interactuar con una sesión:
+
+```bash
+msf > sessions -i <id>
+```
+
+Cerrar una sesión:
+
+```bash
+msf > sessions -k <id>
+```
+
+Enviar la sesión a segundo plano:
+
+```bash
+msf > background
+```
+
+Establecer una conexión (similar a nc):
+
+```bash
+msf > connect <ip> <port>
+```
+
+## Variables
 
 | Variable | Propósito |
 |---|---|
