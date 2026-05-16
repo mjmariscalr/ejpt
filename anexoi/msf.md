@@ -54,3 +54,16 @@ Inicialización de la base de datos en *metasploit*:
 ```bash
 msfdb init --connection-string=postgresql://postgres@localhost:5432/postgres
 ```
+
+# 5. *MSFconsole*
+
+
+Variables:
+
+| Variable | Propósito |
+|---|---|
+| LHOST | almacena la dirección IP del sistema del atacante. |
+| LPORT | almacena el número de puerto del sistema del atacante que se usará para recibir una conexión inversa. |
+| RHOST | almacena la dirección IP del sistema/servidor objetivo. |
+| RHOSTS | especifica las direcciones IP de múltiples sistemas objetivo o rangos de red. |
+| RPORT | almacena el número de puerto que estamos atacando en el sistema objetivo. |
