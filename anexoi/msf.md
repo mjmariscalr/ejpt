@@ -39,3 +39,18 @@ MSF puede usarse para realizar y automatizar tareas que forman parte del ciclo d
 | Post-Explotación | Meterpreter |
 | Escalada de Privilegios | Módulos de Post-Explotación <br> Meterpreter |
 | Mantenimiento de Acceso Persistente | Módulos de Post-Explotación <br> Módulos de Persistencia |
+
+# 4. Configuración inicial
+
+Iniciar el servicio postgresql:
+
+```bash
+sudo systemctl enable postgresql
+sudo systemctl start postgresql
+```
+
+Inicialización de la base de datos en *metasploit*:
+
+```bash
+msfdb init --connection-string=postgresql://postgres@localhost:5432/postgres
+```
