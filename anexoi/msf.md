@@ -10,9 +10,22 @@ Terminología:
 - **Payload:** fragmento de código enviado a un objetivo para ejecutar código arbitrario o proporcionar acceso remoto.
 - **Listener:** utilidad que espera una conexión desde el objetivo.
 
-# 2.
+# 2. Arquitectura de *Metasploit Framework*
 
+*MSF* consta principalmente de tres componentes: 
 
+- **Interfaces:** forma de interactuar con metasploit. Las principales son MSFconsole, MSFcli, Armitage y la interfaz web.
+- **Librerías:** facilitan la ejecución de los módulos. 
+- **Módulos:** fragmento de código que se puede usar en *MSF*. Podemos encontrar los siguientes tipos:
+	- **Exploit:** se usa para aprovechar una vulnerabilidad y se combina con un payload.
+	- **Payload:** código entregado por *MSF* y ejecutado remotamente en el objetivo después de una explotación. Por ejemplo: una shell inversa que inicia una conexión desde el sistema objetivo.
+	- **NOPS:** aseguran que los tamaños de los payloads sean consistentes y garantizan su estabilidad cuando se ejecutan.
+	- **Auxiliary:** realiza funcionalidades adicionales como escaneo de puertos y enumeración.
+
+*MSF* proporciona dos tipos de payloads que pueden combinarse con un exploit:
+
+- Payload no escalonado (Non-Staged Payload): se envía al sistema objetivo tal cual, junto con el exploit.
+- Payload escalonado (Staged Payload): se envía al objetivo en dos partes, la primera (stager) establece una conexión inversa hacia el atacante, descarga la segunda parte del payload (stage) y la ejecuta.
 
 # 3. Pentesting con *MSF*
 
