@@ -21,11 +21,8 @@ MSF puede usarse para realizar y automatizar tareas que forman parte del ciclo d
 | Fase de Pruebas de Penetración | Implementación del Framework Metasploit |
 |---|---|
 | Recopilación de Información y Enumeración | Módulos Auxiliares |
-| Escaneo de Vulnerabilidades | Módulos Auxiliares |
-| Escaneo de Vulnerabilidades | Nessus |
+| Escaneo de Vulnerabilidades | Módulos Auxiliares <br> Nessus |
 | Explotación | Módulos de Exploit y Payloads |
 | Post-Explotación | Meterpreter |
-| Escalada de Privilegios | Módulos de Post-Explotación |
-| Escalada de Privilegios | Meterpreter |
-| Mantenimiento de Acceso Persistente | Módulos de Post-Explotación |
-| Mantenimiento de Acceso Persistente | Módulos de Persistencia |
+| Escalada de Privilegios | Módulos de Post-Explotación <br> Meterpreter |
+| Mantenimiento de Acceso Persistente | Módulos de Post-Explotación <br> Módulos de Persistencia |
