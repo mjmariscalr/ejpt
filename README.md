@@ -11,14 +11,14 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 
 ### Módulos
 
-1. [**Recolección de información**]
+1. **Recolección de información**
 	1. [**Introducción**](01_information_gathering/01_introduccion.md)
 	2. [**Recolección pasiva**](01_information_gathering/02_pasiva.md)
 	3. [**Recolección activa**](01_information_gathering/03_activa.md)
 2. **Evaluación y análisis de vulnerabilidades** 
 	1. [**Análisis de vulnerabilidades**](02_vulnerability_assessment/01_analisis.md)
 	2. [**Escaneo de vulnerabilidades**](02_vulnerability_assessment/02_scanning.md)
-3. [**Fundamentos de auditoría**]
+3. **Fundamentos de auditoría**
 	1. [**Introducción**](03_auditoria/01_introduccion.md)
 	2. [**Governanza, Riesgo y Cumplimiento**](03_auditoria/02_grc.md)
 
