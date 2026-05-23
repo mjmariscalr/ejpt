@@ -21,6 +21,8 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 3. **Fundamentos de auditoría**
 	1. [**Introducción**](03_auditoria/01_introduccion.md)
 	2. [**Governanza, Riesgo y Cumplimiento**](03_auditoria/02_grc.md)
+4. **Anexos**
+	1. [**Anexo I: Introducción a Metasploit Framework**](anexo_01/msf.md)
 
 ## Resultados Esperados
 
