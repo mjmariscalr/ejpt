@@ -6,33 +6,24 @@ Según *PTES*, podemos definir las fases de un pentest según el siguiente diagr
 
 ```mermaid
 flowchart TD
-    A[Pre-engagement] --> A1[Definición del alcance]
-    A --> A2[Reglas de compromiso]
-    A --> A3[Objetivos]
+    A[Penetration Testing Phases]
+    B[Information Gathering]
+    C[Enumeration]
+    D[Exploitation]
+    E[Post Exploitation]
 
-    B[Recopilación de información] --> B1[OSINT]
-    B --> B2[Reconocimiento activo]
-    B --> B3[Enumeración de servicios]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
 
-    C[Modelado de amenazas] --> C1[Identificación de activos]
-    C --> C2[Análisis de riesgos]
-    C --> C3[Vectores de ataque]
+    subgraph " "
+        F[Privilege Escalation]
+        G[Maintaining Persistent Access]
+        H[Clearing Tracks]
+    end
 
-    D[Análisis de vulnerabilidades] --> D1[Escaneo]
-    D --> D2[Validación manual]
-    D --> D3[Priorización]
-
-    E[Explotación] --> E1[Obtención de acceso]
-    E --> E2[Escalada de privilegios]
-    E --> E3[Movimiento lateral]
-
-    F[Post-explotación] --> F1[Persistencia]
-    F --> F2[Impacto]
-    F --> F3[Recolección de evidencias]
-
-    G[Reporte] --> G1[Hallazgos]
-    G --> G2[Recomendaciones]
-    G --> G3[Presentación ejecutiva]
-
-    A --> B --> C --> D --> E --> F --> G
+    E --> F
+    E --> G
+    E --> H
 ``` 
