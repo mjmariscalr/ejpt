@@ -27,3 +27,7 @@ flowchart TD
     E --> G
     E --> H
 ``` 
+
+La metodología usada habitualmente en la fase de explotación sigue el este flujo: identificar servicios vulnerables, identificar y prerarar el código de los exploits, ejecutarlo en el objetivo (de forma manual o automatizada), obtener acceso remoto, evasión de antivirus y pivoting.
+
+
