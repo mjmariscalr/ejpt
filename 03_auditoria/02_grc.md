@@ -12,4 +12,4 @@ Gobernanza, Riesgo y Cumplimiento (GRC) es un marco integral utilizado por las o
 - **Marcos de trabajo:** Estructuras que ayudan a organizar y aplicar prácticas de seguridad y riesgo, como el NIST Cybersecurity Framework.
 - **Directrices:** Recomendaciones más flexibles que orientan buenas prácticas sin ser obligatorias, como las del OWASP para aplicaciones web.
 
-[⟵ Anterior](01_introduccion.md) | [Siguiente ⟶](../04_/.md)
+[⟵ Anterior](01_introduccion.md) | [Siguiente ⟶](../04_explotacion/01_fundamentos.md)
