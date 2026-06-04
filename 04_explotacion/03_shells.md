@@ -85,4 +85,6 @@ nc -nv <IP> <Puerto> < <archivo>
 
 Una bind shell o de enlace es un tipo de shell remota en la que un sistema remoto abre un puerto específico, espera conexiones entrantes y le otorga al atacante control directo sobre la línea de comandos. Se puede configurar un listener de Netcat para lanzar un ejecutable específico al realizar una conexión, como cmd.exe o /bin/bash.
 
+![img](../img/bindshell.png)
+
 ## Reverse shell
