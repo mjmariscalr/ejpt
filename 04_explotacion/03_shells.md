@@ -83,7 +83,11 @@ nc -nv <IP> <Puerto> < <archivo>
 
 ## Bind shell
 
-Una bind shell o de enlace es un tipo de shell remota en la que un sistema remoto abre un puerto específico, espera conexiones entrantes y le otorga al atacante control directo sobre la línea de comandos. Se puede configurar un listener de Netcat para lanzar un ejecutable específico al realizar una conexión, como cmd.exe o /bin/bash.
+Una bind shell o shell de enlace es un tipo de intérprete de comandos remoto en el que un sistema establece un servicio de escucha sobre un puerto de red determinado y permanece a la espera de conexiones entrantes. Cuando se establece una conexión válida, se proporciona acceso a un entorno de línea de comandos asociado al sistema remoto, permitiendo la interacción con el.
+
+Su funcionamiento depende de diversos factores relacionados con la conectividad, el direccionamiento de red y las políticas de control de acceso implementadas en la infraestructura donde se despliegan.
+
+Una de las principales limitaciones de este modelo reside en la necesidad de que el puerto utilizado para la escucha sea accesible desde el exterior. En entornos modernos, los mecanismos de protección perimetral, como firewalls, sistemas de filtrado de paquetes, dispositivos NAT y soluciones de segmentación de red, suelen restringir o bloquear las conexiones entrantes no autorizadas.
 
 ![img](../img/bindshell.png)
 
