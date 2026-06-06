@@ -1,8 +1,8 @@
-# Conexión remota
+# 3. Conexión remota
 
 Durante una auditoría es necesario interactuar con sistemas remotos ya que muchas fases de una evaluación requieren obtener o mantener acceso a un sistema objetivo de forma controlada. Para ello existen diferentes mecanismos que permiten establecer canales de comunicación entre dos equipos a través de una red.
 
-## Fundamentos de `Netcat`
+## 3.1. Fundamentos de `Netcat`
 
 **`Netcat`** (también conocida como la *navaja suiza de TCP/IP*) es una utilidad de red utilizada para leer y escribir datos a través de conexiones de red utilizando los protocolos TCP o UDP. Está disponible tanto para sistemas operativos \*NIX como para Windows, lo que la convierte en una herramienta extremadamente útil en entornos de pentesting multiplataforma.
 
@@ -81,7 +81,7 @@ Cliente:
 nc -nv <IP> <Puerto> < <archivo>
 ```
 
-## Bind shell
+## 3.2. Bind shell
 
 Una bind shell o shell de enlace es un tipo de intérprete de comandos remoto en el que un sistema establece un servicio de escucha sobre un puerto de red determinado y permanece a la espera de conexiones entrantes. Cuando se establece una conexión válida, se proporciona acceso a un entorno de línea de comandos asociado al sistema remoto, permitiendo la interacción con el.
 
