@@ -91,7 +91,7 @@ Una de las principales limitaciones de este modelo reside en la necesidad de que
 
 ![img](../img/bindshell.png)
 
-En el lado del objetivo necesitamos crear un netcat listener que permita la ejecución de programas:
+En el lado del objetivo necesitamos crear un `netcat` listener que permita la ejecución de programas:
 
 ```bash
 # Windows
@@ -108,3 +108,17 @@ nc -nv <IP> <Puerto>
 ```
 
 ## Reverse shell
+
+Una shell inversa (*reverse shell*) es un tipo de shell remota en la que el sistema objetivo establece una conexión hacia un listener de `netcat` en el equipo del atacante, permitiéndole ejecutar comandos de forma remota sobre el objetivo.
+
+La principal ventaja de una shell inversa es que la conexión se inicia desde el propio sistema comprometido, por lo que no es necesario que este tenga `netcat` instalado. Esto contrasta con una *bind shell*, donde la única forma de establecer la conexión es que el objetivo disponga de la herramienta necesaria para escuchar conexiones entrantes.
+
+Además, las shells inversas suelen ser más efectivas en entornos reales, ya que es menos habitual que el tráfico saliente esté bloqueado por firewalls o proxies.
+
+Sin embargo, también presentan un inconveniente importante: el sistema objetivo necesita conocer la dirección IP del atacante para poder establecer la conexión. Esto implica dos problemas principales:
+
+- El exploit debe incluir algún mecanismo para proporcionar al objetivo la dirección IP del atacante.
+- La dirección IP del atacante queda expuesta al objetivo.
+
+
+![img](../img/reverseshell.png)
