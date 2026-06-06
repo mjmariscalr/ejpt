@@ -107,7 +107,7 @@ El el lado atacante simplemente iniciamos una conexión, que si es válida, ejec
 nc -nv <IP> <Puerto>
 ```
 
-## Reverse shell
+## 3.3. Reverse shell
 
 Una shell inversa (*reverse shell*) es un tipo de shell remota en la que el sistema objetivo establece una conexión hacia un listener de `netcat` en el equipo del atacante, permitiéndole ejecutar comandos de forma remota sobre el objetivo.
 
