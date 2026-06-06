@@ -25,6 +25,7 @@ El curso está organizado en varios **módulos**, cada uno enfocado en un área 
 	1. [**Introducción a la explotación**](04_explotacion/01_fundamentos.md)
 	2. [**Preparación de los exploits**](04_explotacion/02_exploits.md)
 	3. [**Conexión remota**](04_explotacion/03_shells.md)
+	4. [**Payloads**](04_explotacion/04_payloads.md)
 5. **Anexos**
 	1. [**Anexo I: Introducción a Metasploit Framework**](anexo_01/msf.md)
 
