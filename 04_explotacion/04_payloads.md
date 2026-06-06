@@ -13,7 +13,15 @@ Dentro de los ataques dirigidos al cliente (client-side attacks), los payloads s
 
 ### Client-side attacks
 
+Son un vector de ataque con el objetivo de conseguir que un usuario interactúe con contenido diseñado para ejecutar acciones controladas por el atacante en el sistema objetivo. Pueden incluir la ejecución de código, la recopilación de información, el acceso remoto al sistema o el establecimiento de comunicaciones con la infraestructura del atacante.
+
+Suelen apoyarse en técnicas de ingeniería social para persuadir al usuario de abrir documentos, ejecutar aplicaciones o visitar recursos aparentemente legítimos. Los formatos más utilizados son: documentos ofimáticos, archivos PDF, instaladores y ejecutables portables. Los ataques del lado del cliente se centran en la interacción del usuario y en las aplicaciones que usa habitualmente.
+
+Debido a que estos ataques suelen requerir la entrega y, en muchos casos, el almacenamiento de un payload en el sistema objetivo, es necesario considerar los mecanismos de detección y protección.
+
 ## 4.1. Generación de payloads con `Msfvenom`
+
+
 
 ## 4.2. Codificación  de payloads con `Msfvenom`
 
