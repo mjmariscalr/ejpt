@@ -21,7 +21,11 @@ Debido a que estos ataques suelen requerir la entrega y, en muchos casos, el alm
 
 ## 4.1. Generación de payloads con `Msfvenom`
 
+Msfvenom es una herramienta de línea de comandos incluida en Metasploit que permite generar y codificar (encode) payloads para distintos sistemas operativos y plataformas.
 
+Permite generar payloads compatibles con sistemas Windows, Linux, macOS y Android, así como exportarlos en múltiples formatos, incluyendo ejecutables, bibliotecas dinámicas, scripts y otros tipos de archivos
+
+Con `Msfvenom` se pueden payloads que, una vez ejecutados en el sistema objetivo, establecen una comunicación con un listener o handler configurado previamente por el auditor. Esta conexión permite gestionar la sesión obtenida y evaluar el nivel de acceso alcanzado durante la prueba.
 
 ## 4.2. Codificación  de payloads con `Msfvenom`
 
