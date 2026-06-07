@@ -113,6 +113,16 @@ Podemos evadir soluciones antivirus antiguas basadas en firmas mediante la codif
 
 El shellcode es una porción de código que normalmente se utiliza como payload durante la explotación de una vulnerabilidad. Originalmente el shellcode era un fragmento de código cuya finalidad era proporcionar a un atacante una consola remota en el sistema objetivo.
 
+Esta técnica dejó de ser tan efectiva porque los antivirus modernos ya no dependen únicamente de firmas estáticas. Hoy en día los productos de seguridad suelen utilizar además:
+
+- **Análisis heurístico:** buscan comportamientos sospechosos.
+- **Análisis de comportamiento:** observan qué hace el programa al ejecutarse.
+- **Emulación o sandboxing:** ejecutan el archivo en un entorno controlado.
+- **Machine Learning:** detectan patrones asociados a malware.
+- **EDR (Endpoint Detection and Response):** monitorizan actividades en memoria, procesos, red y sistema de archivos.
+
+Además, muchos encoders clásicos de herramientas como Metasploit se hicieron muy conocidos. Los fabricantes de seguridad acabaron añadiendo firmas para el payload original y el shellcode descodificado.
+
 ## 4.3. Inyección de payloads en ejecutables Windows
 
 [⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_windows.md)
