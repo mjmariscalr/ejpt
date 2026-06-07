@@ -19,6 +19,60 @@ Suelen apoyarse en técnicas de ingeniería social para persuadir al usuario de 
 
 Debido a que estos ataques suelen requerir la entrega y, en muchos casos, el almacenamiento de un payload en el sistema objetivo, es necesario considerar los mecanismos de detección y protección.
 
+### Tipos de payloads
+
+Los payload pueden ser staged o non-staged.
+
+#### Staged payload
+
+Un staged payload se divide en dos partes:
+
+1. **Stage 1 (stager):** un pequeño código inicial que se ejecuta primero.
+2. **Stage 2 (stage):** una vez establecida la conexión, el stager descarga y ejecuta el payload completo.
+
+**Ventajas**
+
+- Tamaño inicial muy pequeño.
+- Útil cuando la vulnerabilidad permite inyectar pocos bytes.
+- Puede cargar funcionalidades más complejas después.
+
+**Desventajas**
+
+- Requiere una segunda comunicación para descargar la carga completa.
+- Más oportunidades para que sistemas de seguridad detecten o bloqueen la actividad.
+
+Normalmente el flujo es:
+
+1. El atacante aprovecha una vulnerabilidad mediante un exploit.
+2. El exploit introduce o ejecuta un stager muy pequeño en la máquina víctima.
+3. El stager se ejecuta en la víctima.
+4. El stager establece comunicación con el atacante (o escucha una conexión, según el tipo de payload).
+5. A través de esa conexión se transfiere el stage (la carga completa).
+6. La víctima carga y ejecuta ese stage en memoria.
+
+#### Non-staged payload
+
+Contiene todo el código necesario en una sola pieza.
+
+**Ventajas**
+
+- No necesita descargar una segunda etapa.
+- Menos dependencia de la red tras la explotación.
+- Puede ser más fiable en entornos con filtros o restricciones.
+
+**Desventajas**
+
+- El payload inicial es más grande.
+- Puede ser más difícil introducirlo en vulnerabilidades con limitaciones de tamaño.
+
+Normalmente el flujo es:
+
+1. El atacante aprovecha una vulnerabilidad mediante un exploit.
+2. Payload completo llega a la víctima.
+3. Payload completo se ejecuta.
+4. Establece la conexión (si la necesita).
+5. Proporciona la funcionalidad.
+
 ## 4.1. Generación de payloads con `Msfvenom`
 
 Msfvenom es una herramienta de línea de comandos incluida en Metasploit que permite generar y codificar (encode) payloads para distintos sistemas operativos y plataformas.
