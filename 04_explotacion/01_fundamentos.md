@@ -6,26 +6,26 @@ Según *PTES*, podemos definir las fases de un pentest según el siguiente diagr
 
 ```mermaid
 flowchart TD
-    A[Penetration Testing Phases]
-    B[Information Gathering]
-    C[Enumeration]
-    D[Exploitation]
-    E[Post Exploitation]
+	A[Penetration Testing Phases]
+	B[Information Gathering]
+	C[Enumeration]
+	D[Exploitation]
+	E[Post Exploitation]
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
+	A --> B
+	B --> C
+	C --> D
+	D --> E
 
-    subgraph " "
-        F[Privilege Escalation]
-        G[Maintaining Persistent Access]
-        H[Clearing Tracks]
-    end
+	subgraph " "
+		F[Privilege Escalation]
+		G[Maintaining Persistent Access]
+		H[Clearing Tracks]
+	end
 
-    E --> F
-    E --> G
-    E --> H
+	E --> F
+	E --> G
+	E --> H
 ``` 
 
 La metodología usada habitualmente en la fase de explotación sigue el este flujo: identificar servicios vulnerables, identificar y prerarar el código de los exploits, ejecutarlo en el objetivo (de forma manual o automatizada), obtener acceso remoto, evasión de antivirus y pivoting.
@@ -35,6 +35,19 @@ La metodología usada habitualmente en la fase de explotación sigue el este flu
 Una prueba de penetración de caja negra es una evaluación de seguridad en la que al pentester no se le proporciona ninguna información sobre el sistema o la red objetivo (no se facilitan rangos de direcciones IP, información de los sistemas ni credenciales predeterminadas).
 
 El objetivo es evaluar con precisión la seguridad de un sistema o red desde la perspectiva de un atacante externo sin privilegios.
+
+La metodología Black Box sigue el siguiente flujo:
+
+- Descubrimiento de hosts.
+- Escaneo y enumeración de puertos.
+- Detección/escaneo de vulnerabilidades.
+- Explotación.
+	- Manual.
+	- Automatizada.
+- Post-explotación.
+	- Escalada de privilegios.
+	- Persistencia.
+	- Volcado de hashes.
 
 ### White box Penetration Test
 
