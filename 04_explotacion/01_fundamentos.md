@@ -30,4 +30,12 @@ flowchart TD
 
 La metodología usada habitualmente en la fase de explotación sigue el este flujo: identificar servicios vulnerables, identificar y prerarar el código de los exploits, ejecutarlo en el objetivo (de forma manual o automatizada), obtener acceso remoto, evasión de antivirus y pivoting.
 
+### Black box pentest
+
+Una prueba de penetración de caja negra es una evaluación de seguridad en la que al pentester no se le proporciona ninguna información sobre el sistema o la red objetivo (no se facilitan rangos de direcciones IP, información de los sistemas ni credenciales predeterminadas).
+
+El objetivo de una prueba de penetración de caja negra es evaluar con precisión la seguridad de un sistema o red desde la perspectiva de un atacante externo sin privilegios. Este enfoque es muy útil porque demuestra cómo un atacante externo, sin conocimientos internos de la organización, podría comprometer los sistemas o redes de una empresa.
+
+
+
 [⟵ Anterior](../03_auditoria/02_grc.md) | [Siguiente ⟶](02_exploits.md)
