@@ -40,6 +40,8 @@ El objetivo es evaluar con precisión la seguridad de un sistema o red desde la 
 
 En una prueba de caja blanca, el pentester tiene acceso completo a información técnica del entorno, como configuraciones, diagramas de red o código fuente. Gracias a este conocimiento, puede realizar una revisión más profunda y eficiente para identificar vulnerabilidades ocultas y errores de diseño o implementación.
 
+### Gray box penetration test
 
+En una prueba de caja gris, el pentester dispone de cierta información o acceso limitado antes de comenzar la evaluación, como una cuenta de usuario o documentación básica. Esto permite centrar el análisis en escenarios más realistas, simulando a un atacante que ya ha obtenido un punto de acceso inicial.
 
 [⟵ Anterior](../03_auditoria/02_grc.md) | [Siguiente ⟶](02_exploits.md)
