@@ -20,4 +20,23 @@ Name: anonymous
 Password: <pulsamos enter sin escribir>
 ```
 
+### Fuerza bruta
 
+**Metasploit:**
+
+```bash
+msf auxiliary(scanner/ftp/ftp_login) > set rhosts <IP>
+msf auxiliary(scanner/ftp/ftp_login) > set user_file <WORDLIST>
+msf auxiliary(scanner/ftp/ftp_login) > set pass_file <WORDLIST>
+msf auxiliary(scanner/ftp/ftp_login) > run
+```
+
+**Hydra:**
+
+```bash
+hydra -L <USR_WORDLIST> -P <PASS_WORDLIST> <IP> <SERVICE>
+```
+
+```bash
+
+```
