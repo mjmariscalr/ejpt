@@ -21,6 +21,29 @@ Pasos para la explotación de WebDAV:
 - Ataque de fuerza bruta para identificar credenciales legítimas.
 - Autenticarnos con el servidor WebDAV y cargar un payload malicioso .asp que puede usarse para ejecutar comandos arbitrarios u obtener una shell inversa en el objetivo.
 
+### Identificar si WebDAV está configurado con nmap
+
+```bash
+nmap -sV -sC --script http-enum <IP>
+```
+
+Los distintos protocolos http se usan según la situación:
+
+| Módulo           | Capa HTTP            | Cuándo se usa               |
+| ---------------- | -------------------- | --------------------------- |
+| http-get         | URL query            | Parámetros en URL           |
+| http-post-form   | Body POST            | Formularios web normales    |
+| http-get-form    | URL + parsing form   | Formularios GET reales      |
+| http-head        | Header-only          | Checks ligeros / validación |
+| https-*          | HTTPS/TLS            | Siempre que haya cifrado    |
+| http-basic-auth  | Header Authorization | Login tipo popup navegador  |
+| http-digest-auth | Challenge HTTP       | Auth más segura legacy      |
+
+### Fuerza bruta para obtener credenciales
+
+```bash
+hydra -L usr_file -P pass_file <IP> http-get /dir
+```
 
 ### DAVTest
 
@@ -31,5 +54,9 @@ Se utiliza para escanear, autenticar y explotar un servidor WebDAV. Está preins
 ### Cadaver
 
 Cadaver admite la carga y descarga de archivos, la visualización en pantalla, la edición in situ, las operaciones de espacio de nombres (mover/copiar), la creación y eliminación de colecciones, la manipulación de propiedades y el bloqueo de recursos en servidores WebDAV. Preinstalado en la mayoría de las distribuciones de pruebas de penetración ofensivas como Kali y Parrot OS.
+
+
+
+### Metasploit Framework
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
