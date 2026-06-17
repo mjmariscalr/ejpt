@@ -15,4 +15,21 @@ WebDAV (Web-based Distributed Authoring and Versioning) es un conjunto de extens
 
 WebDAV suele ejecutarse sobre Microsoft IIS (Internet Information Services) utilizando los puertos 80 (HTTP) y 443 (HTTPS). Para conectarse a un servidor WebDAV es necesario disponer de credenciales válidas, ya que este servicio implementa mecanismos de autenticación basados en nombre de usuario y contraseña para controlar el acceso a los recursos y garantizar que únicamente los usuarios autorizados puedan gestionarlos.
 
+Pasos para la explotación de WebDAV:
+
+- Identificar si WebDAV está configurado para ejecutarse en el servidor web IIS.
+- Ataque de fuerza bruta para identificar credenciales legítimas.
+- Autenticarnos con el servidor WebDAV y cargar un payload malicioso .asp que puede usarse para ejecutar comandos arbitrarios u obtener una shell inversa en el objetivo.
+
+
+### DAVTest
+
+Se utiliza para escanear, autenticar y explotar un servidor WebDAV. Está preinstalado en la mayoría de las distribuciones de pruebas de penetración ofensivas como Kali y Parrot OS.
+
+
+
+### Cadaver
+
+Cadaver admite la carga y descarga de archivos, la visualización en pantalla, la edición in situ, las operaciones de espacio de nombres (mover/copiar), la creación y eliminación de colecciones, la manipulación de propiedades y el bloqueo de recursos en servidores WebDAV. Preinstalado en la mayoría de las distribuciones de pruebas de penetración ofensivas como Kali y Parrot OS.
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
