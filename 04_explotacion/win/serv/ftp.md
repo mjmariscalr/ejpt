@@ -68,4 +68,4 @@ Por último accedemos al payload desde el navegador para ejecutarlo: *domimio.co
 
 En el contexto de un pentest legal lo más probable es no tener permiso para modificar el contenido de la web, pero es bastante común que un atacante, una vez obtiene acceso, muestre algun tipo de mensaje para dejar claro que la web ha sido vulnerada. Esto lo podemos hacer simplemente modificando los archivos de la web mediante el acceso FTP.
 
-[⟵ Anterior](../../05_windows.md) | [Siguiente ⟶](ssh.md)
+[⟵ Anterior](../../05_sistema.md#explotación-windows)
