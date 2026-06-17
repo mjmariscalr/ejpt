@@ -16,7 +16,7 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 	- [**SMB**](win/serv/smb.md)
 	- [**MySQL**](win/serv/mysql.md)
 - **Vulnerabilidades**
-	- [**WebDAV**](win/vulns/webdav.md)
+	- [**Microsoft IIS WebDAV**](win/vulns/webdav.md)
 	- [**Explotación de SMB con PsExec**](win/vulns/psexec.md)
 	- [**Explotación de la vulnerabilidad MS17-010 de SMB (EternalBlue)**](win/vulns/eternalblue.md)
 	- [**Remote Desktop Protocol (RDP)**](win/vulns/rdp.md)
