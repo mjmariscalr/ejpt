@@ -113,6 +113,15 @@ Podemos evadir soluciones antivirus antiguas basadas en firmas mediante la codif
 
 El shellcode es una porción de código que normalmente se utiliza como payload durante la explotación de una vulnerabilidad. Originalmente el shellcode era un fragmento de código cuya finalidad era proporcionar a un atacante una consola remota en el sistema objetivo.
 
+**Ejemplo de shellcode en C:**
+
+```C
+unsigned char shellcode[] = {
+    0xB8, 0x2A, 0x00, 0x00, 0x00,
+    0xC3
+};
+```
+
 Esta técnica dejó de ser tan efectiva porque los antivirus modernos ya no dependen únicamente de firmas estáticas. Hoy en día los productos de seguridad suelen utilizar además:
 
 - **Análisis heurístico:** buscan comportamientos sospechosos.
