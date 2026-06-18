@@ -17,7 +17,7 @@ Es similar a RDP, pero en lugar de controlar el sistema remoto mediante una inte
 
 Para obtener acceso a un sistema Windows, necesitaremos identificar cuentas de usuario legítimas y sus contraseñas o hashes. Podemos hacerlo con varias herramientas y técnicas; sin embargo, la más común consiste en realizar un ataque de fuerza bruta para iniciar sesión mediante SMB.
 
-Podemos limitar nuestro ataque a cuentas de usuario comunes de Windows y una vez que hayamos obtenido las credenciales de una cuenta, podemos usarlas para autenticarnos en el sistema con PsExec y ejecutar comandos del sistema u obtener una shell inversa.
+Podemos limitar nuestro ataque a cuentas de usuario comunes de Windows, principalmente el usuario administrador, y una vez que hayamos obtenido las credenciales de una cuenta, podemos usarlas para autenticarnos en el sistema con PsExec y ejecutar comandos del sistema u obtener una shell inversa.
 
 **Obtención de credenciales con metasploit**
 
