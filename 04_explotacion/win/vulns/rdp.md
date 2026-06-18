@@ -41,6 +41,14 @@ hydra -L usr_file -P pass_file <HOST> rdp -s 3333
 
 **Conexión con xfreerdp**
 
+xfreerdp es un cliente de RDP de código abierto que forma parte del proyecto FreeRDP. Su función es permitir que un equipo Linux, macOS o incluso Windows se conecte a otro sistema mediante RDP, de forma similar a cómo funciona la aplicación Conexión a Escritorio Remoto de Microsoft.
 
+Para conectarte a un servidor Windows:
+
+```bash
+xfreerdp /u:usuario /p:contraseña /v:192.168.1.10:3333
+```
+
+![xfreerdp](../../../img/xfreerdp.png)
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
