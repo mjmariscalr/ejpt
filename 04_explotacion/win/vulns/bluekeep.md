@@ -11,4 +11,17 @@ La vulnerabilidad BlueKeep afecta a varias versiones de Windows:
 - Windows 7
 - Windows Server 2008 y Windows Server 2008 R2.
 
+La vulnerabilidad BlueKeep tiene diversas PoC (Pruebas de Concepto) y códigos de explotación no legítimos que podrían ser de naturaleza maliciosa. Por lo tanto, se recomienda utilizar únicamente código de explotación y módulos verificados para la explotación.
+
+## Enumeración
+
+MSF cuenta con un módulo auxiliar de BlueKeep que puede utilizarse para comprobar si un sistema objetivo es vulnerable al exploit.
+
+
+## Explotación
+
+Metasploit dispone de un módulo de explotación que puede utilizarse para explotar la vulnerabilidad en sistemas sin parchear y, en consecuencia, proporcionarnos una sesión privilegiada de Meterpreter en el sistema objetivo.
+
+> Nota: Apuntar a la memoria del espacio del kernel y a las aplicaciones puede provocar fallos del sistema.
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
