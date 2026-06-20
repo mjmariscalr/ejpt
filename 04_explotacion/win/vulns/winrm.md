@@ -32,4 +32,28 @@ El escaneo por defecto de `nmap` solo analiza los 1000 puertos más comunes y no
 
 `CrackMapExec` es una herramienta de seguridad ofensiva utilizada para la evaluación y auditoría de redes Windows y entornos Active Directory. Su función principal es automatizar la interacción con sistemas remotos que usan protocolos como SMB, WinRM, MSSQL o SSH.
 
+Para realizar un ataque de fuerza bruta:
+
+```bash
+crackmapexec <protocolo> <IP> -u <usr/usr_file> -p <pass_file>
+```
+
+Para ejecutar comandos de forma remota:
+
+```bash
+crackmapexec <protocolo> <IP> -u <usr> -p <pass> -x <"comando">
+```
+
+**Obtención de una shell con `evil-winrm`**
+
+Su propósito principal es facilitar la conexión y administración remota de un sistema Windows cuando se dispone de credenciales válidas, simulando el comportamiento de un administrador remoto.
+
+```bash
+evil-winrm.rb -u <usr> -p <pass> -i <IP>
+```
+
+**Obtención de una sesión meterpreter con MSF**
+
+
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
