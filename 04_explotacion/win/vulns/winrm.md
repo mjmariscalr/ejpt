@@ -8,6 +8,8 @@ Se utiliza normalmente para:
 - Acceder de forma remota y ejecutar comandos en sistemas Windows.
 - Administrar y configurar sistemas Windows de forma remota.
 
-Normalmente utiliza los puertos TCP 5985 y 5986 (HTTPS).
+Normalmente utiliza los puertos TCP 5985 y 5986 (HTTPS). 
+
+WinRM implementa control de acceso y seguridad para la comunicación entre sistemas mediante diversas formas de autenticación. Podemos usar `crackmapexec` para obtener usuarios y contraseñas mediante fuerza bruta y un script llamado `evil-winrm` para obtener una shell remota.
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
