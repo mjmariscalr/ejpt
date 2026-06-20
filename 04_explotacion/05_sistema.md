@@ -11,19 +11,18 @@ Windows es uno de los principales objetivos en pentesting por su amplia implanta
 Si bien esta sección no explora todos los posibles vectores de ataque, ofrece una idea básica de como actuar en una explotación Windows. Principalmente podemos atacar: servicios que actúan en puertos abiertos y vulnerabilidades nativas de Windows que pueden estar presentes en equipos de usuario y no solo en servidores. Algunos de los vectores de ataque son:
 
 - **Servicios**
-	- [**Microsoft IIS FTP**](win/serv/ftp.md)
-	- [**Microsoft IIS WebDAV**](win/vulns/webdav.md)
-	- [**OpenSSH**](win/serv/ssh.md)
-	- [**SMB**](win/serv/smb.md)
-	- [**MySQL**](win/serv/mysql.md)
-	- [**HTTP File Server (HFS)**](win/serv/hfs.md)
+	- [**Microsoft IIS FTP**](win/ftp.md)
+	- [**Microsoft IIS WebDAV**](win/webdav.md)
+	- [**OpenSSH**](win/ssh.md)
+	- [**SMB**](win/smb.md)
+	- [**MySQL**](win/mysql.md)
+	- [**HTTP File Server (HFS)**](win/hfs.md)
 - **Vulnerabilidades**
-	- [**Explotación de la vulnerabilidad MS17-010 de SMB (EternalBlue)**](win/vulns/eternalblue.md)
-	- [**Explotación de la vulnerabilidad
-	- **CVE-2019-0708 de RDP (BlueKeep)**](win/vulns/rdp.md)
+	- [**Explotación de la vulnerabilidad MS17-010 de SMB (EternalBlue)**](win/eternalblue.md)
+	- [**Explotación de la vulnerabilidad CVE-2019-0708 de RDP (BlueKeep)**](win/rdp.md)
 - **Protocolos**
-	- [**Remote Desktop Protocol (RDP)**](win/vulns/rdp.md)
-	- [**WinRM**](win/vulns/winrm.md)
+	- [**Remote Desktop Protocol (RDP)**](win/rdp.md)
+	- [**WinRM**](win/winrm.md)
 
 ## 5.2. Explotación Linux
 
