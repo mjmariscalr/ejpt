@@ -12,17 +12,19 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 
 - **Servicios**
 	- [**Microsoft IIS FTP**](win/serv/ftp.md)
+	- [**Microsoft IIS WebDAV**](win/vulns/webdav.md)
 	- [**OpenSSH**](win/serv/ssh.md)
 	- [**SMB**](win/serv/smb.md)
 	- [**MySQL**](win/serv/mysql.md)
 	- [**HTTP File Server (HFS)**](win/serv/hfs.md)
 - **Vulnerabilidades**
-	- [**Microsoft IIS WebDAV**](win/vulns/webdav.md)
-	- [**Explotación de SMB con PsExec**](win/vulns/psexec.md)
 	- [**Explotación de la vulnerabilidad MS17-010 de SMB (EternalBlue)**](win/vulns/eternalblue.md)
+	- [**Explotación de la vulnerabilidad
+	- **CVE-2019-0708 de RDP (BlueKeep)**](win/vulns/rdp.md)
+- **Protocolos**
 	- [**Remote Desktop Protocol (RDP)**](win/vulns/rdp.md)
-	- [**Explotación de la vulnerabilidad CVE-2019-0708 de RDP (BlueKeep)**](win/vulns/rdp.md)
 	- [**WinRM**](win/vulns/winrm.md)
+
 
 ## 5.2. Explotación Linux
 
