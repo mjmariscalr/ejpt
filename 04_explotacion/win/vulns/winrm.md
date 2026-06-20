@@ -10,6 +10,26 @@ Se utiliza normalmente para:
 
 Normalmente utiliza los puertos TCP 5985 y 5986 (HTTPS). 
 
-WinRM implementa control de acceso y seguridad para la comunicación entre sistemas mediante diversas formas de autenticación. Podemos usar `crackmapexec` para obtener usuarios y contraseñas mediante fuerza bruta y un script llamado `evil-winrm` para obtener una shell remota.
+WinRM implementa control de acceso y seguridad para la comunicación entre sistemas mediante diversas formas de autenticación:
+
+- usuario:contraseña
+- usuario:hash
+- kerberos
+- NTLM
+- Otras formas
+
+Podemos usar `CrackMapExec` para obtener usuarios y contraseñas mediante fuerza bruta y un script llamado `evil-winrm` para obtener una shell remota.
+
+## Enumeración
+
+El escaneo por defecto de `nmap` solo analiza los 1000 puertos más comunes y no incluye los específicos de WinRM, así que será necesario analizar los puertos por defecto, un rango más amplio o incluso el rango completo de puertos para encontrar esta utilidad.
+
+![winrm_nmap](../../../img/winrm_nmap.png)
+
+## Explotación
+
+**Obtención de credenciales con `CrackMapExec`**
+
+`CrackMapExec` es una herramienta de seguridad ofensiva utilizada para la evaluación y auditoría de redes Windows y entornos Active Directory. Su función principal es automatizar la interacción con sistemas remotos que usan protocolos como SMB, WinRM, MSSQL o SSH.
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
