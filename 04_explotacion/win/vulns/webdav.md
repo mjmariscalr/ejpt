@@ -27,6 +27,12 @@ Pasos para la explotación de WebDAV:
 nmap -sV -sC --script http-enum <IP>
 ```
 
+### Fuerza bruta para obtener credenciales
+
+```bash
+hydra -L usr_file -P pass_file <IP> http-get /dir
+```
+
 Los distintos protocolos http se usan según la situación:
 
 | Módulo           | Capa HTTP            | Cuándo se usa               |
@@ -38,12 +44,6 @@ Los distintos protocolos http se usan según la situación:
 | https-*          | HTTPS/TLS            | Siempre que haya cifrado    |
 | http-basic-auth  | Header Authorization | Login tipo popup navegador  |
 | http-digest-auth | Challenge HTTP       | Auth más segura legacy      |
-
-### Fuerza bruta para obtener credenciales
-
-```bash
-hydra -L usr_file -P pass_file <IP> http-get /dir
-```
 
 ### DAVTest
 
