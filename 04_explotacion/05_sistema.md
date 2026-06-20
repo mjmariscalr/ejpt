@@ -15,6 +15,7 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 	- [**OpenSSH**](win/serv/ssh.md)
 	- [**SMB**](win/serv/smb.md)
 	- [**MySQL**](win/serv/mysql.md)
+	- [**HTTP File Server (HFS)**](win/serv/hfs.md)
 - **Vulnerabilidades**
 	- [**Microsoft IIS WebDAV**](win/vulns/webdav.md)
 	- [**Explotación de SMB con PsExec**](win/vulns/psexec.md)
