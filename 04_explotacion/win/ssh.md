@@ -35,4 +35,4 @@ OpenSSH < 7.7 - User Enumeration (2)                                            
 OpenSSHd 7.2p2 - Username Enumeration                                                           | linux/remote/40113.txt
 ```
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)

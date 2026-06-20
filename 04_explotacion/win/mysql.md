@@ -43,4 +43,4 @@ net start wampapache
 iisreset
 ```
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)

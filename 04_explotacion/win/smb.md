@@ -9,7 +9,7 @@ El protocolo SMB utiliza dos niveles de autenticación:
 
 Ambos niveles de autenticación utilizan un sistema de autenticación de desafío-respuesta (challenge-response).
 
-![auth_smb](../../../img/auth_smb.png)
+![auth_smb](../../img/auth_smb.png)
 
 ### Identificación de usuarios
 
@@ -111,4 +111,4 @@ msf exploit(windows/smb/psexec) > exploit
 meterpreter > 
 ```
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)

@@ -24,7 +24,7 @@ Podemos usar `CrackMapExec` para obtener usuarios y contraseñas mediante fuerza
 
 El escaneo por defecto de `nmap` solo analiza los 1000 puertos más comunes y no incluye los específicos de WinRM, así que será necesario analizar los puertos por defecto, un rango más amplio o incluso el rango completo de puertos para encontrar esta utilidad.
 
-![winrm_nmap](../../../img/winrm_nmap.png)
+![winrm_nmap](../../img/winrm_nmap.png)
 
 ## Explotación
 
@@ -66,4 +66,4 @@ msf exploit(windows/winrm/winrm_script_exec) > exploit
 
 > Nota: `force_vbs` indica que el payload o la ejecución remota debe forzarse a través de un script en Visual Basic Script (VBS) en lugar de otros métodos (PowerShell o CMD). Cuando se activa esta opción, el sistema objetivo ejecuta un script VBS como stager.
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)

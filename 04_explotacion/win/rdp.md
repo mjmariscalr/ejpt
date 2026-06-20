@@ -49,6 +49,6 @@ Para conectarte a un servidor Windows:
 xfreerdp /u:usuario /p:contraseña /v:192.168.1.10:3333
 ```
 
-![xfreerdp](../../../img/xfreerdp.png)
+![xfreerdp](../../img/xfreerdp.png)
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)

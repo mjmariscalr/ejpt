@@ -113,4 +113,4 @@ msf exploit(windows/iis/iis_webdav_upload_asp)> run
 > Se muestran las opciones principales pero puede ser necesario configurar IPs y puertos.
 > Este módulo usa por defecto como payload `windows/meterpreter/reverse_tcp` pero puede cambiarse si es necesario.
 
-[⟵ Anterior](../../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-windows)
