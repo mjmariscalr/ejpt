@@ -17,6 +17,7 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 	- [**SMB**](win/smb.md)
 	- [**MySQL**](win/mysql.md)
 	- [**HTTP File Server (HFS)**](win/hfs.md)
+	- [**Apache Tomcat**](win/tomcat.md)
 - **Vulnerabilidades**
 	- [**Explotación de la vulnerabilidad MS17-010 de SMB (EternalBlue)**](win/eternalblue.md)
 	- [**Explotación de la vulnerabilidad CVE-2019-0708 de RDP (BlueKeep)**](win/rdp.md)
