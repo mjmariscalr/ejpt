@@ -45,4 +45,3 @@ run
 Para ejecutar el script usamos la orden `msfconsole -r script.rc`. Por último, ejecutamos el payload desde la shell jsp con `.\meterpreter.exe`
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
- 
