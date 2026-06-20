@@ -25,7 +25,6 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 	- [**Remote Desktop Protocol (RDP)**](win/vulns/rdp.md)
 	- [**WinRM**](win/vulns/winrm.md)
 
-
 ## 5.2. Explotación Linux
 
 [⟵ Anterior](04_payloads.md) | [Siguiente ⟶](06_redes.md)

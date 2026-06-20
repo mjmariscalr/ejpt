@@ -4,4 +4,10 @@
 
 Rejetto HFS es un servidor de archivos HTTP popular, gratuito y de código abierto que puede configurarse tanto en Windows como en Linux. Su versión 2.3 es vulnerable a un ataque de ejecución remota de comandos.
 
+## Enumeración
+
+Podemos detectarlo con un escaneno de nmap.
+
+![hfs_nmap](../../../img/hfs_nmap.png)
+
 [⟵ Anterior](../../05_sistema.md#explotación-windows)
