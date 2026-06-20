@@ -27,4 +27,15 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 
 ## 5.2. Explotación Linux
 
+Linux es uno de los sistemas operativos más habituales en entornos de servidor, infraestructuras cloud y dispositivos de red. Su estabilidad, flexibilidad y naturaleza abierta han favorecido su adopción en una gran variedad de servicios críticos, convirtiéndolo en un objetivo frecuente durante las fases de enumeración y explotación.
+
+A diferencia de otros sistemas, gran parte de la superficie de ataque en Linux suele estar asociada a servicios expuestos a la red y aplicaciones de terceros instaladas sobre el sistema. Por este motivo, la identificación de versiones, configuraciones inseguras y vulnerabilidades conocidas adquiere una gran importancia.
+
+Esta sección presenta algunos de los servicios, protocolos y vulnerabilidades más comunes que pueden encontrarse en sistemas Linux. El objetivo no es cubrir todos los escenarios posibles, sino proporcionar una base práctica sobre técnicas de explotación aplicables a entornos reales y laboratorios de aprendizaje.
+
+
+- **Servicios**
+- **Vulnerabilidades**
+- **Protocolos**
+
 [⟵ Anterior](04_payloads.md) | [Siguiente ⟶](06_redes.md)
