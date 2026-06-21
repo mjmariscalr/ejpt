@@ -9,5 +9,12 @@ La autenticación en SSH puede configurarse de dos maneras:
 
 En el caso de la autenticación mediante nombre de usuario y contraseña, un atacante podría intentar realizar un **ataque de fuerza bruta** contra el servidor SSH para identificar credenciales válidas y, en consecuencia, obtener acceso al sistema objetivo.
 
+**Fuerza bruta con `hydra`**
+
+Puede ser recomendable reducir el número de conexiones simultaneas para evitar bloquear el servidor.
+
+```bash
+hydra -L usr_file -P pass_file host ssh -t 4
+```
 
 [⟵ Anterior](../05_sistema.md#explotación-linux)
