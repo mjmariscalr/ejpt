@@ -34,6 +34,7 @@ A diferencia de otros sistemas, gran parte de la superficie de ataque en Linux s
 Esta sección presenta algunos de los servicios, protocolos y vulnerabilidades más comunes que pueden encontrarse en sistemas Linux. El objetivo no es cubrir todos los escenarios posibles, sino proporcionar una base práctica sobre técnicas de explotación aplicables a entornos reales y laboratorios de aprendizaje.
 
 - **Servicios**
+	- [**Exploiting Bash CVE-2014-6271 Vulnerability (Shellshock)**](linux/shellshock.md)
 - **Vulnerabilidades**
 - **Protocolos**
 
