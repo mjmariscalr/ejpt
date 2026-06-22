@@ -27,4 +27,12 @@ También se puede utilizar una herramienta llamada **smbclient**. Es un cliente 
 - Subir archivos desde el equipo local al servidor.
 - Obtener información sobre directorios y recursos compartidos del servidor.
 
+```bash
+# Listar shares del servidor
+smbclient -L host -u usr
+
+# Conexión al servidor
+smbclient \\host\share -u usr
+```
+
 [⟵ Anterior](../05_sistema.md#explotación-linux)

@@ -33,6 +33,6 @@ msf post(multi/manage/shell_to_meterpreter) > set session id_bash
 msf post(multi/manage/shell_to_meterpreter) > run
 ```
 
-Esto crea la sesión meterpreter, pero no la abre. Para conectarnos a ella usamos `session id_meterpreter`.
+Esto crea la sesión meterpreter, pero no la abre. Para conectarnos a ella usamos `sessions id_meterpreter`.
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
