@@ -15,7 +15,9 @@ hydra -L <USR_WORDLIST> -P <PASS_WORDLIST> <IP> smb
 
 Una vez obtenidas credenciales legítimas, se puede utilizar **SMBMap** para enumerar los recursos compartidos de Samba, listar el contenido de dichos recursos, descargar archivos y ejecutar comandos remotos en el sistema objetivo.
 
-
+```bash
+smbmap -H host -u usr -p pass
+```
 
 ### smbclient
 
