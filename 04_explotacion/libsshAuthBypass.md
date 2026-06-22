@@ -20,6 +20,8 @@ msf auxiliary(scanner/ssh/libssh_auth_bypass) > set spawn_pty true
 msf auxiliary(scanner/ssh/libssh_auth_bypass) > run
 ```
 
+**SPAWN_PTY** es una opción presente en algunos módulos de Metasploit que permite solicitar la creación de un pseudo-terminal interactivo (PTY) en sistemas Unix o Linux. Un PTY es una interfaz que emula el comportamiento de una terminal real.
+
 De la misma forma que en las vulnerabilidades linux anteriores, podemos elevar la sesión a meterpreter.
 
 [⟵ Anterior](../05_sistema.md#explotación-linux)
