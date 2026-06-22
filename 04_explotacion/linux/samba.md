@@ -1,0 +1,15 @@
+# SAMBA
+
+**Samba** es la implementación de SMB para Linux, y permite que los sistemas Windows accedan a recursos compartidos (archivos, carpetas y dispositivos) alojados en ellos.
+
+**Samba** utiliza autenticación mediante **nombre de usuario y contraseña** para obtener acceso al servidor o a un recurso compartido de red. Es posible realizar un **ataque de fuerza bruta** contra un servidor Samba con el objetivo de obtener credenciales válidas.
+
+Una vez obtenidas credenciales legítimas, se puede utilizar una herramienta llamada **SMBMap** para enumerar los recursos compartidos de Samba, listar el contenido de dichos recursos, descargar archivos y ejecutar comandos remotos en el sistema objetivo.
+
+También se puede utilizar una herramienta llamada **smbclient**. Es un cliente que forma parte del conjunto de herramientas de Samba. Se comunica con un servidor **LAN Manager** y ofrece una interfaz similar a la de un programa **FTP**. Puede utilizarse para:
+
+- Descargar archivos desde el servidor al equipo local.
+- Subir archivos desde el equipo local al servidor.
+- Obtener información sobre directorios y recursos compartidos del servidor.
+
+[⟵ Anterior](../05_sistema.md#explotación-linux)
