@@ -1,4 +1,4 @@
-# vsftpd 2.3.4 Backdoor
+# vsFTPd 2.3.4 Backdoor (CVE-2011-2523)
 
 Uno de los servidores FTP más conocidos en sistemas Linux es **vsftpd (Very Secure FTP Daemon)**, que ha sido ampliamente utilizado en distribuciones como Ubuntu, CentOS y Fedora.
 

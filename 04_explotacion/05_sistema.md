@@ -39,6 +39,7 @@ Esta sección presenta algunos de los servicios, protocolos y vulnerabilidades m
 	- [**SAMBA**](linux/samba.md)
 - **Vulnerabilidades**
 	- [**Exploiting Bash CVE-2014-6271 Vulnerability (Shellshock)**](linux/shellshock.md)
-- **Protocolos**
+	- [**Samba Arbitrary Module Load (CVE-2017-7494)**](linux/sambaArbitraryModuleLoad.md)
+	- [**vsFTPd 2.3.4 Backdoor (CVE-2011-2523)**](linux/vsftpd_backdoor.md)
 
 [⟵ Anterior](04_payloads.md) | [Siguiente ⟶](06_redes.md)
