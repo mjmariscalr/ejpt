@@ -34,5 +34,3 @@ smbclient -L host -u usr
 # Conexión al servidor
 smbclient \\host\share -u usr
 ```
-
-[⟵ Anterior](../05_sistema.md#explotación-linux)
