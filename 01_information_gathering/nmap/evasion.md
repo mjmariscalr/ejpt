@@ -80,7 +80,7 @@ Ejemplo:
 $ nmap -sS -D 192.168.1.5,192.168.1.8 192.168.1.10
 ```
 
-Esta técnica no evita la detección del escaneo, solo dificulta identificar su origen real.
+Esta técnica no evita la detección del escaneo, solo dificulta identificar su origen real. Junto con esta opción, también podemos usar `-g` para seleccionar el puerto de origen, de forma similar a lo que hacemos con la opción decoy.
 
 ## Plantilla de tiempo (*-T[0-5]*)
 

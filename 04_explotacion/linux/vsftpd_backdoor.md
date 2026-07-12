@@ -74,6 +74,6 @@ hydra -l usuario -P /ruta/lista.txt <IP> ftp
 
 Si el usuario que obtenemos nos permite navegar por el sistema de archivos y el servidor tiene habilitado (WebDAV)[../win/webdav.md], podemos subir el payload `/usr/share/webshells/php/php-reverse-shell.php` a `/var/www/dav`, ya que el usuario si tendrá permiso para subir archivos en este directorio. Antes de hacerlo será necesario modificarlo para incluir la dirección IP de nuestra máquina kali y el puerto de nuestro listener.
 
-Por último, accedemos con el navegador a `host.com/dav/php-reverse-shell.php` para ejecutarlo y obtener la shell.
+Por último, accedemos con el navegador a `host.com/dav/php-reverse-shell.php` para ejecutarlo y obtener la shell con el usuario `www-data`.
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
