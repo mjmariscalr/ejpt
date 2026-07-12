@@ -66,6 +66,14 @@ Es recomendable identificar los usuarios de servicio para descartarlos de fases 
 | `systemd-network` | `/usr/sbin/nologin` | Gestión de configuraciones de red de Systemd. |
 | `bin`/`sys` | `/usr/sbin/nologin` | Propietarios heredados de binarios y archivos del sistema. |
 
+Una vez identificado el usuario o usuarios, podemos lanzar un ataque de fuerza bruta con hydra sobre ftp para obtener contraseñas asociadas a este servicio:
 
+```bash
+hydra -l usuario -P /ruta/lista.txt <IP> ftp
+```
+
+Si el usuario que obtenemos nos permite navegar por el sistema de archivos y el servidor tiene habilitado (WebDAV)[../win/webdav.md], podemos subir el payload `/usr/share/webshells/php/php-reverse-shell.php` a `/var/www/dav`, ya que el usuario si tendrá permiso para subir archivos en este directorio. Antes de hacerlo será necesario modificarlo para incluir la dirección IP de nuestra máquina kali y el puerto de nuestro listener.
+
+Por último, accedemos con el navegador a `host.com/dav/php-reverse-shell.php` para ejecutarlo y obtener la shell.
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
