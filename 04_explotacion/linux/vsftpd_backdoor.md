@@ -35,4 +35,20 @@ msf post(multi/manage/shell_to_meterpreter) > run
 
 Esto crea la sesión meterpreter, pero no la abre. Para conectarnos a ella usamos `sessions id_meterpreter`.
 
+### Explotación de la versión corregida
+
+Al tratarse de un ataque a la cadena de suministro, no todas las versiones del código fuente de vsftpd 2.3.4 contienen un backdoor, ya que no es un fallo de programación.
+
+Podemos encontrarnos el caso de que vsFTPd esté alojado en el mismo host que un servidor LAMP (Linux, Apache, MySQL, PHP). En este caso, siempre que vsFTPd esté mal configurado y permita acceso a los directorios del sistema, podemos subir un payload al directorio web para tratar de obtener una shell.
+
+Empezamos enumerando los usuarios del servicio smtp en caso de estar disponible, ya que puede proporcionar una visión bastante amplia de los usuarios del servicio, lo que puede acercarnos a los usuarios de otros servicios. Para ello usamos el módulo `smtp_enum`
+
+```bash
+msf > use auxiliary/scanner/smtp/smtp_enum
+msf auxiliary(scanner/smtp/smtp_enum) > set rhosts
+msf auxiliary(scanner/smtp/smtp_enum) > run
+```
+
+
+
 [⟵ Anterior](../05_sistema.md#explotación-windows)
