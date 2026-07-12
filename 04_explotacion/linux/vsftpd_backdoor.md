@@ -49,6 +49,23 @@ msf auxiliary(scanner/smtp/smtp_enum) > set rhosts
 msf auxiliary(scanner/smtp/smtp_enum) > run
 ```
 
+Es recomendable identificar los usuarios de servicio para descartarlos de fases posteriores, ya que son usuarios del sistema para administrar el servicio específico y no tienen habilitado el inicion de sesión. Algunos de ellos son:
+
+| | **Servicio** | **Acción** |
+
+| Usuario | Shell | Propósito/Servicio |
+| :------ | :---- | :----------------- |
+| `www-data` | `/usr/sbin/nologin` <br>*(o `/sbin/nologin`)* | Servidores web (Apache, Nginx, PHP-FPM). |
+| `mysql` <br>*(o `postgres`)* | `/bin/false` o `nologin` | Sistemas de gestión de bases de datos. |
+| `nobody` | `/usr/sbin/nologin` | Tareas genéricas de baja prioridad y sin privilegios (ej. NFS). |
+| `mail` <br>*(o `postfix`, `dovecot`)* | `/usr/sbin/nologin` | Gestión y envío de correos electrónicos del sistema. |
+| `daemon` | `/usr/sbin/nologin` | Ejecución de tareas en segundo plano del sistema (daemons). |
+| `sshd` | `/usr/sbin/nologin` | Servidor OpenSSH (fase de pre-autenticación). |
+| `ftp` | `/usr/sbin/nologin` | Servidores de transferencia de archivos (FTP). |
+| `messagebus` <br>*(o `dbus`)* | `/usr/sbin/nologin` | Comunicación interna entre procesos del sistema (D-Bus). |
+| `systemd-network` | `/usr/sbin/nologin` | Gestión de configuraciones de red de Systemd. |
+| `bin`/`sys` | `/usr/sbin/nologin` | Propietarios heredados de binarios y archivos del sistema. |
+
 
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
