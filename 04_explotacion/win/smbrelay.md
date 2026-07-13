@@ -47,3 +47,5 @@ arpspoof -i eth1 -t gateway ip_cliente
 Una vez establecido el entorno MitM, cuando el cliente inicie una conexión smb el exploit de `msfconsole` captura la sesión establecida y genera una sesión meterpreter.
 
 > Nota: El Spoofing es una técnica mediante la cual un atacante falsifica su identidad o la información que envía para hacerse pasar por otro dispositivo, usuario o servicio.
+
+[⟵ Anterior](../../05_sistema.md#explotación-windows)
