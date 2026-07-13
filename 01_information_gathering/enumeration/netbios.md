@@ -12,6 +12,20 @@
 
 Las implementaciones modernas de **Windows** utilizan principalmente **SMB** y pueden funcionar sin **NetBIOS**. Sin embargo, **NetBIOS sobre TCP (puerto 139)** sigue siendo necesario para mantener la compatibilidad con sistemas antiguos, por lo que ambos servicios suelen estar habilitados de forma conjunta.
 
+## NBTScan
 
+NBTScan se utiliza para descubrir equipos en una red local mediante NetBIOS. Funciona mediante el envío de consultas al puerto UDP 137 para obtener información de los dispositivos que tienen NetBIOS habilitado.
+
+Entre otros datos, puede mostrar:
+
+- La dirección IP del equipo.
+- El nombre NetBIOS (nombre del ordenador).
+- El grupo de trabajo o dominio al que pertenece.
+- El tipo de servicio registrado (por ejemplo, servidor de archivos, estación de trabajo, controlador de dominio, etc.).
+- La dirección MAC (en muchos casos).
+
+```bash
+nbtscan host/red
+```
 
 [⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
