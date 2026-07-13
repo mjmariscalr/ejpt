@@ -95,6 +95,18 @@ nmap -p <Puerto> --script smb-os-discovery <IP>
 nmap -p <Puerto> --script smb-enum-domains <IP>
 ```
 
+**Enumerar versión:**
+
+```bash
+nmap -p <Puerto> --script smb-protocols <IP>
+```
+
+**Enumerar nivel de seguridad:**
+
+```bash
+nmap -p <Puerto> --script smb-security-mode <IP>
+```
+
 ## Enumeración con enum4linux
 
 Enum4linux es una herramienta de automatización que combina información obtenida de smbclient, rpclient, net y nmblookup. Extrae información sobre: usuarios, grupos, recursos compartidos, políticas de contraseñas y sistema operativo.
