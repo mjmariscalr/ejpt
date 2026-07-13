@@ -15,6 +15,7 @@ Si bien esta sección no explora todos los posibles vectores de ataque, ofrece u
 	- [**Microsoft IIS WebDAV**](win/webdav.md)
 	- [**OpenSSH**](win/ssh.md)
 	- [**SMB**](win/smb.md)
+	- [**SMB relay attack**](win/smbrelay.md)
 	- [**MySQL**](win/mysql.md)
 	- [**HTTP File Server (HFS)**](win/hfs.md)
 	- [**Apache Tomcat**](win/tomcat.md)

@@ -59,3 +59,5 @@ Podemos hacer algo similar, pero en un formato más legible usando `nmap`:
 ```bash
 nmap -sU --script snmp-* -p 161,162 host 
 ```
+
+[⟵ Anterior](../03_activa.md#323-enummeración-de-servicios)
