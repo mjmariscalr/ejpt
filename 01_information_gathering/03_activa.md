@@ -80,6 +80,7 @@ Algunos de los servicios que se pueden enumerar a través de los módulos auxili
 - [MySQL](enumeration/mysql.md)
 - [SSH](enumeration/ssh.md)
 - [SMTP](enumeration/smtp.md)
+- [NetBIOS](enumeration/netbios.md)
 
 ### 3.2.4. Banner grabbing
 
