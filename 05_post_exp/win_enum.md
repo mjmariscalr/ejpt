@@ -11,3 +11,10 @@ Después de obtener acceso inicial a un sistema objetivo, siempre es importante 
 - Compilación del sistema operativo y Service Pack (por ejemplo, Windows 7 SP1, compilación 7600).
 - Arquitectura del sistema operativo (x64 o x86).
 - Actualizaciones y correcciones de seguridad instaladas (Installed updates/Hotfixes).
+
+**Nombre del equipo y usuario desde meterpreter:**
+
+```bash
+meterpreter > getuid
+Server username: WIN-OMCNBKR66MN\Administrator
+```
