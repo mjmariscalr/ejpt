@@ -89,3 +89,17 @@ C:\ > query user
 ```
 
 El comando `net user` es una utilidad nativa de Windows utilizada para consultar y administrar cuentas de usuario locales o de dominio según el contexto. Permite obtener información sobre las cuentas existentes en el sistema, la pertenencia a grupos, el estado de la cuenta, la fecha del último inicio de sesión o la configuración relacionada con la contraseña.
+
+```bash
+meterpreter > shell
+C:\ > net user
+C:\ > net user <usuario> # Muestra información del usuario, como cuando debe cambiar la contraseña.
+```
+
+**Grupos locales:**
+
+```bash
+meterpreter > shell
+C:\ > net localgroup
+C:\ > net localgroup <grupo> # Muestra los miembros del grupo.
+```
