@@ -50,3 +50,40 @@ C:\hfs> wmic qfe get Caption,Description,HotFixID,InstalledOn
 ```bash
 meterpreter > cat C:\Windows\System32\eula.txt # No está disponible en todas las versiones de Windows
 ```
+
+## Enumeración de grupos y usuarios
+
+Es importante recopilar más información sobre las cuentas de usuario del sistema, como el usuario al que se tiene acceso y las demás cuentas de usuario existentes. Buscamos:
+
+- Usuario actual y sus privilegios.
+- Información adicional sobre las cuentas de usuario.
+- Otros usuarios presentes en el sistema.
+- Grupos de usuarios.
+- Miembros del grupo integrado de administradores (Built-in Administrators).
+
+**Enumerar los privilegios asociados al usuario actual:**
+
+El comando `getprivs` de Meterpreter tiene la finalidad de identificar qué privilegios del sistema están disponibles para el usuario comprometido, lo que permite evaluar las capacidades de la sesión y determinar si es posible realizar determinadas acciones o aplicar técnicas de escalada de privilegios que dependan de dichos privilegios.
+
+```bash
+meterpreter > getprivs
+```
+
+**Enumerar los usuarios del sistema con msfconsole:**
+
+El módulo `enum_logged_on_users` recopila información sobre las cuentas de usuario que tienen o han tenido sesiones iniciadas en el sistema comprometido de forma local, remota o mediante otros mecanismos compatibles, detectando posibles cuentas con privilegios elevados.
+
+```bash
+msf > use post/windows/gather/enum_logged_on_users
+msf post(windows/gather/enum_logged_on_users) > set session <id>
+msf post(windows/gather/enum_logged_on_users) > run
+```
+
+**Enumerar los usuarios del sistema de forma manual:**
+
+El comando `query user` es una utilidad nativa de Windows que muestra información sobre las sesiones de usuario existentes en el sistema. Permite identificar qué usuarios tienen sesiones activas, desconectadas o en espera, así como obtener información relacionada con el estado de cada sesión.
+
+```bash
+meterpreter > shell
+C:\ > query user
+```
