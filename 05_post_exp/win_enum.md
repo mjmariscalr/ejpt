@@ -18,3 +18,35 @@ Después de obtener acceso inicial a un sistema objetivo, siempre es importante 
 meterpreter > getuid
 Server username: WIN-OMCNBKR66MN\Administrator
 ```
+
+**Información del sistema:**
+
+```bash
+meterpreter > sysinfo
+Computer        : WIN-OMCNBKR66MN
+OS              : Windows 2012 R2 (6.3 Build 9600).
+Architecture    : x64
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 1
+Meterpreter     : x86/windows
+```
+
+**Toda la información del sistema:**
+
+```bash
+meterpreter > shell # Abre una consola de comandos nativa del sistema.
+C:\hfs> systeminfo  # Muestra toda la información del sistema, incluyendo actualizaciones y correcciones de seguridad.
+```
+
+**Información adicional sobre las actualizaciones:**
+
+```bash
+C:\hfs> wmic qfe get Caption,Description,HotFixID,InstalledOn
+```
+
+**Versión del sistema:**
+
+```bash
+meterpreter > cat C:\\Windows\System32\eula.txt # No está disponible en todas las versiones de Windows
+```
