@@ -48,5 +48,5 @@ C:\hfs> wmic qfe get Caption,Description,HotFixID,InstalledOn
 **Versión del sistema:**
 
 ```bash
-meterpreter > cat C:\\Windows\System32\eula.txt # No está disponible en todas las versiones de Windows
+meterpreter > cat C:\Windows\System32\eula.txt # No está disponible en todas las versiones de Windows
 ```
