@@ -151,3 +151,30 @@ En algunos casos el primer comando puede estar discontinuado.
 C:\ > netsh firewall show state
 C:\ > netsh advfirewall firewall show
 ```
+
+## Procesos y servicios
+
+**Procesos y servicios en ejecución.**
+
+```bash
+C:\ > 
+```
+
+**Tareas programadas.**
+
+```bash
+C:\ > 
+```
+
+**Un proceso es una instancia de un archivo ejecutable (.exe) o de un programa que está en ejecución.**
+
+```bash
+C:\ > 
+```
+
+**Un servicio es un proceso que se ejecuta en segundo plano y no interactúa con el escritorio del usuario.**
+
+```bash
+C:\ > 
+```
+
