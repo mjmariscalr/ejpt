@@ -103,3 +103,51 @@ meterpreter > shell
 C:\ > net localgroup
 C:\ > net localgroup <grupo> # Muestra los miembros del grupo.
 ```
+
+## Información de red
+
+
+**Dirección IP actual, adaptador de red, máscara de red y puerta de enlace.**
+
+```bash
+C:\ > ipconfig
+C:\ > ipconfig \all # Proporciona información adicional como: dirección MAC o información de activación sobre DHCP.
+```
+
+**Servicios TCP/UDP en ejecución y sus respectivos puertos.**
+
+Podemos ver todas las conexiones de red y los puertos abiertos del equipo, junto con el proceso que los está utilizando. Estados más comunes:
+
+- **LISTENING:** el programa está esperando conexiones entrantes.
+- **ESTABLISHED:** hay una conexión activa entre dos equipos.
+- **TIME_WAIT:** la conexión se cerró recientemente y el sistema espera antes de liberar el puerto.
+- **CLOSE_WAIT:** el equipo remoto cerró la conexión y la aplicación local aún no la ha cerrado.
+- **SYN_SENT:** se ha iniciado una conexión y se espera respuesta.
+- **SYN_RECEIVED:** se recibió una solicitud de conexión y está en proceso de establecerse.
+
+```bash
+C:\ > netstat -ano
+```
+
+**Tabla de enrutamiento.**
+
+```bash
+C:\ > route print
+```
+
+**Tabla ARP.**
+
+Muestra la tabla ARP (Address Resolution Protocol) del equipo. Contiene los dispositivos con los que ha tenido comunicación recientemente dentro de la misma red local.
+
+```bash
+C:\ > arp -a
+```
+
+**Estado del Firewall de Windows.**
+
+En algunos casos el primer comando puede estar discontinuado.
+
+```bash
+C:\ > netsh firewall show state
+C:\ > netsh advfirewall firewall show
+```
