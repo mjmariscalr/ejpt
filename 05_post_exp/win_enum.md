@@ -154,27 +154,28 @@ C:\ > netsh advfirewall firewall show
 
 ## Procesos y servicios
 
-**Procesos y servicios en ejecución.**
+Un proceso es una instancia de un archivo ejecutable (.exe) o de un programa que está en ejecución.
+Un servicio es un proceso que se ejecuta en segundo plano y no interactúa con el escritorio del usuario.
+
+### Procesos con meterpreter.
+
+En el listado que obtenemos con este comando se muestra, entre otra información, el PID, nombre del ejecutable y usuario
 
 ```bash
-C:\ > 
+meterpreter > ps
 ```
+
+Para ver un proceso en concreto podemos usar `pgrep <proceso>`. Este comando es útil para migrar a una sesión más estable, como puede ser el proceso `explorer.exe`. Para migrar usamos `migrate <pid>`
+
+### Servicios con una shell estándar.
+
+- `net start`: Muestra todos los servicios de Windows que están actualmente en ejecución.
+- `wmic service list brief`: Presenta un listado resumido de todos los servicios del sistema, incluyendo información como el nombre del servicio, su estado (en ejecución o detenido) y el modo de inicio.
+- `tasklist /SVC`: Muestra los procesos en ejecución junto con los servicios asociados a cada proceso. Permite identificar qué servicios se están ejecutando dentro de un mismo proceso.
+- `schtasks /query /fo LIST:` Muestra un listado detallado de las tareas programadas en el sistema utilizando un formato de lista. Para cada tarea se incluye información como el nombre, el estado, la fecha y hora de la próxima ejecución, la última vez que se ejecutó y el usuario bajo el que se ejecuta. Esta información será útil durante la escalada de privilegios.
 
 **Tareas programadas.**
 
 ```bash
 C:\ > 
 ```
-
-**Un proceso es una instancia de un archivo ejecutable (.exe) o de un programa que está en ejecución.**
-
-```bash
-C:\ > 
-```
-
-**Un servicio es un proceso que se ejecuta en segundo plano y no interactúa con el escritorio del usuario.**
-
-```bash
-C:\ > 
-```
-
