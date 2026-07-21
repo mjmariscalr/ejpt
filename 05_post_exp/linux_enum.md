@@ -125,4 +125,8 @@ Para diferenciar una cuenta de servicio de una de usuario podemos comprobar la s
 ```bash
 usr@hostname: cat /etc/groups
 usr@hostname: cat /etc/groups | grep -v /nologin # Excluye la cadena /nologin y por tanto cuentas de servicio.
+usr@hostname: ls /home
+usr@hostname: w    # Muestra los usuarios conectados actualmente y la actividad que están realizando.
+usr@hostname: who  # Muestra qué usuarios tienen una sesión iniciada en el sistema.
+usr@hostname: last # Muestra el historial de inicios y cierres de sesión de los usuarios.
 ```
