@@ -189,3 +189,16 @@ Además de automatizar la recopilación de información como los datos del siste
 - Vulnerabilidades de escalada de privilegios.
 - Contraseñas almacenadas localmente.
 - Otra información útil para la evaluación de seguridad del sistema.
+
+### `win_privs`
+
+```bash
+msf > use post/windows/gather/win_privs
+msf post(windows/gather/win_privs) > set session <id>
+msf post(windows/gather/win_privs) > run
+```
+
+**JAWS (Just Another Windows (Enum) Script)** es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows.
+
+Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante.
+
