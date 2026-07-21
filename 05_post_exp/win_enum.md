@@ -192,13 +192,56 @@ Además de automatizar la recopilación de información como los datos del siste
 
 ### `win_privs`
 
+Muestra el usuario actual y el nivel de privilegios que tiene.
+
 ```bash
 msf > use post/windows/gather/win_privs
 msf post(windows/gather/win_privs) > set session <id>
 msf post(windows/gather/win_privs) > run
 ```
 
-**JAWS (Just Another Windows (Enum) Script)** es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows.
+### `checkvm`
+
+Muestra el usuario actual y el nivel de privilegios que tiene.
+
+```bash
+msf > use post/windows/gather/checkvm
+msf post(windows/gather/checkvm) > run
+```
+
+### `enum_applications`
+
+Muestra las aplicaciones instaladas en el objetivo.
+
+```bash
+msf > use post/windows/gather/enum_applications
+msf post(windows/gather/enum_applications) > set session <id>
+msf post(windows/gather/enum_applications) > run
+```
+
+### `enum_computers`
+
+Enumera los equipos del dominio.
+
+```bash
+msf > use post/windows/gather/enum_computers
+msf post(windows/gather/enum_computers) > set session <id>
+msf post(windows/gather/enum_computers) > run
+```
+
+### `enum_patches`
+
+Muestra las actualizaciones instaladas en el objetivo.
+
+```bash
+msf > use post/windows/gather/enum_patches
+msf post(windows/gather/enum_patches) > set session <id>
+msf post(windows/gather/enum_patches) > run
+```
+
+### JAWS (Just Another Windows (Enum) Script)
+
+Es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows.
 
 Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante.
 
