@@ -247,9 +247,7 @@ Su objetivo es identificar qué carpetas o recursos compartidos están disponibl
 
 ### JAWS (Just Another Windows (Enum) Script)
 
-Es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows.
-
-Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante.
+Es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows. Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante. Se encuentra disponible en [github](https://github.com/411Hall/JAWS).
 
 Subimos el script usando una sesión meterpreter:
 
