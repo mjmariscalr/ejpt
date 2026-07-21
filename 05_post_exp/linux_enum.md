@@ -53,3 +53,76 @@ usr@hostname: cat /etc/*release
 usr@hostname: uname -a                                                                        
 Linux hostname 5.14.28-1-generic #1 SMP PREEMPT_DYNAMIC Sat, 04 Jul 2026 20:51:33 +0000 x86_64 GNU/Linux
 ```
+
+**Variables de entorno del usuario:**
+
+```bash
+usr@hostname: env
+```
+
+**Información sobre la CPU:**
+
+```bash
+usr@hostname: lscpu
+lscpu
+Arquitectura:                            x86_64
+  modo(s) de operación de las CPUs:      32-bit, 64-bit
+  Tamaños de las direcciones:            39 bits physical, 48 bits virtual
+  Orden de los bytes:                    Little Endian
+CPU(s):                                  8
+  Lista de la(s) CPU(s) en línea:        0-7
+.
+.
+.
+```
+
+**Memoria libre:**
+
+```bash
+usr@hostname: free -h                                           
+               total       usado       libre  compartido   búf/caché  disponible
+Mem:            15Gi       6,7Gi       4,0Gi       818Mi       4,8Gi       8,8Gi
+Inter:            0B          0B          0B
+```
+
+**Discos instalados:**
+
+```bash
+usr@hostname: df -h
+usr@hostname: lsblk
+```
+
+**Listar los paquetes instalados:**
+
+| Distribuciones                                                        | Comando                              |
+| --------------------------------------------------------------------- | ------------------------------------ |
+| Debian, Ubuntu, Kali, Linux Mint                                      | `dpkg -l` (o `apt list --installed`) |
+| Fedora, RHEL 8/9, CentOS Stream, Rocky Linux, AlmaLinux, Oracle Linux | `dnf list installed`                 |
+| CentOS 7, RHEL 7                                                      | `yum list installed`                 |
+| Arch Linux, Manjaro                                                   | `pacman -Q`                          |
+| openSUSE, SUSE Linux Enterprise                                       | `zypper se --installed-only`         |
+| Alpine Linux                                                          | `apk info`                           |
+| Gentoo                                                                | `qlist -I` (o `equery list '*'`)     |
+| Void Linux                                                            | `xbps-query -l`                      |
+
+## Enumeración de grupos y usuarios
+
+**Comprobar los privilegios de un usuario en Linux:**
+
+| Información                                  | Comando                            |
+| -------------------------------------------- | ---------------------------------- |
+| Usuario actual                               | `whoami`                           |
+| UID, GID y grupos                            | `id`                               |
+| Grupos del usuario                           | `groups`                           |
+| Privilegios sudo del usuario actual          | `sudo -l`                          |
+| Privilegios sudo de otro usuario (como root) | `sudo -l -U <usuario>`             |
+| Comprobar si es root                         | `id -u` (si devuelve `0`, es root) |
+
+**Listar todos los usuarios:**
+
+Para diferenciar una cuenta de servicio de una de usuario podemos comprobar la shell asociada. Si tiene algo como `/bin/bash` o `/bin/sh`, será una cuenta de usuario.
+
+```bash
+usr@hostname: cat /etc/groups
+usr@hostname: cat /etc/groups | grep -v /nologin # Excluye la cadena /nologin y por tanto cuentas de servicio.
+```
