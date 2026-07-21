@@ -179,3 +179,13 @@ Para ver un proceso en concreto podemos usar `pgrep <proceso>`. Este comando es 
 ```bash
 C:\ > 
 ```
+
+## Automatización
+
+Además de realizar la enumeración local de forma manual, también podemos automatizar el proceso con la ayuda de algunos scripts y módulos de MSF. Aunque es importante conocer las técnicas y comandos de enumeración local, es necesario trabajar de manera eficiente en términos de tiempo.
+
+Además de automatizar la recopilación de información como los datos del sistema, los usuarios y grupos, etc., estos scripts proporcionan información adicional sobre el sistema objetivo, como:
+
+- Vulnerabilidades de escalada de privilegios.
+- Contraseñas almacenadas localmente.
+- Otra información útil para la evaluación de seguridad del sistema.
