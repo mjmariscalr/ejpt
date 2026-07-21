@@ -15,4 +15,41 @@ Buscamos:
 - Información de los discos y unidades montadas.
 - Paquetes o software instalados.
 
+**Información del sistema:**
 
+```bash
+meterpreter > sysinfo
+Computer        : 192.168.10.25
+OS              : Debian 9.5 (Linux 5.4)
+Architecture    : x64
+Meterpreter     : x86/linux
+```
+
+**Obtener una sesion bash interactiva desde meterpreter:**
+
+```bash
+meterpreter > shell
+/bin/bash -i
+usr@hostname:
+```
+
+**Hostname:**
+
+Al obtener una shell interaciva con el paso anterior podemos ver el nombre del equipo, pero tambien podemos hacerlo con el comando hostname:
+
+```bash
+usr@hostname: hostname
+```
+
+**Comprobar la distribución:**
+
+```bash
+usr@hostname: cat /etc/*release
+```
+
+**Información del sistema:**
+
+```bash
+usr@hostname: uname -a                                                                        
+Linux hostname 5.14.28-1-generic #1 SMP PREEMPT_DYNAMIC Sat, 04 Jul 2026 20:51:33 +0000 x86_64 GNU/Linux
+```
