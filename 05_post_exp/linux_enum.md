@@ -181,3 +181,12 @@ usr@hostname# cat /etc/resolv.conf
    3 │ nameserver 1.1.1.1
    4 │ nameserver 2a0c:5a80:0:2::1
 ```
+
+**Tabla ARP:**
+
+Al igual que con el comando `ifconfig`, el comando `arp -a` se encuentra obsoleto aunque puede estar disponible en versiones antiguas o no actualizadas de algunos sistemas. 
+
+```bash
+usr@hostname# ip n    
+192.168.1.1 dev wlp5s0 lladdr 33:23:ff:31:ab:4a REACHABLE 
+```
