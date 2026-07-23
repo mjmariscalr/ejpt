@@ -30,40 +30,41 @@ Meterpreter     : x86/linux
 ```bash
 meterpreter > shell
 /bin/bash -i
-usr@hostname:
+usr@hostname#
 ```
 
 **Hostname:**
 
-Al obtener una shell interaciva con el paso anterior podemos ver el nombre del equipo, pero tambien podemos hacerlo con el comando hostname:
+Al obtener una shell interaciva con el paso anterior podemos ver el nombre del equipo, pero tambien podemos hacerlo con el comando hostname o mostrando el contenido de `/etc/hostname`:
 
 ```bash
-usr@hostname: hostname
+usr@hostname# hostname
+usr@hostname# cat /etc/hostname
 ```
 
 **Comprobar la distribución:**
 
 ```bash
-usr@hostname: cat /etc/*release
+usr@hostname# cat /etc/*release
 ```
 
 **Información del sistema:**
 
 ```bash
-usr@hostname: uname -a                                                                        
+usr@hostname# uname -a                                                                        
 Linux hostname 5.14.28-1-generic #1 SMP PREEMPT_DYNAMIC Sat, 04 Jul 2026 20:51:33 +0000 x86_64 GNU/Linux
 ```
 
 **Variables de entorno del usuario:**
 
 ```bash
-usr@hostname: env
+usr@hostname# env
 ```
 
 **Información sobre la CPU:**
 
 ```bash
-usr@hostname: lscpu
+usr@hostname# lscpu
 lscpu
 Arquitectura:                            x86_64
   modo(s) de operación de las CPUs:      32-bit, 64-bit
@@ -79,7 +80,7 @@ CPU(s):                                  8
 **Memoria libre:**
 
 ```bash
-usr@hostname: free -h                                           
+usr@hostname# free -h                                           
                total       usado       libre  compartido   búf/caché  disponible
 Mem:            15Gi       6,7Gi       4,0Gi       818Mi       4,8Gi       8,8Gi
 Inter:            0B          0B          0B
@@ -88,8 +89,8 @@ Inter:            0B          0B          0B
 **Discos instalados:**
 
 ```bash
-usr@hostname: df -h
-usr@hostname: lsblk
+usr@hostname# df -h
+usr@hostname# lsblk
 ```
 
 **Listar los paquetes instalados:**
@@ -123,10 +124,41 @@ usr@hostname: lsblk
 Para diferenciar una cuenta de servicio de una de usuario podemos comprobar la shell asociada. Si tiene algo como `/bin/bash` o `/bin/sh`, será una cuenta de usuario.
 
 ```bash
-usr@hostname: cat /etc/groups
-usr@hostname: cat /etc/groups | grep -v /nologin # Excluye la cadena /nologin y por tanto cuentas de servicio.
-usr@hostname: ls /home
-usr@hostname: w    # Muestra los usuarios conectados actualmente y la actividad que están realizando.
-usr@hostname: who  # Muestra qué usuarios tienen una sesión iniciada en el sistema.
-usr@hostname: last # Muestra el historial de inicios y cierres de sesión de los usuarios.
+usr@hostname# cat /etc/passwd
+usr@hostname# cat /etc/passwd | grep -v /nologin # Excluye la cadena /nologin y por tanto cuentas de servicio.
+usr@hostname# ls /home
+usr@hostname# w    # Muestra los usuarios conectados actualmente y la actividad que están realizando.
+usr@hostname# who  # Muestra qué usuarios tienen una sesión iniciada en el sistema.
+usr@hostname# last # Muestra el historial de inicios y cierres de sesión de los usuarios.
+```
+
+**Listar grupos:**
+
+```bash
+usr@hostname# gropus # Muestra los grupos a los que pertenece el usuario actual.
+usr@hostname# cat /etc/groups # Muestra todos los grupos del sistema.
+```
+
+## Información de red
+
+Buscamos:
+
+- Dirección IP actual y adaptador de red.
+- Redes internas.
+- Servicios TCP/UDP en ejecución y sus respectivos puertos.
+- Otros hosts en la red.
+
+**Dirección IP:**
+
+```bash
+meterpreter > ifconfig
+usr@hostname# ip a 
+```
+
+El comando `ifconfig` ya no funciona en la mayoria de distribuciones por estar obsoleto, pero puede estar disponible en sistemas antiguos sin actualizar.
+
+**Tabla de enrutamiento:**
+
+```bash
+meterpreter > route
 ```
