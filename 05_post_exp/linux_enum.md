@@ -190,3 +190,15 @@ Al igual que con el comando `ifconfig`, el comando `arp -a` se encuentra obsolet
 usr@hostname# ip n    
 192.168.1.1 dev wlp5s0 lladdr 33:23:ff:31:ab:4a REACHABLE 
 ```
+
+## Enumeración de procesos y tareas de cron
+
+Después de obtener acceso inicial a un sistema objetivo, siempre es importante conocer más sobre él, por ejemplo, qué procesos, servicios y tareas programadas se están ejecutando actualmente.
+
+**Servicios en ejecución.**
+
+
+
+**Tareas programadas (cron jobs).**
+
+Si las tareas de cron se han configurado de forma insegura pueden permitir una escalada de privilegios.
