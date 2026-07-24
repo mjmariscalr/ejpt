@@ -25,3 +25,11 @@ Crea un servidor web con acceso al directorio donde ejecutamos el comando.
 ```bash
 python -m http.server 80
 ```
+
+## Descarga de archivos
+
+**En Windows**
+
+```bash
+C: > certutil -urlcache -f http://ip/archivo archivo_guardado
+```
