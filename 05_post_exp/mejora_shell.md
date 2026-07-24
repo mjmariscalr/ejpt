@@ -19,3 +19,11 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 perl -e 'exec "/bin/bash";'
 ruby: exec "/bin/bash"
 ```
+
+Algo recomendable a hacer es comprobar las variables de entorno con el comando `env` y asegurarnos de que la ruta donde la shell busca los binarios para ejecutar los comandos está definida. En caso de no estarlo, podemos hacerlo con:
+
+```bash
+usr@hostname# export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+usr@hostname# export SHELL=bash
+usr@hostname# export TERM=xterm
+```
