@@ -195,10 +195,21 @@ usr@hostname# ip n
 
 Después de obtener acceso inicial a un sistema objetivo, siempre es importante conocer más sobre él, por ejemplo, qué procesos, servicios y tareas programadas se están ejecutando actualmente.
 
-**Servicios en ejecución.**
+**Procesos en ejecución.**
 
-
+```bash
+meterpreter > ps
+usr@hostname# ps aux
+usr@hostname# top
+usr@hostname# htop
+```
 
 **Tareas programadas (cron jobs).**
 
 Si las tareas de cron se han configurado de forma insegura pueden permitir una escalada de privilegios.
+
+```bash
+usr@hostname# crontab -l # Muestra las tareas programadas para el usuario actual
+usr@hostname# ls -la /etc/cron* # Muestra todos los archivos cron
+usr@hostname# cat /etc/cron* # Muestra el contenido de todos los archivos cron
+```
