@@ -11,4 +11,11 @@ Sus limitaciones más comunes son:
 - Muchas aplicaciones interactivas (vim, nano, top, htop, su, sudo, etc.) no funcionan correctamente.
 - No dispone de control de trabajos y combinaciones como `Ctrl+C` pueden cerrar la conexión en lugar de comportarse como en una terminal normal.
 
+Para actualizarla usamos el comando `/bin/bash -i`, aunque no es obligatorio que `bash` esté instalado en el sistema. Para comprobar las shell instaladas usamos `cat /etc/shells`. Otras formas son:
 
+```bash
+/bin/sh -i
+python -c 'import pty; pty.spawn("/bin/bash")'
+perl -e 'exec "/bin/bash";'
+ruby: exec "/bin/bash"
+```
