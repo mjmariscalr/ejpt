@@ -270,13 +270,29 @@ msf post(linux/gather/enum_system) > run
 **Comprobar si el sistema es una máquina virtual.**
 
 ```bash
-msf > use post/windows/gather/checkvm
+msf > use post/linux/gather/checkvm
 msf post(windows/gather/checkvm) > run
 ```
 
-****
+### LinEnum
+
+LinEnum es un sencillo script escrito en Bash que automatiza las comprobaciones más comunes de enumeración local en sistemas Linux, además de identificar posibles vulnerabilidades de escalada de privilegios. Recopila automáticamente información como:
+
+- Información del sistema operativo y del kernel.
+- Usuarios y grupos existentes.
+- Permisos de archivos y directorios.
+- Servicios y procesos en ejecución.
+- Tareas programadas (cron jobs).
+- Archivos SUID/SGID.
+- Contraseñas o credenciales almacenadas localmente.
+
+Podemos encontrarlo [aquí](https://github.com/rebootuser/LinEnum).
+
+Subimos el script usando una sesión meterpreter:
 
 ```bash
-
+meterpreter > cd /tmp
+meterpreter > upload /path/LinEnum.sh
 ```
+
 
