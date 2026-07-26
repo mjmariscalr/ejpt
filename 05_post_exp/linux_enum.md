@@ -223,3 +223,60 @@ Además de automatizar la recopilación de información como los datos del siste
 - Vulnerabilidades de escalada de privilegios.
 - Contraseñas almacenadas localmente.
 - Y otros datos relevantes que pueden ser útiles durante la evaluación de seguridad.
+
+**Configuraciones del sistema.**
+
+Este módulo enumera todos los archivos de configuración de Linux. Puede fallar con algunos de ellos, pero la principal información que buscamos es: 
+
+- hostname
+- distribución y versión
+- kernel
+
+```bash
+msf > use post/linux/gather/enum_configs
+msf post(linux/gather/enum_configs) > set session <id>
+msf post(linux/gather/enum_configs) > run
+```
+
+La información que obtenemos con este módulo es la ruta local donde se almacenan los archivos encontrados. Es decir, metasploit genera una copia de esta información y la almacena de forma local para consultarla en cualquier momento. Para ver su contenido:
+
+```bash
+msf post(linux/gather/enum_configs) > cat /ruta/archivo.conf
+```
+
+**Información de red.**
+
+```bash
+msf > use post/linux/gather/enum_network
+msf post(linux/gather/enum_network) > set session <id>
+msf post(linux/gather/enum_network) > run
+```
+
+**Información del sistema y usuario.**
+
+Enumera información como:
+
+- Versión del sistema.
+- Paquetes instalados.
+- Información de usuarios
+- Cron jobs.
+
+```bash
+msf > use post/linux/gather/enum_system 
+msf post(linux/gather/enum_system) > set session <id>
+msf post(linux/gather/enum_system) > run
+```
+
+**Comprobar si el sistema es una máquina virtual.**
+
+```bash
+msf > use post/windows/gather/checkvm
+msf post(windows/gather/checkvm) > run
+```
+
+****
+
+```bash
+
+```
+
