@@ -202,7 +202,7 @@ msf post(windows/gather/win_privs) > run
 
 ### `checkvm`
 
-Muestra el usuario actual y el nivel de privilegios que tiene.
+Comprueba si el sistema se esta ejecutando en una máquina virtual
 
 ```bash
 msf > use post/windows/gather/checkvm
