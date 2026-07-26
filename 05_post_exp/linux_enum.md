@@ -213,3 +213,13 @@ usr@hostname# crontab -l # Muestra las tareas programadas para el usuario actual
 usr@hostname# ls -la /etc/cron* # Muestra todos los archivos cron
 usr@hostname# cat /etc/cron* # Muestra el contenido de todos los archivos cron
 ```
+
+## Automatización
+
+Además de realizar la enumeración local de forma manual, también podemos automatizar el proceso con la ayuda de algunos scripts y módulos de MSF. Aunque es importante conocer las técnicas y comandos de enumeración local, es necesario trabajar de manera eficiente en términos de tiempo.
+
+Además de automatizar la recopilación de información como los datos del sistema, los usuarios y grupos, etc., estos scripts proporcionan información adicional sobre el sistema objetivo, como:
+
+- Vulnerabilidades de escalada de privilegios.
+- Contraseñas almacenadas localmente.
+- Y otros datos relevantes que pueden ser útiles durante la evaluación de seguridad.
