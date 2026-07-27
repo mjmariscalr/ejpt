@@ -9,3 +9,17 @@ Este proceso variará considerablemente según el tipo de sistema objetivo al qu
 ```bash
 C: > powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck"
 ```
+
+## Credenciales en texto plano en Winogn
+
+Winlogon (Windows Logon Application) es un proceso esencial de Microsoft Windows encargado de gestionar el inicio y el cierre de sesión de los usuarios.
+
+Entre sus funciones principales están:
+
+- Gestionar el inicio de sesión (cuando introduces tu contraseña o PIN).
+- Cargar el perfil del usuario al iniciar sesión.
+- Bloquear y desbloquear el equipo (por ejemplo, con Windows + L).
+- Gestionar la secuencia de atención segura (Ctrl + Alt + Supr).
+- Coordinar el cierre de sesión y algunas tareas relacionadas con la seguridad.
+
+
