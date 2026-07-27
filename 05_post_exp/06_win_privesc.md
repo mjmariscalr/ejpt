@@ -7,5 +7,5 @@ Este proceso variará considerablemente según el tipo de sistema objetivo al qu
 **PrivescCheck**: este script tiene como objetivo enumerar problemas comunes de configuración en Windows que pueden aprovecharse para realizar una escalada local de privilegios. Además, recopila diversa información que puede resultar útil durante las fases de explotación y/o postexplotación. Disponible en su repositorio [GitHub](https://github.com/itm4n/PrivescCheck).
 
 ```bash
-C: > power
+C: > powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck"
 ```
