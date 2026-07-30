@@ -18,4 +18,8 @@ usr@hostname$ find / -not -type l -perm -o+w
 
 Si el archivo `/etc/shadow`, encargado de almacenar las contraseñas de usuario, puede ser modificado por cualquier usuario, significa que un usuario sin privilegios podría modificar la contraseña del usuario root y obtener acceso completo al sistema.
 
+Para generar una contraseña en el formato de hash que usa este archivo podemos hacer lo siguiente:
 
+```bash
+openssl passwd -1 -salt abc <pass>
+```
