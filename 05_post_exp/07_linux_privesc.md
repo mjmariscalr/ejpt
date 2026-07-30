@@ -25,10 +25,7 @@ openssl passwd -1 -salt <texto> <pass>
 ```
 
 - `passwd`: Subcomando de OpenSSL que permite generar el hash de una contraseña.
-- `-1`: Indica que se utilice el algoritmo **MD5-Crypt** para generar el hash. El resultado tendrá un formato similar a:
-    ```text
-    $1$abc$Qm3KjY...
-    ```
+- `-1`: Indica que se utilice el algoritmo **MD5-Crypt** para generar el hash. El resultado tendrá un formato similar a: `$1$abc$Qm3KjY...`
 - `-salt`: evita que una misma contraseña genere siempre el mismo hash y dificulta el uso de tablas precalculadas.
 
 
