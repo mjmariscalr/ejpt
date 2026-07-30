@@ -15,3 +15,7 @@ usr@hostname$ find / -not -type l -perm -o+w
 - `o+w`:
 	- `o` = others (otros usuarios).
 	- `+w` = permiso de escritura.
+
+Si el archivo `/etc/shadow`, encargado de almacenar las contraseñas de usuario, puede ser modificado por cualquier usuario, significa que un usuario sin privilegios podría modificar la contraseña del usuario root y obtener acceso completo al sistema.
+
+
