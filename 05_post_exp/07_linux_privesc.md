@@ -28,4 +28,9 @@ openssl passwd -1 -salt <texto> <pass>
 - `-1`: Indica que se utilice el algoritmo **MD5-Crypt** para generar el hash. El resultado tendrá un formato similar a: `$1$abc$Qm3KjY...`
 - `-salt`: evita que una misma contraseña genere siempre el mismo hash y dificulta el uso de tablas precalculadas.
 
+Por último, para modificar la contraseña del usuario, modificamos la segunda columna de `/etc/shadow` para añadir nuestra contraseña:
 
+```text
+root:$y$j9T$J9kP8mQv...:19850:0:99999:7:::
+usuario:$y$j9T$Q8wErTyU...:19850:0:99999:7:::
+```
