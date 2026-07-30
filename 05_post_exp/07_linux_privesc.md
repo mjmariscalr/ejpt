@@ -9,3 +9,9 @@ Para buscar este fallo en archivos del sistema que nos puedan permitir una escal
 ```bash
 usr@hostname$ find / -not -type l -perm -o+w
 ```
+
+- `-not -type l`: significa que no sea un enlace simbólico.
+- `-perm`: filtra por permisos.
+- `o+w`:
+	- `o` = others (otros usuarios).
+	- `+w` = permiso de escritura.
