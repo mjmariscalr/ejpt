@@ -21,7 +21,7 @@ Si el archivo `/etc/shadow`, encargado de almacenar las contraseñas de usuario,
 Para generar una contraseña en el formato de hash que usa este archivo podemos hacer lo siguiente:
 
 ```bash
-openssl passwd -1 -salt <texto> <pass>
+usr@hostname$ openssl passwd -1 -salt <texto> <pass>
 ```
 
 - `passwd`: Subcomando de OpenSSL que permite generar el hash de una contraseña.
@@ -34,3 +34,47 @@ Por último, para modificar la contraseña del usuario, modificamos la segunda c
 root:$y$j9T$J9kP8mQv...:19850:0:99999:7:::
 usuario:$y$j9T$Q8wErTyU...:19850:0:99999:7:::
 ```
+
+## Errores de configuración en sudo
+
+La primera comprobación que podemos hacer es listar los comandos que puede ejecutar el usuario:
+
+```bash
+usr@hostname$ sudo -l
+```
+
+Uno de los programas que puede facilitarnos la escalada de privilegios es `man`. Si podemos ejecutar este comando como sudo sin indicar ningún tipo de contraseña, una vez dentro podemos escribir `!/bin/bash` para obtener una nueva sesión. Si hemos ejecutado `man` con permisos root, todo lo que ejecutemos dentro los hereda.
+
+Lo realmente interesante en este tipo de error no es el comando man en si mismo, sino el error en la configuración de los permisos en cierto tipo de binarios que permiten la ejecución de comandos. Otros comandos que permiten la ejecución de comandos son:
+
+| Programa                   | Sintaxis                   | Ejemplo         |
+| -------------------------- | -------------------------- | --------------- |
+| `man` (a través de `less`) | `!comando`                 | `!ls -l`        |
+| `less`                     | `!comando`                 | `!pwd`          |
+| `more`                     | `!comando`                 | `!date`         |
+| `vi` / `vim`               | `:!comando`                | `:!gcc main.c`  |
+| `nvi`                      | `:!comando`                | igual que Vim   |
+| `ed`                       | `!comando`                 | `!ls`           |
+| `ex`                       | `!comando`                 | `!make`         |
+| `gdb`                      | `shell comando`            | `shell ls`      |
+| `lldb`                     | `platform shell` o `shell` | `shell id`      |
+| `ftp`                      | `!comando`                 | `!ls`           |
+| `lftp`                     | `!comando`                 | `!cat archivo`  |
+| `sftp` (OpenSSH)           | `!comando`                 | `!pwd`          |
+| `psql`                     | `\! comando`               | `\! ls`         |
+| `sqlite3`                  | `.shell comando`           | `.shell whoami` |
+| `mysql`                    | `system comando`           | `system ls`     |
+| `gnuplot`                  | `!comando`                 | `!date`         |
+| `expect`                   | `exec comando`             | `exec ls`       |
+| `python` (REPL/IPython)    | `!comando` (IPython)       | `!ls`           |
+| `R`                        | `system("comando")`        | `system("ls")`  |
+
+Y comandos basados en `less` como:
+
+- `git log`
+- `git diff`
+- `git show`
+- `git blame`
+- `systemctl status`
+- `journalctl`
+- `ps aux | les`
