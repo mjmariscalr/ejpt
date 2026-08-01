@@ -37,6 +37,15 @@ usuario:$y$j9T$Q8wErTyU...:19850:0:99999:7:::
 
 ## Errores de configuración en sudo
 
+`sudo` hace lo siguiente:
+
+1. Comprueba el archivo de políticas (sudoers y los ficheros incluidos).
+2. Verifica si el usuario puede ejecutar ese comando concreto como otro usuario (normalmente root).
+3. Si la política exige autenticación, solicita la contraseña (o reutiliza un ticket de autenticación válido).
+4. Si la autorización tiene éxito, crea un nuevo proceso con el UID/GID del usuario de destino y ejecuta el binario autorizado con esos privilegios.
+
+Si ese programa incorpora una función para ejecutar otros comandos (por ejemplo, un editor, un paginador o un depurador), esos comandos se lanzan como procesos hijos del programa y, salvo restricciones adicionales, heredan sus credenciales efectivas. Es un comportamiento normal de los sistemas Unix: un proceso hijo hereda el contexto de ejecución de su padre.
+
 La primera comprobación que podemos hacer es listar los comandos que puede ejecutar el usuario:
 
 ```bash
@@ -45,7 +54,7 @@ usr@hostname$ sudo -l
 
 Uno de los programas que puede facilitarnos la escalada de privilegios es `man`. Si podemos ejecutar este comando como sudo sin indicar ningún tipo de contraseña, una vez dentro podemos escribir `!/bin/bash` para obtener una nueva sesión. Si hemos ejecutado `man` con permisos root, todo lo que ejecutemos dentro los hereda.
 
-Lo realmente interesante en este tipo de error no es el comando man en si mismo, sino el error en la configuración de los permisos en cierto tipo de binarios que permiten la ejecución de comandos. Otros comandos que permiten la ejecución de comandos son:
+Otros comandos que permiten la ejecución de comandos son:
 
 | Programa                   | Sintaxis                   | Ejemplo         |
 | -------------------------- | -------------------------- | --------------- |
