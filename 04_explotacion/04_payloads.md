@@ -157,4 +157,4 @@ La inyección de payloads en ejecutables de Windows es una técnica en la que se
 - **-x ejecutable.exe:** programa legítimo en el que pretendemos inyectar el payload.
 - **-k:** trata de mantener la funcionalidad original aunque no siempre funciona.
 
-[⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_windows.md)
+[⟵ Anterior](03_shells.md) | [Siguiente ⟶](05_sistema.md)

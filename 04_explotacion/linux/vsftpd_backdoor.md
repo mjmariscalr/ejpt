@@ -76,4 +76,4 @@ Si el usuario que obtenemos nos permite navegar por el sistema de archivos y el 
 
 Por último, accedemos con el navegador a `host.com/dav/php-reverse-shell.php` para ejecutarlo y obtener la shell con el usuario `www-data`.
 
-[⟵ Anterior](../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-linux)

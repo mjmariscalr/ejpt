@@ -87,3 +87,5 @@ Y comandos basados en `less` como:
 - `systemctl status`
 - `journalctl`
 - `ps aux | les`
+
+[⟵ Anterior](06_win_privesc.md.md) | [Siguiente ⟶](08_win_pers.md)

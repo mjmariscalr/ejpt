@@ -308,3 +308,5 @@ Descargamos los resultados a nuestra máquina kali:
 ```bash
 meterpreter > download linenum.txt
 ```
+
+[⟵ Anterior](02_win_enum.md) | [Siguiente ⟶](04_enviar_archivos.md)

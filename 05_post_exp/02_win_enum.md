@@ -269,3 +269,5 @@ Descargamos los resultados a nuestra máquina kali:
 ```bash
 meterpreter > download jaws-enum.txt
 ```
+
+[⟵ Anterior](01_intro.md) | [Siguiente ⟶](03_linux_enum.md)

@@ -27,3 +27,5 @@ usr@hostname# export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbi
 usr@hostname# export SHELL=bash
 usr@hostname# export TERM=xterm
 ```
+
+[⟵ Anterior](04_enviar_archivos.md) | [Siguiente ⟶](06_win_privesc.md)

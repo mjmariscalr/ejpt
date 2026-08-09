@@ -30,4 +30,4 @@ msf post(multi/manage/shell_to_meterpreter) > set session id_bash
 msf post(multi/manage/shell_to_meterpreter) > run
 ```
 
-[⟵ Anterior](../05_sistema.md#explotación-windows)
+[⟵ Anterior](../05_sistema.md#explotación-linux)

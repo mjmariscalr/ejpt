@@ -25,3 +25,5 @@ Entre sus funciones principales están:
 El fallo se encuentra en **AutoAdminLogon**. Cuando se configura el inicio de sesión automático, Windows guarda la contraseña en el Registro y queda almacenada en texto claro para que Winlogon pueda iniciar sesión automáticamente.
 
 Si durante el paso anterior hemos obtenido las credenciales de un usuario administrador, podemos usar [PSExec](../04_explotacion/win/smb.md#ejecución-remota-de-comandos-con-psexec) para obtener acceso con este usuario.
+
+[⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)

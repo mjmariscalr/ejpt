@@ -32,3 +32,5 @@ Este enfoque estructurado y metodológico garantiza que no se omitan ni se pasen
 	- Reconocimiento de la red interna.
 	- Pivoting.
 8. Limpiar el rastro.
+
+[⟵ Anterior](../04_explotacion/05_sistema.md) | [Siguiente ⟶](02_win_enum.md)
