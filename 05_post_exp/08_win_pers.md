@@ -39,7 +39,15 @@ msf exploit(multi/handler) > exploit
 
 En este tipo de persistencia se modifican archivos y configuraciones del sistema al crear un nuevo usuario, por lo que es necesario tener consentimiento explícito y definir el alcance.
 
-Para la persistencia vía RDP necesitamos una sesión estable, por lo que es recomendable migrar a [explorer](02_win_enum.md#Procesos-con-meterpreter)
+Para la persistencia vía RDP necesitamos una sesión estable, por lo que es recomendable migrar a [explorer](02_win_enum.md#Procesos-con-meterpreter).
+
+Los pasos que debemos dar son:
+
+1. Crear un usuario (necesitamos permisos de administrador).
+2. Habilitar RDP si esta deshabilitado.
+3. Ocultar el usuario en la pantalla de inicio de sesión de Windows.
+4. Añadir el usuario al grupo de administradores y de RDP.
+
 
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
 
