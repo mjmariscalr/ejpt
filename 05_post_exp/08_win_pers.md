@@ -35,5 +35,11 @@ msf exploit(multi/handler) > set lport <puerto>
 msf exploit(multi/handler) > exploit
 ```
 
+## Persistencia vía RDP
+
+En este tipo de persistencia se modifican archivos y configuraciones del sistema al crear un nuevo usuario, por lo que es necesario tener consentimiento explícito y definir el alcance.
+
+Para la persistencia vía RDP necesitamos una sesión estable, por lo que es recomendable migrar a [explorer](02_win_enum.md#Procesos-con-meterpreter)
+
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
 
