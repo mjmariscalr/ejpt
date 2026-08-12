@@ -74,9 +74,19 @@ En Linux existen diferentes mecanismos que pueden utilizarse para mantener el ac
 
 Linux suele desplegarse como sistema operativo para servidores que normalmente se administran de forma remota mediante servicios o protocolos como SSH. Si SSH está habilitado y en ejecución en un sistema Linux que hemos comprometido, podemos aprovechar su configuración para establecer un acceso persistente.
 
-En la mayoría de los casos, los servidores Linux tienen habilitada la autenticación mediante claves para el servicio SSH, lo que permite a los usuarios acceder al sistema Linux de forma remota sin necesidad de utilizar una contraseña. Después de obtener acceso a un sistema Linux, podemos transferir a nuestro sistema la clave privada SSH asociada a una cuenta de usuario específica y utilizarla para futuras autenticaciones y accesos.
+En la mayoría de los casos, los servidores Linux tienen habilitada la autenticación mediante claves para el servicio SSH, lo que permite a los usuarios acceder al sistema Linux de forma remota sin necesidad de utilizar una contraseña. 
 
+Después de obtener acceso a un sistema Linux, podemos transferir a nuestro sistema la clave privada SSH asociada a una cuenta de usuario específica y utilizarla para futuras autenticaciones y accesos. Habitualmente se encuentra en el directorio `~/.ssh/`.
 
+```bash
+usr@hostname:~# scp usr@ip:~/.ssh/key .
+```
 
-[⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
+Para iniciar sesión con la clave que hemos obtenido usamos la opción `-i`.
+
+```bash
+usr@hostname:~# ssh -i key usr@ip
+```
+
+[⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_.md)
 
