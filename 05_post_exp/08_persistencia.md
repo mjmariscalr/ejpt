@@ -1,10 +1,14 @@
-# Persistencia en Windows
+# Persistencia
 
 La persistencia consiste en técnicas usadas para mantener el acceso a un sistema a pesar de los reinicios, cambios de credenciales y otras interrupciones que puedan afectar al acceso. Estas técnicas incluyen cualquier acceso, acción o cambio de configuración que permita mantener un punto de apoyo en el sistema. Pueden ser reemplazar o secuestrar (hijacking) código legítimo.
 
 Hijacking significa alterar el flujo normal de ejecución de un programa legítimo para que el sistema ejecute el código del atacante de forma automática y repetitiva.
 
-## Persistencia mediante servicios
+## Persistencia en Windows
+
+En Windows, la persistencia puede conseguirse mediante distintos mecanismos que permiten mantener el acceso al sistema después de reinicios o interrupciones de la sesión inicial. A continuación, se presentan algunas de las técnicas más habituales, centradas en servicios y en el acceso mediante RDP.
+
+### Persistencia mediante servicios
 
 Para esta técnica podemos usar el módulo `persistence_service` de metasploit (`exploit/windows/persistence/service` en versiones recientes). Su funcionamiento consiste en los siguientes pasos:
 
@@ -35,7 +39,7 @@ msf exploit(multi/handler) > set lport <puerto>
 msf exploit(multi/handler) > exploit
 ```
 
-## Persistencia vía RDP
+### Persistencia vía RDP
 
 En este tipo de persistencia se modifican archivos y configuraciones del sistema al crear un nuevo usuario, por lo que es necesario tener consentimiento explícito y definir el alcance.
 
@@ -61,6 +65,10 @@ Una vez creado el usuario deberiamos tener acceso gráfico al sistema usando:
 ```bash
 usr@hostname:~# xfreerdp /u:usuario /p:contraseña /v:ip
 ```
+
+## Persistencia en Linux
+
+En Linux existen diferentes mecanismos que pueden utilizarse para mantener el acceso a un sistema una vez obtenido un punto de apoyo inicial. Estas técnicas aprovechan funcionalidades propias del sistema operativo y requieren, dependiendo del método empleado, distintos niveles de privilegios.
 
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
 
