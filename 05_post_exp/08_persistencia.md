@@ -88,5 +88,11 @@ Para iniciar sesión con la clave que hemos obtenido usamos la opción `-i`.
 usr@hostname:~# ssh -i key usr@ip
 ```
 
+### Vía Cron Jobs
+
+Linux implementa la programación de tareas mediante Cron, un servicio basado en el tiempo que ejecuta aplicaciones, scripts y otros comandos de forma repetitiva siguiendo una programación determinada.
+
+Una aplicación o script que se ha configurado para ejecutarse repetidamente mediante Cron (Cron job) se puede usar para ejecutar un comando o script a intervalos determinados, con el objetivo de garantizar un acceso persistente al sistema objetivo.
+
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_.md)
 
