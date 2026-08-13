@@ -40,3 +40,11 @@ meterpreter > portfwd -l 1234 -p 80 -r 192.168.1.10
 | `-l 1234`         | Puerto **local** de kali donde se escuchará. |
 | `-p 80`           | Puerto **remoto** al que se redirigirá.      |
 | `-r 192.168.1.10` | Host remoto al que se enviará el tráfico.    |
+
+Como el puerto ahora es accesible desde nuesta máquina kali, podemos escanearlo de forma normal con nmap teniendo en cuenta que es accesible desde localhost:
+
+```bash
+nmap -sC -sV -p 1234 localhost
+```
+
+Una vez terminada la enumeración y el análisis de vulnerabilidades del segundo host podemos explotarlo de la fomrma habitual, ya que msfconsole está configurado para establecer una ruta a esta máquina a traves del primer host.
