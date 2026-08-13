@@ -88,4 +88,4 @@ Y comandos basados en `less` como:
 - `journalctl`
 - `ps aux | les`
 
-[⟵ Anterior](06_win_privesc.md.md) | [Siguiente ⟶](08_win_pers.md)
+[⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
