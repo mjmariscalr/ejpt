@@ -108,5 +108,5 @@ crontab -i cron
 
 Para establecer una conexión a partir de este momento basta con crear un listener en nuestra máquina kali con `nc -nvlp puerto_kali` y esperar a que se ejecute el comando en el objetivo.
 
-[⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_hashes.md)
+[⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_winhash.md)
 

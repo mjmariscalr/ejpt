@@ -80,4 +80,4 @@ Para buscar el código correspondiente a un tipo de hash podemos filtrar de la s
 usr@hostname:~# hashcat -hh | grep -i ntlm
 ```
 
-[⟵ Anterior](08_persistencia.md) | [Siguiente ⟶]()
+[⟵ Anterior](08_persistencia.md) | [Siguiente ⟶](10_linuxhash.md)
