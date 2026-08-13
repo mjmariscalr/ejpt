@@ -16,5 +16,13 @@ Podemos determinarlo observando el número que aparece después del nombre de us
 | `$6$`     | SHA-512      |
 | `$y$`     | yescrypt     |
 
+## `hashdump`
+
+En el caso de Linux podemos usar el mismo módulo, pero debido a la configuración de meterpreter es necesario hacerlo de forma externa. Una vez obtenida la sesión, podemos hacerlo de la siguiente forma:
+
+```bash
+msf > 
+```
+
 [⟵ Anterior](09_winhash.md) | [Siguiente ⟶]()
 
