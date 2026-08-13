@@ -59,13 +59,13 @@ Para listar todos los hashes soportados: `john --list=formats`.
 
 Esta herramienta usa una wordlist por defecto en caso de no indicarle una. Podemos usarla de la siguiente forma:
 
-```bash
+```console
 usr@hostname:~# john --format=NT hashes.txt --wordlist=wordlist.txt
 ```
 
 #### `Hashcat`
 
-```bash
+```console
 usr@hostname:~# hashcat -a3 -m 1000 hashes.txt wordlist.txt
 ```
 
@@ -76,7 +76,7 @@ Siendo:
 
 Para buscar el código correspondiente a un tipo de hash podemos filtrar de la siguiente forma:
 
-```bash
+```console
 usr@hostname:~# hashcat -hh | grep -i ntlm
 ```
 
