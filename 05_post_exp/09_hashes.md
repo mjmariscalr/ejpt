@@ -19,8 +19,12 @@ NTLM es una colección de protocolos de autenticación que usa Windows para faci
 - Case sensitive.
 - Permite el uso de símbolos y caracteres unicode.
 
-## Dumping de hashes NTLM
+### Dumping de hashes NTLM
 
 Podemos realizar dumping de los hashes de contraseñas de Windows mediante herramientas, como: `hashdump` de Meterpreter o `Mimikatz`.
+
+### Cracking de hashes NTLM
+
+Una vez que hayamos extraído los hashes, podemos realizar su cracking usando: `John the Ripper` o `Hashcat`
 
 [⟵ Anterior](08_persistencia.md) | [Siguiente ⟶]()
