@@ -33,5 +33,5 @@ msf post(linux/gather/hashdump) > run
 
 Este paso se puede realizar de la misma forma que hemos visto en [Windows](09_winhash.md#Cracking-de-hashes-NTLM). Simplemente debemos tener en cuenta el método con el que se ha creado el hash de la contraseña antes de ejecutar las herramientas, tanto `john` como `hashcat`.
 
-[⟵ Anterior](09_winhash.md) | [Siguiente ⟶]()
+[⟵ Anterior](09_winhash.md) | [Siguiente ⟶](11_pivoting.md)
 

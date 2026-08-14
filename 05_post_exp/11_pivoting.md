@@ -48,3 +48,5 @@ nmap -sC -sV -p 1234 localhost
 ```
 
 Una vez terminada la enumeración y el análisis de vulnerabilidades del segundo host podemos explotarlo de la fomrma habitual, ya que msfconsole está configurado para establecer una ruta a esta máquina a traves del primer host.
+
+[⟵ Anterior](10_linuxhash.md) | [Siguiente ⟶](12_clearing.md)

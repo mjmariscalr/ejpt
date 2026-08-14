@@ -13,3 +13,5 @@ meterpreter > resource /ruta_en_kali/script.rc
 ```
 
 Una técnica típica consiste en eliminar el registro de eventos de Windows (Windows Event Log), pero debe evitarse durante una prueba de penetración, ya que almacena una gran cantidad de información importante para el cliente.
+
+[⟵ Anterior](11_pivoting.md) | [Siguiente ⟶]()
