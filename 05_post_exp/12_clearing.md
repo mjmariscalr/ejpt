@@ -14,6 +14,10 @@ meterpreter > resource /ruta_en_kali/script.rc
 
 Una técnica típica consiste en eliminar el registro de eventos de Windows (Windows Event Log), pero debe evitarse durante una prueba de penetración, ya que almacena una gran cantidad de información importante para el cliente.
 
+```bash
+meterpreter > clearev
+```
+
 ## Linux
 
 En Linux debemos seguir la misma metodología que en Windows, es decir, almacenar cualquier arhcivo que transfiramos en el directorio `/tmp` para tenerlo localizado y poder eliminarlo, además de usar los sripts de metasploit para eliminar el rastro dejado por el módulo.
