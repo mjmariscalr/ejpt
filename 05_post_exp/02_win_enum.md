@@ -172,13 +172,7 @@ Para ver un proceso en concreto podemos usar `pgrep <proceso>`. Este comando es 
 - `net start`: Muestra todos los servicios de Windows que están actualmente en ejecución.
 - `wmic service list brief`: Presenta un listado resumido de todos los servicios del sistema, incluyendo información como el nombre del servicio, su estado (en ejecución o detenido) y el modo de inicio.
 - `tasklist /SVC`: Muestra los procesos en ejecución junto con los servicios asociados a cada proceso. Permite identificar qué servicios se están ejecutando dentro de un mismo proceso.
-- `schtasks /query /fo LIST:` Muestra un listado detallado de las tareas programadas en el sistema utilizando un formato de lista. Para cada tarea se incluye información como el nombre, el estado, la fecha y hora de la próxima ejecución, la última vez que se ejecutó y el usuario bajo el que se ejecuta. Esta información será útil durante la escalada de privilegios.
-
-**Tareas programadas.**
-
-```bash
-C:\ > 
-```
+- `schtasks /query /fo LIST /v:` Muestra un listado detallado de las tareas programadas en el sistema utilizando un formato de lista. Para cada tarea se incluye información como el nombre, el estado, la fecha y hora de la próxima ejecución, la última vez que se ejecutó y el usuario bajo el que se ejecuta. Esta información será útil durante la escalada de privilegios.
 
 ## Automatización
 
