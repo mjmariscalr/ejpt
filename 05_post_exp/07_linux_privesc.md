@@ -88,4 +88,11 @@ Y comandos basados en `less` como:
 - `journalctl`
 - `ps aux | les`
 
+## Explotación del programa `chkrootkit` (CVE-2014-0476)
+
+La función slapper de chkrootkit, en versiones anteriores a la 0.50, no entrecomilla correctamente las rutas de los archivos, lo que permite a usuarios locales ejecutar código arbitrario mediante un ejecutable troyano. Esto significa que el programa no trata correctamente las rutas de archivos como una única unidad, lo que puede permitir que determinados caracteres sean interpretados de forma no deseada.
+
+Esta vulnerabilidad solo existe cuando `/tmp` no está montado con la opción `noexec`, ya que no permite la ejecución de binarios.
+
+
 [⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
