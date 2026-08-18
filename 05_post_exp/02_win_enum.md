@@ -270,4 +270,19 @@ Descargamos los resultados a nuestra máquina kali:
 meterpreter > download jaws-enum.txt
 ```
 
+## Keylogging
+
+El keylogging es una técnica de captura de información que consiste en registrar las pulsaciones de teclado realizadas por un usuario en un sistema comprometido. Entre los datos que pueden capturarse se encuentran:
+
+- Credenciales.
+- Comandos.
+- Mensajes.
+- Otra información sensible.
+
+Para usar el módulo de metasploit puede ser necesario migrar al proceso `explorer`.
+
+```bash
+
+```
+
 [⟵ Anterior](01_intro.md) | [Siguiente ⟶](03_linux_enum.md)
