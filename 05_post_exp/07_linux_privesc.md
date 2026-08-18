@@ -6,7 +6,7 @@ El proceso de análisis de vulnerabilidades referentes a la escalada de privileg
 
 Para buscar este fallo en archivos del sistema que nos puedan permitir una escalada de privilegios, podemos hacerlo con:
 
-```bash
+```console
 usr@hostname$ find / -not -type l -perm -o+w
 ```
 
@@ -20,7 +20,7 @@ Si el archivo `/etc/shadow`, encargado de almacenar las contraseñas de usuario,
 
 Para generar una contraseña en el formato de hash que usa este archivo podemos hacer lo siguiente:
 
-```bash
+```console
 usr@hostname$ openssl passwd -1 -salt <texto> <pass>
 ```
 
@@ -48,7 +48,7 @@ Si ese programa incorpora una función para ejecutar otros comandos (por ejemplo
 
 La primera comprobación que podemos hacer es listar los comandos que puede ejecutar el usuario:
 
-```bash
+```console
 usr@hostname$ sudo -l
 ```
 
