@@ -30,6 +30,11 @@ Si durante el [paso anterior](#Escalada-de-privilegios-en-sistemas-Windows) hemo
 
 Los **tokens de acceso de Windows** son un elemento fundamental del proceso de autenticación de Windows y son creados y gestionados por el Local Security Authority Subsystem Service (LSASS). Se encargan de identificar y describir el contexto de seguridad de un proceso o hilo que se está ejecutando en un sistema. Puede considerarse como una clave temporal, similar a una cookie web, que proporciona a los usuarios acceso a un sistema o recurso de red sin tener que proporcionar las credenciales cada vez que se inicia un proceso o se accede a un recurso del sistema.
 
-Son generados por el proceso `winlogon.exe` cada vez que un usuario se autentica correctamente. El token incluye la identidad y los privilegios de la cuenta de usuario asociada al hilo o proceso. Posteriormente, este token se vincula al proceso userinit.exe, tras lo cual todos los procesos hijos iniciados por el usuario heredan una copia del token de acceso de su proceso creador y se ejecutan con los privilegios definidos por dicho token.
+Los genera `winlogon.exe` cada vez que un usuario se autentica correctamente e incluye la identidad y los privilegios de la cuenta de usuario. Después se vincula al proceso userinit.exe y todos los procesos hijos iniciados por el usuario heredan una copia del token de acceso de su proceso creador y se ejecutan con los privilegios definidos por dicho token.
+
+Los tokens de acceso de Windows se clasifican en función de los diferentes niveles de seguridad que se les asignan y que sirven para determinar los privilegios asociados:
+
+- **Nivel Impersonate:** se crean como resultado directo de un inicio de sesión no interactivo en Windows. Pueden usarse para suplantar un token en el sistema local, pero no en sistemas externos.
+- **Nivel Delegate:** se crean mediante un inicio de sesión tradicional o protocolos de acceso remoto como RDP.
 
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
