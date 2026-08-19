@@ -116,6 +116,6 @@ meterpreter >
 Pass-the-Hash es una técnica de explotación que consiste en capturar u obtener hashes NTLM o contraseñas en texto plano y utilizarlos para autenticarse legítimamente en el objetivo.
 
 Podemos utilizar el módulo PsExec para autenticarnos legítimamente en el sistema objetivo mediante SMB.
-Esta técnica nos permitirá obtener acceso al sistema objetivo utilizando un hash obtenido mediante el [dumping de hashes](../../05_post/09_winhash.md#Dumping-de-hashes-NTLM). Basta con indicarle el hash en el campo de la contraseña para realizar el ataque.
+Esta técnica nos permitirá obtener acceso al sistema objetivo utilizando un hash obtenido mediante el [dumping de hashes](../../05_post_exp/09_winhash.md#Dumping-de-hashes-NTLM). Basta con indicarle el hash en el campo de la contraseña para realizar el ataque.
 
 [⟵ Anterior](../05_sistema.md#explotación-windows)
