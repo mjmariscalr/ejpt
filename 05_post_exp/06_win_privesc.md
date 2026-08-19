@@ -37,4 +37,10 @@ Los tokens de acceso de Windows se clasifican en función de los diferentes nive
 - **Nivel Impersonate:** se crean como resultado directo de un inicio de sesión no interactivo en Windows. Pueden usarse para suplantar un token en el sistema local, pero no en sistemas externos.
 - **Nivel Delegate:** se crean mediante un inicio de sesión tradicional o protocolos de acceso remoto como RDP.
 
+La suplantación dependerá de los privilegios asignados a la cuenta que ha sido comprometida para obtener el acceso inicial, así como de los tokens de impersonación o delegación disponibles. Los privilegios necesarios para llevar a cabo con éxito un ataque de suplantación son:
+
+- **SeAssignPrimaryToken:** permite suplantar tokens y asignarlos como token principal de un proceso.
+- **SeCreateToken:** permite crear un token arbitrario, potencialmente con privilegios administrativos.
+- **SeImpersonatePrivilege:** permite crear un proceso bajo el contexto de seguridad de otro usuario, normalmente con privilegios administrativos.
+
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
