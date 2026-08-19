@@ -10,7 +10,7 @@ Este proceso variará considerablemente según el tipo de sistema objetivo al qu
 C: > powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck"
 ```
 
-## Credenciales en texto plano en Winogn
+## Credenciales en texto plano en Winlogon
 
 Winlogon (Windows Logon Application) es un proceso esencial de Microsoft Windows encargado de gestionar el inicio y el cierre de sesión de los usuarios.
 
@@ -24,6 +24,12 @@ Entre sus funciones principales están:
 
 El fallo se encuentra en **AutoAdminLogon**. Cuando se configura el inicio de sesión automático, Windows guarda la contraseña en el Registro y queda almacenada en texto claro para que Winlogon pueda iniciar sesión automáticamente.
 
-Si durante el paso anterior hemos obtenido las credenciales de un usuario administrador, podemos usar [PSExec](../04_explotacion/win/smb.md#ejecución-remota-de-comandos-con-psexec) para obtener acceso con este usuario.
+Si durante el [paso anterior](#Escalada-de-privilegios-en-sistemas-Windows) hemos obtenido las credenciales de un usuario administrador, podemos usar [PSExec](../04_explotacion/win/smb.md#ejecución-remota-de-comandos-con-psexec) para obtener acceso con este usuario.
+
+## Suplantación de tokens con Incognito
+
+Los **tokens de acceso de Windows** son un elemento fundamental del proceso de autenticación de Windows y son creados y gestionados por el Local Security Authority Subsystem Service (LSASS). Se encargan de identificar y describir el contexto de seguridad de un proceso o hilo que se está ejecutando en un sistema. Puede considerarse como una clave temporal, similar a una cookie web, que proporciona a los usuarios acceso a un sistema o recurso de red sin tener que proporcionar las credenciales cada vez que se inicia un proceso o se accede a un recurso del sistema.
+
+Son generados por el proceso `winlogon.exe` cada vez que un usuario se autentica correctamente. El token incluye la identidad y los privilegios de la cuenta de usuario asociada al hilo o proceso. Posteriormente, este token se vincula al proceso userinit.exe, tras lo cual todos los procesos hijos iniciados por el usuario heredan una copia del token de acceso de su proceso creador y se ejecutan con los privilegios definidos por dicho token.
 
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
