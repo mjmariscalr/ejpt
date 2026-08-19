@@ -194,8 +194,12 @@ set lhost 10.125.84.23
 run
 ```
 
-Lo podemos ejecutar, despues de guardarlo como `script.rc`, con:
+Lo podemos ejecutar, despues de guardarlo como `script.rc`, con cualquiera de las dos opciones:
 
 ```bash
+# Opcion 1
 msfconsole -r script.rc
+
+# Opcion 2
+msf > resource /path/script.rc
 ```
