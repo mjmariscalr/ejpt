@@ -43,4 +43,24 @@ La suplantación dependerá de los privilegios asignados a la cuenta que ha sido
 - **SeCreateToken:** permite crear un token arbitrario, potencialmente con privilegios administrativos.
 - **SeImpersonatePrivilege:** permite crear un proceso bajo el contexto de seguridad de otro usuario, normalmente con privilegios administrativos.
 
+### El módulo incognito
+
+Incognito es un módulo integrado de Meterpreter que permite suplantar tokens de usuario después de conseguir explotar correctamente un sistema. Podemos utilizar el módulo Incognito para mostrar una lista de los tokens disponibles que podemos suplantar (impersonate).
+
+Para comprobar los privilegios asociados a la cuenta con la que hemos obtenido acceso:
+
+```bash
+meterpreter > getprivs
+```
+
+Escalada de privilegios con incognito:
+
+```bash
+meterpreter > load incognito
+meterpreter > list_tokens -u # Muestra la lista de tokens disponibles
+meterpreter > impersonate_token "ATTACKDEFENSE/Administrator"
+```
+
+Una vez hecho esto, es necesario migrar a otro proceso, por ejemplo explorer, porque el proceso en el que tenemos la sesión puede seguir con los privilegios iniciales asociados.
+
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
