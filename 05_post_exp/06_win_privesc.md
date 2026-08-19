@@ -63,4 +63,11 @@ meterpreter > impersonate_token "ATTACKDEFENSE/Administrator"
 
 Una vez hecho esto, es necesario migrar a otro proceso, por ejemplo explorer, porque el proceso en el que tenemos la sesión puede seguir con los privilegios iniciales asociados.
 
+## Bypassing UAC
+
+**User Account Control (UAC)** es una función de seguridad de Windows, introducida en Windows Vista, que se utiliza para evitar que se realicen cambios no autorizados en el sistema operativo.
+
+UAC garantiza que los cambios realizados en el sistema operativo requieran la aprobación del administrador.
+Podemos utilizar el módulo “Windows Escalate UAC Protection Bypass (In Memory Injection)” para evadir UAC mediante la utilización de un certificado de editor de confianza y process injection. Este módulo genera una segunda shell en la que el indicador de UAC está desactivado.
+
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
