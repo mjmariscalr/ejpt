@@ -239,6 +239,24 @@ El módulo `post/windows/gather/enum_shares` de Metasploit se utiliza para enume
 
 Su objetivo es identificar qué carpetas o recursos compartidos están disponibles en la red y a los que el usuario actual tiene acceso.
 
+### `enum_av_excluded`
+
+Este módulo escanea el objetivo para detectar los directorios que están excluidos durante un análisis de **Windows Defender**.
+
+```bash
+msf > use post/windows/gather/enum_av_excluded
+msf post(windows/gather/enum_av_excluded) > set session id
+msf post(windows/gather/enum_av_excluded) > run
+```
+
+### `enable_rdp`
+
+```bash
+msf > use post/windows/manage/enable_rdp
+msf post(windows/manage/enable_rdp) > set session id
+msf post(windows/manage/enable_rdp) > run
+```
+
 ### JAWS (Just Another Windows (Enum) Script)
 
 Es un script de PowerShell diseñado para ayudar a los pentesters (y participantes de CTF) a identificar rápidamente posibles vectores de escalada de privilegios en sistemas Windows. Está desarrollado en PowerShell 2.0, por lo que debería ser compatible con todas las versiones de Windows desde Windows 7 en adelante. Se encuentra disponible en [github](https://github.com/411Hall/JAWS).
