@@ -203,3 +203,11 @@ msfconsole -r script.rc
 # Opcion 2
 msf > resource /path/script.rc
 ```
+
+# 7. Otros comandos
+
+Listar los archivos generados durante la explotación o la post-explotación:
+
+```bash
+msf > loot
+```
