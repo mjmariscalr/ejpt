@@ -267,11 +267,50 @@ msf post(linux/gather/enum_system) > set session <id>
 msf post(linux/gather/enum_system) > run
 ```
 
-**Comprobar si el sistema es una máquina virtual.**
+**Comprobar si el sistema es una máquina virtual o un container.**
 
 ```bash
+# VM
 msf > use post/linux/gather/checkvm
+msf post(windows/gather/checkvm) > set session id
 msf post(windows/gather/checkvm) > run
+
+# Container
+msf > use post/linux/gather/checkcontainer
+msf post(windows/gather/checkcontainer) > set session id
+msf post(windows/gather/checkcontainer) > run
+```
+
+**Información sobre variables de entorno.**
+
+Puede obtener datos como:
+
+- Variables de entorno configuradas en el sistema.
+- Rutas y directorios importantes, como PATH, HOME o TEMP.
+- Información relacionada con el usuario y la sesión actual.
+- Configuración que podría revelar cómo está configurado el entorno de ejecución.
+
+
+```bash
+msf > use post/multi/gather/env
+msf post(multi/gather/env) > set session id
+msf post(multi/gather/env) > run
+```
+
+**Sistemas de seguridad activos.**
+
+```bash
+msf > use post/linux/gather/enum_protections
+msf post(windows/gather/enum_protections) > set session id
+msf post(windows/gather/enum_protections) > run
+```
+
+**Enumerar el historial de comandos de los usuarios.**
+
+```bash
+msf > use post/linux/gather/enum_users_hystory
+msf post(windows/gather/enum_users_hystory) > set session id
+msf post(windows/gather/enum_users_hystory) > run
 ```
 
 ### LinEnum
