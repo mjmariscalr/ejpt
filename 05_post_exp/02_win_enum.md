@@ -200,6 +200,7 @@ Comprueba si el sistema se esta ejecutando en una máquina virtual
 
 ```bash
 msf > use post/windows/gather/checkvm
+msf post(windows/gather/checkvm) > set session id
 msf post(windows/gather/checkvm) > run
 ```
 
