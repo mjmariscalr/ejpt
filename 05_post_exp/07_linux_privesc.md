@@ -113,4 +113,25 @@ En caso de encontrar un script que se esté ejecutando desde cron con permisos d
 echo "usuario ALL=NOWPASSWD:ALL" >> /etc/sudoers
 ```  
 
+## Explotación de binarios SUID
+
+Además de los tres permisos principales de acceso a archivos (lectura, escritura y ejecución), Linux también proporciona a los usuarios permisos especializados que pueden utilizarse en situaciones específicas. Uno de estos permisos de acceso es el permiso SUID (Set Owner User ID). SUID permite a los usuarios ejecutar un script o binario con los permisos del propietario del archivo, en lugar de hacerlo con los permisos del usuario que está ejecutando el script o binario.
+
+Se utilizan normalmente para proporcionar a usuarios sin privilegios la capacidad de ejecutar determinados scripts o binarios con permisos de root. Sin embargo, cabe señalar que la concesión de privilegios elevados se limita a la ejecución del script y no implica una elevación permanente de privilegios. No obstante, si está configurado de forma incorrecta, un usuario sin privilegios puede aprovechar configuraciones incorrectas o vulnerabilidades presentes en el binario o script para obtener una sesión con privilegios elevados.
+
+El éxito de nuestro ataque dependerá de:
+
+- **Propietario del binario SUID:** dado que estamos intentando elevar nuestros privilegios, solo explotaremos binarios SUID cuyo propietario sea el usuario root u otros usuarios con privilegios.
+- **Permisos de acceso:** necesitaremos tener permisos de ejecución para poder ejecutar el binario SUID.
+
+Podemos buscar binarios que tengan estos permisos activos usando el comando `find`:
+
+```console
+usr@hostname# find / -perm -4000 -type f 2>/dev/null
+```
+
+Será necesario encontrar un binario que pertenezca a usuario root y además ejecute otro binario. La idea es sustituir el segundo binario por una copia de `/bin/bash`. Al ejecutarse desde un binario con privilegios root, nos abrirá una nueva shell con estos privilegios.
+
+##
+
 [⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
