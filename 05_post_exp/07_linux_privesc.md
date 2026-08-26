@@ -106,7 +106,7 @@ msf exploit(unix/local/chkrootkit) > run
 
 ## Escalada de privilegios mediante cronjobs
 
-En caso de encontrar un archivo o un script que se esté ejecutando desde cron con permisos de root y pueda ser leido y modificado por nuestro usuario, podemos usarlo para ejecutar una orden que nos eleve los privilegios, por ejemplo añadiendo:
+En caso de encontrar un script que se esté ejecutando desde cron con permisos de root y pueda ser leido y modificado por nuestro usuario, podemos usarlo para ejecutar una orden que nos eleve los privilegios, por ejemplo añadiendo:
 
 ```bash
 #!/bin/bash
