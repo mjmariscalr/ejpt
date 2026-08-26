@@ -93,4 +93,17 @@ Para buscar el código correspondiente a un tipo de hash podemos filtrar de la s
 usr@hostname:~# hashcat -hh | grep -i ntlm
 ```
 
+## Windows configuration files
+
+Windows puede automatizar una tareas repetitivas, como el despliegue masivo o la instalación de Windows en muchos sistemas. Esto se hace mediante la utilidad Unattended Windows Setup. Usa archivos de configuración que contienen configuraciones específicas y credenciales de cuentas de usuario, concretamente la contraseña de la cuenta de Administrador.
+
+Si los archivos de configuración de Unattended Windows Setup se dejan en el sistema objetivo después de la instalación, pueden revelar credenciales de cuentas de usuario que los atacantes pueden utilizar para autenticarse legítimamente en el sistema Windows objetivo.
+
+Normalmente utilizará uno de los siguientes archivos de configuración, que contienen información sobre las cuentas de usuario y la configuración del sistema:
+
+- C:\Windows\Panther\Unattend.xml
+- C:\Windows\Panther\Autounattend.xml
+
+Como medida de seguridad, las contraseñas almacenadas en el archivo de configuración de Unattended Windows Setup pueden estar codificadas en Base64.
+
 [⟵ Anterior](08_persistencia.md) | [Siguiente ⟶](10_linuxhash.md)
