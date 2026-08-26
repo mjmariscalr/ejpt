@@ -83,4 +83,22 @@ meterpreter > getsystem
 
 La nueva sesión mantiene el mismo usuario, por lo que inicialmente no tiene privilegios. Lo que conseguimos con este módulo es una sesión con UAC desactivado y nos permite usar `getsystem` para elevar los privilegios.
 
+## Kernel exploits
+
+Windows NT es el kernel que viene incluido con todas las versiones de Microsoft Windows y funciona como un kernel tradicional, con algunas excepciones basadas en la filosofía de diseño del sistema. Consta de dos modos principales de funcionamiento que determinan el acceso a los recursos del sistema y al hardware:
+
+- **User Mode:** los programas y servicios que se ejecutan en modo usuario tienen un acceso limitado a los recursos y funcionalidades del sistema.
+- **Kernel Mode:** el modo kernel tiene acceso sin restricciones a los recursos y funcionalidades del sistema, además de encargarse de gestionar los dispositivos y la memoria del sistema.
+
+Las vulnerabilidades presentes en el kernel de Windows permiten ejecutar código arbitrario con el fin de ejecutar comandos del sistema con privilegios elevados u obtener una shell del sistema. El proceso varía dependiendo de la versión de Windows y del exploit del kernel empleado.
+
+**Windows-Exploit-Suggester:** compara los niveles de parches de un sistema con la base de datos de vulnerabilidades de Microsoft para detectar posibles parches que falten en el sistema. También informa al usuario de si existen exploits públicos y módulos de Metasploit disponibles.
+
+GitHub: [Windows-Exploit-Suggester en GitHub](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+
+**Windows-Kernel-Exploits:** colección de exploits del kernel de Windows, organizados según su CVE correspondiente.
+
+GitHub: W[indows-Kernel-Exploits en GitHub](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS16-
+135)
+
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
