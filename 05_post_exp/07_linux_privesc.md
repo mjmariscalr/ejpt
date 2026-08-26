@@ -132,6 +132,19 @@ usr@hostname# find / -perm -4000 -type f 2>/dev/null
 
 Será necesario encontrar un binario que pertenezca a usuario root y además ejecute otro binario. La idea es sustituir el segundo binario por una copia de `/bin/bash`. Al ejecutarse desde un binario con privilegios root, nos abrirá una nueva shell con estos privilegios.
 
-##
+## Kernel exploits
+
+Tienen como objetivo vulnerabilidades presentes en el kernel de Linux para ejecutar código arbitrario con el fin de ejecutar comandos del sistema con privilegios elevados u obtener una shell del sistema. El proceso variará dependiendo de la versión del kernel, la distribución de Linux y el exploit del kernel que se utilice.
+
+Se seguirá la siguiente metodología:
+
+- Identificar vulnerabilidades del kernel.
+- Descargar, compilar y transferir exploits del kernel al sistema objetivo.
+
+**Linux-Exploit-Suggester:** esta herramienta está diseñada para ayudar a detectar deficiencias de seguridad en un sistema basado en Linux, teniendo en cuenta la versión del kernel. Evalúa, mediante métodos heurísticos, la exposición del kernel proporcionado frente a exploits de Linux conocidos públicamente.
+
+Una vez transferido al objetivo, lo podemos ejecutar como `./les.sh` y nos mostrará una lista de exploits a los que es vulnerable.
+
+GitHub: [Linux-Exploit-Suggester en GitHub](https://github.com/mzet-/linux-exploit-suggester)
 
 [⟵ Anterior](06_win_privesc.md) | [Siguiente ⟶](08_persistencia.md)
