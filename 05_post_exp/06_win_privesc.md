@@ -65,10 +65,11 @@ Una vez hecho esto, es necesario migrar a otro proceso, por ejemplo explorer, po
 
 ## Bypassing UAC
 
-**User Account Control (UAC)** es una función de seguridad de Windows, introducida en Windows Vista, que se utiliza para evitar que se realicen cambios no autorizados en el sistema operativo.
+**User Account Control (UAC)** es una función de seguridad de Windows, introducida en Windows Vista, que se utiliza para evitar que se realicen cambios no autorizados en el sistema operativo. UAC garantiza que los cambios realizados en el sistema operativo requieran la aprobación del administrador.
 
-UAC garantiza que los cambios realizados en el sistema operativo requieran la aprobación del administrador.
-Podemos utilizar el módulo “Windows Escalate UAC Protection Bypass (In Memory Injection)” para evadir UAC mediante la utilización de un certificado de editor de confianza y process injection. Este módulo genera una segunda shell en la que el indicador de UAC está desactivado.
+### Metasploit
+
+Podemos utilizar el módulo `exploit/windows/local/bypassuac_injection` para evadir UAC mediante la utilización de un certificado de editor de confianza y process injection. Este módulo genera una segunda shell en la que el indicador de UAC está desactivado.
 
 ```bash
 msf > use exploit/windows/local/bypassuac_injection
@@ -82,6 +83,12 @@ meterpreter > getsystem
 ```
 
 La nueva sesión mantiene el mismo usuario, por lo que inicialmente no tiene privilegios. Lo que conseguimos con este módulo es una sesión con UAC desactivado y nos permite usar `getsystem` para elevar los privilegios.
+
+### UACMe
+
+UACMe es una herramienta de escalada de privilegios robusta y de código abierto. Puede utilizarse para evadir el UAC (Control de cuentas de usuario) de Windows mediante diversas técnicas. Permite a los atacantes ejecutar payloads maliciosos en un sistema Windows objetivo con privilegios administrativos/elevados, aprovechándose de la herramienta integrada de Windows AutoElevate.
+
+El repositorio de [GitHub de UACME](https://github.com/hfiref0x/UACME) contiene una lista muy bien documentada de métodos que pueden utilizarse para evadir el UAC en varias versiones de Windows, desde Windows 7 hasta Windows 10. Además, cuenta con más de 60 exploits que pueden utilizarse para evadir el UAC.
 
 ## Kernel exploits
 
