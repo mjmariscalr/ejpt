@@ -96,9 +96,30 @@ Las vulnerabilidades presentes en el kernel de Windows permiten ejecutar código
 
 GitHub: [Windows-Exploit-Suggester en GitHub](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 
+```console
+usr@hostname# ./windows-exploit-suggester.py --update
+usr@hostname# ./windows-exploit-suggester.py --database <base_de_datos.xls>
+```
+
 **Windows-Kernel-Exploits:** colección de exploits del kernel de Windows, organizados según su CVE correspondiente.
 
-GitHub: W[indows-Kernel-Exploits en GitHub](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS16-
+GitHub: [Windows-Kernel-Exploits en GitHub](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS16-
 135)
+
+**`local_exploit_suggester`** Este módulo sugiere exploits locales de Metasploit en función de la arquitectura y la plataforma del sistema en el que el usuario tiene una shell abierta, así como de los exploits disponibles en Meterpreter.
+
+Los exploits se seleccionan en función de las siguientes condiciones:
+
+- Tipo de sesión
+- Plataforma
+- Arquitectura
+- Opciones predeterminadas requeridas
+
+
+```bash
+msf > use post/multi/recon/local_exploit_suggester
+msf post(multi/recon/local_exploit_suggester) > set session id
+msf post(multi/recon/local_exploit_suggester) > run
+```
 
 [⟵ Anterior](05_mejora_shell.md) | [Siguiente ⟶](07_linux_privesc.md)
