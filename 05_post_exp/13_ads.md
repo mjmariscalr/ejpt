@@ -9,6 +9,10 @@ Cualquier archivo creado en una unidad formateada con NTFS tendrá dos flujos (*
 
 Los atacantes pueden utilizar **ADS** para ocultar código malicioso o archivos ejecutables dentro de archivos legítimos con el objetivo de evadir la detección. Esto puede hacerse almacenando el código malicioso o los ejecutables en el atributo de archivo **Resource Stream (metadatos)** de un archivo legítimo. Esta técnica suele utilizarse para evadir **antivirus (AV) básicos basados en firmas** y herramientas de **análisis estático**.
 
-
+```console
+C:\Temp>type payload.exe > log.txt:hidden.exe
+C:\Windows\system32>mklink link.exe C:\Temp\log.txt:hidden.exe
+C:\Temp>link.exe
+```
 
 [⟵ Anterior](12_clearing.md) | [Siguiente ⟶](.md)
