@@ -22,4 +22,4 @@ meterpreter > clearev
 
 En Linux debemos seguir la misma metodología que en Windows, es decir, almacenar cualquier arhcivo que transfiramos en el directorio `/tmp` para tenerlo localizado y poder eliminarlo, además de usar los sripts de metasploit para eliminar el rastro dejado por el módulo.
 
-[⟵ Anterior](11_pivoting.md) | [Siguiente ⟶]()
+[⟵ Anterior](11_pivoting.md) | [Siguiente ⟶](13_ads.md)
