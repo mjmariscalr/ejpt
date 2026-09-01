@@ -23,6 +23,8 @@ La evasión de defensas consiste en técnicas para evitar ser detectados a lo la
 
 Se centran en la manipulación de la memoria y no escribe archivos en el disco. Se inyecta el payload en un proceso aprovechando varias API de Windows, luego, se ejecuta en la memoria en un hilo (thread) separado.
 
+## Evasión AV con shellter
+
 ## Ofuscación de código PowerShell
 
 La ofuscación se refiere al proceso de ocultar algo importante, valioso o crítico. La ofuscación reorganiza el código para dificultar su análisis o ingeniería inversa (RE). La mayoría de las soluciones antivirus detectarán de inmediato el código malicioso de PowerShell y es necesario ofuscar/codificar el código para evitar la detección.
