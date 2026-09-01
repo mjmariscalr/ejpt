@@ -1,4 +1,29 @@
-# Ofuscación de código PowerShell
+# Evasión AV
+
+La evasión de defensas consiste en técnicas para evitar ser detectados a lo largo del ataque. Las técnicas utilizadas para la evasión de defensas incluyen:
+
+- desinstalar o deshabilitar el software de seguridad
+- la ofuscación o el cifrado de datos y scripts 
+- procesos de confianza para ocultar y enmascarar malware
+
+**Métodos de detección del antivirus:**
+
+1. ***Detección basada en firmas:*** Una firma de AV es una secuencia única de bytes que identifica un malware de forma inequívoca. El exploit ofuscado no debe coincidir con ninguna firma conocida en la base de datos del AV.
+2. ***Detección basada en heurística:*** Se basa en reglas o decisiones para determinar si un binario es malicioso. También busca patrones específicos dentro del código o de las llamadas del programa.
+3. ***Detección basada en comportamiento:*** Se basa en identificar el malware mediante el monitoreo de su comportamiento.
+
+**Técnicas de evasión On-disk:**
+
+- ***Ofuscación:*** proceso de ocultar algo. Reorganiza el código para hacer que sea más difícil de analizar o de aplicar ingeniería inversa.
+- ***Encoding:*** cambia los datos a un nuevo formato utilizando un esquema. Es un proceso reversible; los datos se pueden codificar a un nuevo formato y decodificar a su formato original.
+- ***Packing:*** Genera un ejecutable con una nueva estructura binaria de menor tamaño y proporciona una nueva firma.
+- ***Crypters:*** Cifran el código o los payloads y descifran el código cifrado en la memoria.
+
+**Técnicas de evasión In-Memory:**
+
+Se centran en la manipulación de la memoria y no escribe archivos en el disco. Se inyecta el payload en un proceso aprovechando varias API de Windows, luego, se ejecuta en la memoria en un hilo (thread) separado.
+
+## Ofuscación de código PowerShell
 
 La ofuscación se refiere al proceso de ocultar algo importante, valioso o crítico. La ofuscación reorganiza el código para dificultar su análisis o ingeniería inversa (RE). La mayoría de las soluciones antivirus detectarán de inmediato el código malicioso de PowerShell y es necesario ofuscar/codificar el código para evitar la detección.
 
