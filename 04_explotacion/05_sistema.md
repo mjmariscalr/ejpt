@@ -46,4 +46,4 @@ Esta sección presenta algunos de los servicios, protocolos y vulnerabilidades m
 	- [**libssh Authentication Bypass (CVE-2018-10933)**](linux/libsshAuthBypass.md)
 	- [**PHP CGI Argument Injection (CVE-2012-1823)**](linux/libsshAuthBypass.md)
 
-[⟵ Anterior](04_payloads.md) | [Siguiente ⟶](../05_post/01_intro.md)
+[⟵ Anterior](04_payloads.md) | [Siguiente ⟶](06_ofuscacion.md)
